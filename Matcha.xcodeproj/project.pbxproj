@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */; };
+		3C30202D29C33870C0BF46A0 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9BAE326B00B37156FBCFA /* EarlGrey.swift */; };
 		41F1F4E01F01104100D31B35 /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4DE1F01104100D31B35 /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41F1F4F71F01138D00D31B35 /* MatchaEditTextActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; };
 		41F1F4F81F01138D00D31B35 /* MatchaKeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; };
@@ -20,6 +22,7 @@
 		41F1F5001F01138D00D31B35 /* XCTestCase+Matcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */; };
 		41F1F5011F01138D00D31B35 /* CustomMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */; };
 		41F1F5021F01138D00D31B35 /* EarlGreyHumanizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */; };
+		95CF0DA1FF8738F41497D5CA /* Pods_Matcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,11 @@
 		41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Matcha.swift"; sourceTree = "<group>"; };
 		41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMatcher.swift; sourceTree = "<group>"; };
 		41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreyHumanizer.swift; sourceTree = "<group>"; };
+		58C9BAE326B00B37156FBCFA /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
+		918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		998A3AC993C0939B7837E205 /* Pods-Matcha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matcha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matcha/Pods-Matcha.release.xcconfig"; sourceTree = "<group>"; };
+		C42D4549BAAB0E4BDCEA02B5 /* Pods-Matcha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matcha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matcha/Pods-Matcha.debug.xcconfig"; sourceTree = "<group>"; };
+		E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = "${SRCROOT}/Pods/EarlGrey/EarlGrey/EarlGrey.framework"; sourceTree = SRCROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */,
+				95CF0DA1FF8738F41497D5CA /* Pods_Matcha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,8 @@
 			children = (
 				41F1F4DD1F01104100D31B35 /* Matcha */,
 				41F1F4DC1F01104100D31B35 /* Products */,
+				A7060A3C4DED472335B83B6A /* Pods */,
+				AC62590E832C74351652B6BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				41F1F4DB1F01104100D31B35 /* Matcha.framework */,
+				E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +90,7 @@
 				41F1F4F51F01138D00D31B35 /* Wrapper */,
 				41F1F4DE1F01104100D31B35 /* Matcha.h */,
 				41F1F4DF1F01104100D31B35 /* Info.plist */,
+				58C9BAE326B00B37156FBCFA /* EarlGrey.swift */,
 			);
 			path = Matcha;
 			sourceTree = "<group>";
@@ -128,6 +142,23 @@
 			path = Wrapper;
 			sourceTree = "<group>";
 		};
+		A7060A3C4DED472335B83B6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C42D4549BAAB0E4BDCEA02B5 /* Pods-Matcha.debug.xcconfig */,
+				998A3AC993C0939B7837E205 /* Pods-Matcha.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC62590E832C74351652B6BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -146,10 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41F1F4E31F01104100D31B35 /* Build configuration list for PBXNativeTarget "Matcha" */;
 			buildPhases = (
+				68943F9E82458971D96C31CA /* [CP] Check Pods Manifest.lock */,
 				41F1F4D61F01104100D31B35 /* Sources */,
 				41F1F4D71F01104100D31B35 /* Frameworks */,
 				41F1F4D81F01104100D31B35 /* Headers */,
 				41F1F4D91F01104100D31B35 /* Resources */,
+				045C15AB0C5303EBDBC65A99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +236,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		045C15AB0C5303EBDBC65A99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Matcha/Pods-Matcha-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68943F9E82458971D96C31CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41F1F4D61F01104100D31B35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,6 +286,7 @@
 				41F1F4FF1F01138D00D31B35 /* UIWindow+UITestWindow.swift in Sources */,
 				41F1F5001F01138D00D31B35 /* XCTestCase+Matcha.swift in Sources */,
 				41F1F4F91F01138D00D31B35 /* MatchaScrollViewActions.swift in Sources */,
+				3C30202D29C33870C0BF46A0 /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +396,7 @@
 		};
 		41F1F4E41F01104100D31B35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C42D4549BAAB0E4BDCEA02B5 /* Pods-Matcha.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -348,6 +416,7 @@
 		};
 		41F1F4E51F01104100D31B35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998A3AC993C0939B7837E205 /* Pods-Matcha.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
