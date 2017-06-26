@@ -8,12 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		41F1F4E01F01104100D31B35 /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4DE1F01104100D31B35 /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41F1F4F71F01138D00D31B35 /* MatchaEditTextActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; };
+		41F1F4F81F01138D00D31B35 /* MatchaKeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; };
+		41F1F4F91F01138D00D31B35 /* MatchaScrollViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */; };
+		41F1F4FA1F01138D00D31B35 /* MatchaTableViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4EA1F01138D00D31B35 /* MatchaTableViewActions.swift */; };
+		41F1F4FB1F01138D00D31B35 /* MatchaTapActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4EB1F01138D00D31B35 /* MatchaTapActions.swift */; };
+		41F1F4FC1F01138D00D31B35 /* MatchaAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4ED1F01138D00D31B35 /* MatchaAssertion.swift */; };
+		41F1F4FD1F01138D00D31B35 /* MatchaScrollingAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4EE1F01138D00D31B35 /* MatchaScrollingAssertion.swift */; };
+		41F1F4FE1F01138D00D31B35 /* MatchaTableViewAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4EF1F01138D00D31B35 /* MatchaTableViewAssertions.swift */; };
+		41F1F4FF1F01138D00D31B35 /* UIWindow+UITestWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F11F01138D00D31B35 /* UIWindow+UITestWindow.swift */; };
+		41F1F5001F01138D00D31B35 /* XCTestCase+Matcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */; };
+		41F1F5011F01138D00D31B35 /* CustomMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */; };
+		41F1F5021F01138D00D31B35 /* EarlGreyHumanizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41F1F4DB1F01104100D31B35 /* Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Matcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F1F4DE1F01104100D31B35 /* Matcha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matcha.h; sourceTree = "<group>"; };
 		41F1F4DF1F01104100D31B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaEditTextActions.swift; sourceTree = "<group>"; };
+		41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaKeyboardActions.swift; sourceTree = "<group>"; };
+		41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaScrollViewActions.swift; sourceTree = "<group>"; };
+		41F1F4EA1F01138D00D31B35 /* MatchaTableViewActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaTableViewActions.swift; sourceTree = "<group>"; };
+		41F1F4EB1F01138D00D31B35 /* MatchaTapActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaTapActions.swift; sourceTree = "<group>"; };
+		41F1F4ED1F01138D00D31B35 /* MatchaAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaAssertion.swift; sourceTree = "<group>"; };
+		41F1F4EE1F01138D00D31B35 /* MatchaScrollingAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaScrollingAssertion.swift; sourceTree = "<group>"; };
+		41F1F4EF1F01138D00D31B35 /* MatchaTableViewAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaTableViewAssertions.swift; sourceTree = "<group>"; };
+		41F1F4F11F01138D00D31B35 /* UIWindow+UITestWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+UITestWindow.swift"; sourceTree = "<group>"; };
+		41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Matcha.swift"; sourceTree = "<group>"; };
+		41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMatcher.swift; sourceTree = "<group>"; };
+		41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreyHumanizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +70,62 @@
 		41F1F4DD1F01104100D31B35 /* Matcha */ = {
 			isa = PBXGroup;
 			children = (
+				41F1F4E61F01138D00D31B35 /* Actions */,
+				41F1F4EC1F01138D00D31B35 /* Assertions */,
+				41F1F4F01F01138D00D31B35 /* Extensions */,
+				41F1F4F31F01138D00D31B35 /* Matchers */,
+				41F1F4F51F01138D00D31B35 /* Wrapper */,
 				41F1F4DE1F01104100D31B35 /* Matcha.h */,
 				41F1F4DF1F01104100D31B35 /* Info.plist */,
 			);
 			path = Matcha;
+			sourceTree = "<group>";
+		};
+		41F1F4E61F01138D00D31B35 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */,
+				41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */,
+				41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */,
+				41F1F4EA1F01138D00D31B35 /* MatchaTableViewActions.swift */,
+				41F1F4EB1F01138D00D31B35 /* MatchaTapActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		41F1F4EC1F01138D00D31B35 /* Assertions */ = {
+			isa = PBXGroup;
+			children = (
+				41F1F4ED1F01138D00D31B35 /* MatchaAssertion.swift */,
+				41F1F4EE1F01138D00D31B35 /* MatchaScrollingAssertion.swift */,
+				41F1F4EF1F01138D00D31B35 /* MatchaTableViewAssertions.swift */,
+			);
+			path = Assertions;
+			sourceTree = "<group>";
+		};
+		41F1F4F01F01138D00D31B35 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41F1F4F11F01138D00D31B35 /* UIWindow+UITestWindow.swift */,
+				41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41F1F4F31F01138D00D31B35 /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
+		41F1F4F51F01138D00D31B35 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */,
+			);
+			path = Wrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F1F5021F01138D00D31B35 /* EarlGreyHumanizer.swift in Sources */,
+				41F1F4FC1F01138D00D31B35 /* MatchaAssertion.swift in Sources */,
+				41F1F4F81F01138D00D31B35 /* MatchaKeyboardActions.swift in Sources */,
+				41F1F4FA1F01138D00D31B35 /* MatchaTableViewActions.swift in Sources */,
+				41F1F4FD1F01138D00D31B35 /* MatchaScrollingAssertion.swift in Sources */,
+				41F1F5011F01138D00D31B35 /* CustomMatcher.swift in Sources */,
+				41F1F4F71F01138D00D31B35 /* MatchaEditTextActions.swift in Sources */,
+				41F1F4FB1F01138D00D31B35 /* MatchaTapActions.swift in Sources */,
+				41F1F4FE1F01138D00D31B35 /* MatchaTableViewAssertions.swift in Sources */,
+				41F1F4FF1F01138D00D31B35 /* UIWindow+UITestWindow.swift in Sources */,
+				41F1F5001F01138D00D31B35 /* XCTestCase+Matcha.swift in Sources */,
+				41F1F4F91F01138D00D31B35 /* MatchaScrollViewActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +384,7 @@
 				41F1F4E51F01104100D31B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
