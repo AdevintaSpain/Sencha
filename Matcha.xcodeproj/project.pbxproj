@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */; };
 		3C30202D29C33870C0BF46A0 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9BAE326B00B37156FBCFA /* EarlGrey.swift */; };
+		41D45E6F1F014FDD00A49B60 /* Matcha.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 41D45E6E1F014FDD00A49B60 /* Matcha.podspec */; };
 		41F1F4E01F01104100D31B35 /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4DE1F01104100D31B35 /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41F1F4F71F01138D00D31B35 /* MatchaEditTextActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; };
 		41F1F4F81F01138D00D31B35 /* MatchaKeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41D45E6E1F014FDD00A49B60 /* Matcha.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matcha.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		41D45E701F01543500A49B60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		41D595BB1F02457200CB5F57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41F1F4DB1F01104100D31B35 /* Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Matcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F1F4DE1F01104100D31B35 /* Matcha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matcha.h; sourceTree = "<group>"; };
 		41F1F4DF1F01104100D31B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		41F1F4D11F01104100D31B35 = {
 			isa = PBXGroup;
 			children = (
+				41D595BB1F02457200CB5F57 /* README.md */,
+				41D45E6E1F014FDD00A49B60 /* Matcha.podspec */,
 				41F1F4DD1F01104100D31B35 /* Matcha */,
 				41F1F4DC1F01104100D31B35 /* Products */,
 				A7060A3C4DED472335B83B6A /* Pods */,
@@ -154,6 +160,7 @@
 		AC62590E832C74351652B6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41D45E701F01543500A49B60 /* XCTest.framework */,
 				918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */,
 			);
 			name = Frameworks;
@@ -231,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D45E6F1F014FDD00A49B60 /* Matcha.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +412,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
+					"\"${PODS_ROOT}/EarlGrey/EarlGrey\"",
+				);
 				INFOPLIST_FILE = Matcha/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -424,6 +437,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
+					"\"${PODS_ROOT}/EarlGrey/EarlGrey\"",
+				);
 				INFOPLIST_FILE = Matcha/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
