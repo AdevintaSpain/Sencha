@@ -4,12 +4,25 @@ import EarlGrey
 
 protocol MatchaScrollViewActions: EarlGreyHumanizer {
     
-    @discardableResult func scrollToElementWith(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
+    func tap(with matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString, line: UInt)
+    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
 }
 
 extension MatchaScrollViewActions {
     
-    @discardableResult func scrollToElementWith(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
+    func tap(with matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        
+        scrollTo(
+            matcher,
+            inElementWith: scrollMatcher,
+            file: file,
+            line: line
+            ).perform(
+                grey_tap()
+        )
+    }
+    
+    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
         
         let halfScreenSize = UIScreen.main.bounds.height/2
         return strictSelect(
