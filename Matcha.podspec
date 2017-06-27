@@ -8,17 +8,17 @@ Pod::Spec.new do |s|
                    Provides a set of tools to facilitate the UI tests using EarlGrey, with a more developer-friendly API.
                    DESC
 
-  s.homepage     = "https://github.schibsted.io/gil-serra/ios-common--lib-matcha"
+  s.homepage     = "https://github.schibsted.io/scmspain/ios-common--lib-matcha.git"
   s.license      = { "type" => "Proprietary", "text" => "Copyright Schibsted All rights reserved.\n\n" }
   s.author       = "Gil Serra"
 
   s.platform     = :ios, "8.0"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 
-  s.source       = { :git => "https://github.schibsted.io/gil-serra/ios-common--lib-matcha" }
+  s.source       = { :git => "https://github.schibsted.io/scmspain/ios-common--lib-matcha.git" }
   s.source_files  = "Matcha/**/*.swift"
   
-  s.frameworks 'XCTest'
+  s.framework = 'XCTest'
   s.dependency 'EarlGrey', '~> 1.9.2'
 
 end
