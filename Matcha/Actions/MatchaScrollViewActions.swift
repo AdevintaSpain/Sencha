@@ -2,13 +2,13 @@
 import Foundation
 import EarlGrey
 
-protocol MatchaScrollViewActions: EarlGreyHumanizer {
+public protocol MatchaScrollViewActions: EarlGreyHumanizer {
     
     func tap(with matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString, line: UInt)
     @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
 }
 
-extension MatchaScrollViewActions {
+public extension MatchaScrollViewActions {
     
     func tap(with matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         

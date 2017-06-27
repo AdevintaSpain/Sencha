@@ -2,13 +2,13 @@
 import Foundation
 import EarlGrey
 
-protocol MatchaAssertion: EarlGreyHumanizer {
+public protocol MatchaAssertion: EarlGreyHumanizer {
     
     func assertVisible(_ matcher: Matcher, file: StaticString, line: UInt)
     func assertNotVisible(_ matcher: Matcher, file: StaticString, line: UInt)
 }
 
-extension MatchaAssertion {
+public extension MatchaAssertion {
     
     func assertVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         

@@ -2,7 +2,7 @@
 import Foundation
 import EarlGrey
 
-indirect enum Matcher {
+public indirect enum Matcher {
     
     case text(String)
     case accessibilityID(String)
@@ -44,14 +44,14 @@ indirect enum Matcher {
     }
 }
 
-protocol EarlGreyHumanizer {
+public protocol EarlGreyHumanizer {
     
     func strictSelect(matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
     func select(firstElementMatching matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
     func simpleSelect(matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
 }
 
-extension EarlGreyHumanizer {
+public extension EarlGreyHumanizer {
     
     func strictSelect(matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
         

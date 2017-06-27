@@ -3,12 +3,12 @@ import UIKit
 import Foundation
 import EarlGrey
 
-protocol MatchaKeyboardActions: EarlGreyHumanizer {
+public protocol MatchaKeyboardActions: EarlGreyHumanizer {
     
     func tapKeyboardReturnKey(file: StaticString, line: UInt)
 }
 
-extension MatchaKeyboardActions {
+public extension MatchaKeyboardActions {
     
     func tapKeyboardReturnKey(file: StaticString = #file, line: UInt = #line) {
         

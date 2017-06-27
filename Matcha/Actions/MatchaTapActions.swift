@@ -2,12 +2,12 @@
 import Foundation
 import EarlGrey
 
-protocol MatchaTapActions: EarlGreyHumanizer {
+public protocol MatchaTapActions: EarlGreyHumanizer {
     
     func tap(_ matcher: Matcher, file: StaticString, line: UInt)
 }
 
-extension MatchaTapActions {
+public extension MatchaTapActions {
         
     func tap(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
