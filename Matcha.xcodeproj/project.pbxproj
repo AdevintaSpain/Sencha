@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */; };
 		3C30202D29C33870C0BF46A0 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9BAE326B00B37156FBCFA /* EarlGrey.swift */; };
+		419B3B3B1F029F7D00D7BC89 /* MatchaEditTextActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B3C1F029F7D00D7BC89 /* MatchaKeyboardActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B3D1F029F7D00D7BC89 /* MatchaScrollViewActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B3E1F029F7D00D7BC89 /* MatchaTapActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4EB1F01138D00D31B35 /* MatchaTapActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B3F1F029F7D00D7BC89 /* MatchaAssertion.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4ED1F01138D00D31B35 /* MatchaAssertion.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B401F029F7D00D7BC89 /* MatchaScrollingAssertion.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4EE1F01138D00D31B35 /* MatchaScrollingAssertion.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B411F029F7D00D7BC89 /* MatchaTableViewAssertions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4EF1F01138D00D31B35 /* MatchaTableViewAssertions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B421F029F7D00D7BC89 /* UIWindow+UITestWindow.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4F11F01138D00D31B35 /* UIWindow+UITestWindow.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B431F029F7D00D7BC89 /* XCTestCase+Matcha.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B441F029F7D00D7BC89 /* CustomMatcher.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B451F029F7D00D7BC89 /* EarlGreyHumanizer.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		419B3B461F029F7D00D7BC89 /* EarlGrey.swift in Headers */ = {isa = PBXBuildFile; fileRef = 58C9BAE326B00B37156FBCFA /* EarlGrey.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		41D45E6F1F014FDD00A49B60 /* Matcha.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 41D45E6E1F014FDD00A49B60 /* Matcha.podspec */; };
 		41F1F4E01F01104100D31B35 /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4DE1F01104100D31B35 /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41F1F4F71F01138D00D31B35 /* MatchaEditTextActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; };
@@ -171,6 +183,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				41F1F4E01F01104100D31B35 /* Matcha.h in Headers */,
+				419B3B3B1F029F7D00D7BC89 /* MatchaEditTextActions.swift in Headers */,
+				419B3B3C1F029F7D00D7BC89 /* MatchaKeyboardActions.swift in Headers */,
+				419B3B3D1F029F7D00D7BC89 /* MatchaScrollViewActions.swift in Headers */,
+				419B3B3E1F029F7D00D7BC89 /* MatchaTapActions.swift in Headers */,
+				419B3B3F1F029F7D00D7BC89 /* MatchaAssertion.swift in Headers */,
+				419B3B401F029F7D00D7BC89 /* MatchaScrollingAssertion.swift in Headers */,
+				419B3B411F029F7D00D7BC89 /* MatchaTableViewAssertions.swift in Headers */,
+				419B3B421F029F7D00D7BC89 /* UIWindow+UITestWindow.swift in Headers */,
+				419B3B431F029F7D00D7BC89 /* XCTestCase+Matcha.swift in Headers */,
+				419B3B441F029F7D00D7BC89 /* CustomMatcher.swift in Headers */,
+				419B3B451F029F7D00D7BC89 /* EarlGreyHumanizer.swift in Headers */,
+				419B3B461F029F7D00D7BC89 /* EarlGrey.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
