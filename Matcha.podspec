@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source_files  = "Matcha/**/*.swift"
   
   s.framework = 'XCTest'
-  s.dependency 'EarlGrey', '~> 1.9.2'
+  s.dependency 'EarlGrey', '1.9.2'
   s.requires_arc = true
 
 end

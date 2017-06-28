@@ -6,6 +6,6 @@ use_frameworks!
 
 target 'Matcha' do
 
-  pod 'EarlGrey', '~> 1.9.2'
+  pod 'EarlGrey', '1.9.2'
 
 end
