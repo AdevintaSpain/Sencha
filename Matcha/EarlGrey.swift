@@ -96,7 +96,7 @@ private func GREYWaitUntilIdle() {
   GREYUIThreadExecutor.sharedInstance().drainUntilIdle()
 }
 
-@nonobjc open class EarlGrey: NSObject {
+open class EarlGrey: NSObject {
   open class func select(elementWithMatcher matcher:GREYMatcher,
                            file: StaticString = #file,
                            line: UInt = #line) -> GREYElementInteraction {
