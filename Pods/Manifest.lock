@@ -1,12 +1,12 @@
 PODS:
-  - EarlGrey (1.9.4)
+  - EarlGrey (1.9.2)
 
 DEPENDENCIES:
-  - EarlGrey (~> 1.9.2)
+  - EarlGrey (= 1.9.2)
 
 SPEC CHECKSUMS:
-  EarlGrey: fa4657007f1f51bfdeb96a8bf4db57857de90cac
+  EarlGrey: b78a93bd5fddba9a79a8e5ec5ae8a7718453ca40
 
-PODFILE CHECKSUM: dd8bcdcd483d9b524c4e454bf20f8ba01c00ad0c
+PODFILE CHECKSUM: 08637c36be4037004355a110f1bba58ac69c0f5c
 
 COCOAPODS: 1.2.1

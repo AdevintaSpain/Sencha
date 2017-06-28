@@ -16,8 +16,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  *  An block-based enumerator that repeatedly invokes the block to return the next object.
  */
@@ -43,14 +41,12 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - NSEnumerator
 
 /**
- *  @return The next object in the enumerator returned by the @c nextObjectBlock.
+ *  @return The next object in the enumerator returned by the @nextObjectBlock. Can also be @c nil.
  */
-- (id _Nullable)nextObject;
+- (id)nextObject;
 /**
  *  @return An array of all the objects in the enumerator.
  */
 - (NSArray *)allObjects;
 
 @end
-
-NS_ASSUME_NONNULL_END

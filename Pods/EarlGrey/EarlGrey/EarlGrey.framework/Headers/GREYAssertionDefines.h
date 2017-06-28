@@ -38,7 +38,7 @@ GREY_EXPORT id<GREYFailureHandler> grey_getFailureHandler();
 /**
  *  These Macros are safe to call from anywhere within a testcase.
  */
-#pragma mark - Public Macros
+#pragma mark - Public
 
 /**
  *  Generates a failure with the provided @c __description if the expression @c __a1 evaluates to
@@ -232,7 +232,7 @@ GREY_EXPORT id<GREYFailureHandler> grey_getFailureHandler();
   I_GREYConstraintsFailedWithDetails((__description), (__details), ##__VA_ARGS__); \
 })
 
-#pragma mark - Private Macros
+#pragma mark - Private Use By Framework Only
 
 /**
  *  THESE ARE METHODS TO BE CALLED BY THE FRAMEWORK ONLY.
@@ -395,6 +395,9 @@ GREY_EXPORT id<GREYFailureHandler> grey_getFailureHandler();
                         __description, \
                         __details, \
                         ##__VA_ARGS__)
+
+#define I_CHECK_MAIN_THREAD() \
+  I_GREYAssertTrue([NSThread isMainThread], @"Must be on the main thread.")
 
 /// @endcond
 
