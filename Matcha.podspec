@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.author       = "Gil Serra"
 
   s.platform     = :ios, "8.0"
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 
   s.source       = { :git => "https://github.schibsted.io/scmspain/ios-common--lib-matcha.git" }
   s.source_files  = "Matcha/**/*.swift"
