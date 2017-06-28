@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */; };
-		4124CE411F03E34E00B59025 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124CE401F03E34E00B59025 /* EarlGrey.swift */; };
-		4124CE421F03E67500B59025 /* EarlGrey.swift in Headers */ = {isa = PBXBuildFile; fileRef = 4124CE401F03E34E00B59025 /* EarlGrey.swift */; };
+		1FDC8A2D753808F3D6A58612 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A73761203B36AC2502E8B3 /* EarlGrey.swift */; };
 		419B3B3B1F029F7D00D7BC89 /* MatchaEditTextActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3C1F029F7D00D7BC89 /* MatchaKeyboardActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3D1F029F7D00D7BC89 /* MatchaScrollViewActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4124CE401F03E34E00B59025 /* EarlGrey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		41D45E6E1F014FDD00A49B60 /* Matcha.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matcha.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		41D45E701F01543500A49B60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		41D595BB1F02457200CB5F57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -57,6 +55,7 @@
 		41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreyHumanizer.swift; sourceTree = "<group>"; };
 		918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		998A3AC993C0939B7837E205 /* Pods-Matcha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matcha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matcha/Pods-Matcha.release.xcconfig"; sourceTree = "<group>"; };
+		B6A73761203B36AC2502E8B3 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		C42D4549BAAB0E4BDCEA02B5 /* Pods-Matcha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matcha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matcha/Pods-Matcha.debug.xcconfig"; sourceTree = "<group>"; };
 		E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = "${SRCROOT}/Pods/EarlGrey/EarlGrey/EarlGrey.framework"; sourceTree = SRCROOT; };
 /* End PBXFileReference section */
@@ -79,7 +78,6 @@
 			children = (
 				41D595BB1F02457200CB5F57 /* README.md */,
 				41D45E6E1F014FDD00A49B60 /* Matcha.podspec */,
-				4124CE401F03E34E00B59025 /* EarlGrey.swift */,
 				41F1F4DD1F01104100D31B35 /* Matcha */,
 				41F1F4DC1F01104100D31B35 /* Products */,
 				A7060A3C4DED472335B83B6A /* Pods */,
@@ -106,6 +104,7 @@
 				41F1F4F51F01138D00D31B35 /* Wrapper */,
 				41F1F4DE1F01104100D31B35 /* Matcha.h */,
 				41F1F4DF1F01104100D31B35 /* Info.plist */,
+				B6A73761203B36AC2502E8B3 /* EarlGrey.swift */,
 			);
 			path = Matcha;
 			sourceTree = "<group>";
@@ -192,7 +191,6 @@
 				419B3B431F029F7D00D7BC89 /* XCTestCase+Matcha.swift in Headers */,
 				419B3B441F029F7D00D7BC89 /* CustomMatcher.swift in Headers */,
 				419B3B451F029F7D00D7BC89 /* EarlGreyHumanizer.swift in Headers */,
-				4124CE421F03E67500B59025 /* EarlGrey.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +307,10 @@
 				41F1F4F71F01138D00D31B35 /* MatchaEditTextActions.swift in Sources */,
 				41F1F4FB1F01138D00D31B35 /* MatchaTapActions.swift in Sources */,
 				41F1F4FE1F01138D00D31B35 /* MatchaTableViewAssertions.swift in Sources */,
-				4124CE411F03E34E00B59025 /* EarlGrey.swift in Sources */,
 				41F1F4FF1F01138D00D31B35 /* UIWindow+UITestWindow.swift in Sources */,
 				41F1F5001F01138D00D31B35 /* XCTestCase+Matcha.swift in Sources */,
 				41F1F4F91F01138D00D31B35 /* MatchaScrollViewActions.swift in Sources */,
+				1FDC8A2D753808F3D6A58612 /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
