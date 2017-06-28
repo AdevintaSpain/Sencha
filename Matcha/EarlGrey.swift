@@ -96,7 +96,7 @@ private func GREYWaitUntilIdle() {
   GREYUIThreadExecutor.sharedInstance().drainUntilIdle()
 }
 
-open class EarlGrey: NSObject {
+@nonobjc open class EarlGrey: NSObject {
   open class func select(elementWithMatcher matcher:GREYMatcher,
                            file: StaticString = #file,
                            line: UInt = #line) -> GREYElementInteraction {
@@ -147,11 +147,11 @@ extension GREYInteraction {
 }
 
 extension GREYCondition {
-  open func waitWithTimeout(seconds: CFTimeInterval) -> Bool {
+  @nonobjc open func waitWithTimeout(seconds: CFTimeInterval) -> Bool {
     return self.wait(withTimeout: seconds)
   }
 
-  open func waitWithTimeout(seconds: CFTimeInterval, pollInterval: CFTimeInterval)
+  @nonobjc open func waitWithTimeout(seconds: CFTimeInterval, pollInterval: CFTimeInterval)
     -> Bool {
     return self.wait(withTimeout: seconds, pollInterval: pollInterval)
   }
