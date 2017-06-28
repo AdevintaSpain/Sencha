@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */; };
 		4124CE411F03E34E00B59025 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124CE401F03E34E00B59025 /* EarlGrey.swift */; };
+		4124CE421F03E67500B59025 /* EarlGrey.swift in Headers */ = {isa = PBXBuildFile; fileRef = 4124CE401F03E34E00B59025 /* EarlGrey.swift */; };
 		419B3B3B1F029F7D00D7BC89 /* MatchaEditTextActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3C1F029F7D00D7BC89 /* MatchaKeyboardActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3D1F029F7D00D7BC89 /* MatchaScrollViewActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -191,6 +192,7 @@
 				419B3B431F029F7D00D7BC89 /* XCTestCase+Matcha.swift in Headers */,
 				419B3B441F029F7D00D7BC89 /* CustomMatcher.swift in Headers */,
 				419B3B451F029F7D00D7BC89 /* EarlGreyHumanizer.swift in Headers */,
+				4124CE421F03E67500B59025 /* EarlGrey.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
