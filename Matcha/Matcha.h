@@ -1,10 +1,3 @@
-//
-//  Matcha.h
-//  Matcha
-//
-//  Created by Gil Serra on 26/06/2017.
-//  Copyright © 2017 Schibsted Spain. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

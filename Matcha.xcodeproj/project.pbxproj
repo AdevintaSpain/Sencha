@@ -229,6 +229,7 @@
 					41F1F4DA1F01104100D31B35 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RCTL45N8E9;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -422,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C42D4549BAAB0E4BDCEA02B5 /* Pods-Matcha.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RCTL45N8E9;
@@ -439,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.Matcha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -447,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 998A3AC993C0939B7837E205 /* Pods-Matcha.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RCTL45N8E9;
