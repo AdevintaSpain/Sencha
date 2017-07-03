@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '8.0'
 
-  s.source       = { :git => 'git@github.schibsted.io:scmspain/ios-common--lib-matcha.git' }
+  s.source       = { :git => 'git@github.schibsted.io:scmspain/ios-common--lib-matcha.git', :tag => s.version.to_s }
   s.source_files  = 'Matcha/**/*.{swift,h,m}'
   
   s.framework = 'XCTest'
