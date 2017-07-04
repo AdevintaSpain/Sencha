@@ -7,6 +7,21 @@ On the other hand, if you tried Earl Grey, you’ll agree that its API is not di
 
 Matcha introduces a discoverable API for the Earl Grey features. So, you and all the iOS team will write instrumental tests with no effort.
 
+Benefits of using EarlGrey(via Matcha) over other UI testing libraries:
+
+> EarlGrey’s synchronization features help to ensure that the UI is in a steady state before actions are performed. This greatly increases test stability and makes tests highly repeatable.
+
+In simpler words, when travis is shitting itself with overloaded machines, your tests won't crash, they'll wait patiently.
+
+## Installation
+
+### Cocoapods
+
+You'll be thankful you didn't have to follow EarlGrey's weird installation instructions
+
+```
+pod 'Matcha'
+```
 
 ## Matcha's actions
 
