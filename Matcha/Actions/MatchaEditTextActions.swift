@@ -11,7 +11,7 @@ public extension MatchaEditTextActions {
     
     func type(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
-        strictSelect(
+        select(
             matcher: matcher,
             file: file,
             line: line

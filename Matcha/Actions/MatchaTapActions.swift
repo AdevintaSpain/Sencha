@@ -11,7 +11,7 @@ public extension MatchaTapActions {
         
     func tap(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
-        strictSelect(
+        select(
             matcher: matcher,
             file: file,
             line: line

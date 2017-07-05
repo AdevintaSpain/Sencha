@@ -40,7 +40,7 @@ public extension MatchaTableViewAssertions {
             return false
         }
         
-        strictSelect(
+        select(
             matcher: matcher,
             file: file,
             line: line
@@ -59,7 +59,7 @@ public extension MatchaTableViewAssertions {
             return false
         }
         
-        strictSelect(
+        select(
             matcher: matcher,
             file: file,
             line: line

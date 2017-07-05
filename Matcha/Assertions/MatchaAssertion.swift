@@ -13,7 +13,7 @@ public extension MatchaAssertion {
     func assertVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
         select(
-            firstElementMatching: matcher,
+            matcher: matcher,
             file: file,
             line: line
         ).assert(
@@ -23,7 +23,7 @@ public extension MatchaAssertion {
 
     func assertNotVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
-        simpleSelect(
+        select(
             matcher: matcher,
             file: file,
             line: line

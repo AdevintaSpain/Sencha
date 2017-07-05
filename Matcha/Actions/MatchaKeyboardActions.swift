@@ -20,7 +20,7 @@ public extension MatchaKeyboardActions {
         )
         let newLineCharacter = "\n"
 
-        self.strictSelect(
+        select(
             matcher: matchers, file: file, line: line
         ).perform(
             grey_typeText(newLineCharacter)

@@ -17,15 +17,15 @@ public extension MatchaScrollViewActions {
             inElementWith: scrollMatcher,
             file: file,
             line: line
-            ).perform(
-                grey_tap()
+        ).perform(
+            grey_tap()
         )
     }
     
     @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
         
         let halfScreenSize = UIScreen.main.bounds.height/2
-        return strictSelect(
+        return select(
             matcher: matcher,
             file: file,
             line: line
