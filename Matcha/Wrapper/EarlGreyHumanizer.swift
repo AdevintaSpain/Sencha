@@ -15,6 +15,8 @@ public indirect enum Matcher {
     case allOf([Matcher])
     case anyOf([Matcher])
     case firstElement
+    case enabled
+    case userInteractionEnabled
     
     func greyMatcher() -> GREYMatcher {
         switch self {
@@ -40,6 +42,10 @@ public indirect enum Matcher {
             return grey_anyOf(matchers.map{$0.greyMatcher()})
         case .firstElement:
             return CustomMatcher.firstElementMatcher()
+        case .enabled:
+            return grey_enabled()
+        case .userInteractionEnabled:
+            return grey_userInteractionEnabled()
         }
     }
 }
