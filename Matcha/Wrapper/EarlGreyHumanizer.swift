@@ -18,7 +18,7 @@ public indirect enum Matcher {
     case enabled
     case userInteractionEnabled
     
-    func greyMatcher() -> GREYMatcher {
+    public func greyMatcher() -> GREYMatcher {
         switch self {
         case .text(let text):
             return grey_text(text)
@@ -64,5 +64,11 @@ public extension EarlGreyHumanizer {
             file: file,
             line: line
         )
+    }
+}
+
+public extension GREYElementInteraction {
+    @discardableResult public func assert(_ matcher: @autoclosure () -> Matcher) -> Self {
+        return self.assert(with:matcher().greyMatcher())
     }
 }
