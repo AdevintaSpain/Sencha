@@ -66,3 +66,9 @@ public extension EarlGreyHumanizer {
         )
     }
 }
+
+public extension GREYElementInteraction {
+    @discardableResult public func assert(_ matcher: @autoclosure () -> Matcher) -> Self {
+        return self.assert(with:matcher().greyMatcher())
+    }
+}
