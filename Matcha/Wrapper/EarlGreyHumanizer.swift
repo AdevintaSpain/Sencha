@@ -18,7 +18,7 @@ public indirect enum Matcher {
     case enabled
     case userInteractionEnabled
     
-    func greyMatcher() -> GREYMatcher {
+    public func greyMatcher() -> GREYMatcher {
         switch self {
         case .text(let text):
             return grey_text(text)
