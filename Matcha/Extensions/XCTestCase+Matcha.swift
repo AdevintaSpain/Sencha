@@ -5,9 +5,7 @@ public protocol Matcha: MatchaAssertion, MatchaScrollableAssertion, MatchaTapAct
 
 
 protocol PropertyStoring {
-    
     associatedtype T
-    
     func getAssociatedObject(_ key: UnsafeRawPointer!, defaultValue: T) -> T
 }
 
@@ -19,7 +17,6 @@ extension PropertyStoring {
         return value
     }
 }
-
 
 extension XCTestCase: Matcha, PropertyStoring {
 
@@ -58,5 +55,4 @@ extension XCTestCase: Matcha, PropertyStoring {
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }
-    
 }
