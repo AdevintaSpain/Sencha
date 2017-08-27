@@ -33,6 +33,7 @@
 		41F1F5011F01138D00D31B35 /* CustomMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */; };
 		41F1F5021F01138D00D31B35 /* EarlGreyHumanizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */; };
 		95CF0DA1FF8738F41497D5CA /* Pods_Matcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */; };
+		A101DE5E1F52456800B9A08B /* MatchaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101DE5D1F52456800B9A08B /* MatchaTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,8 +54,10 @@
 		41F1F4F21F01138D00D31B35 /* XCTestCase+Matcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Matcha.swift"; sourceTree = "<group>"; };
 		41F1F4F41F01138D00D31B35 /* CustomMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMatcher.swift; sourceTree = "<group>"; };
 		41F1F4F61F01138D00D31B35 /* EarlGreyHumanizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreyHumanizer.swift; sourceTree = "<group>"; };
+		7D20E782A3943E7CA2C5A25B /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Pods/EarlGrey/EarlGrey/EarlGrey.framework; sourceTree = SOURCE_ROOT; };
 		918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		998A3AC993C0939B7837E205 /* Pods-Matcha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matcha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matcha/Pods-Matcha.release.xcconfig"; sourceTree = "<group>"; };
+		A101DE5D1F52456800B9A08B /* MatchaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchaTestCase.swift; sourceTree = "<group>"; };
 		B6A73761203B36AC2502E8B3 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		C42D4549BAAB0E4BDCEA02B5 /* Pods-Matcha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matcha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matcha/Pods-Matcha.debug.xcconfig"; sourceTree = "<group>"; };
 		E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = "${SRCROOT}/Pods/EarlGrey/EarlGrey/EarlGrey.framework"; sourceTree = SRCROOT; };
@@ -97,6 +100,7 @@
 		41F1F4DD1F01104100D31B35 /* Matcha */ = {
 			isa = PBXGroup;
 			children = (
+				A101DE5C1F52455900B9A08B /* Base */,
 				41F1F4E61F01138D00D31B35 /* Actions */,
 				41F1F4EC1F01138D00D31B35 /* Assertions */,
 				41F1F4F01F01138D00D31B35 /* Extensions */,
@@ -155,6 +159,14 @@
 			path = Wrapper;
 			sourceTree = "<group>";
 		};
+		A101DE5C1F52455900B9A08B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A101DE5D1F52456800B9A08B /* MatchaTestCase.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		A7060A3C4DED472335B83B6A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 			children = (
 				41D45E701F01543500A49B60 /* XCTest.framework */,
 				918E31D2E3723A79D7F1CEA1 /* Pods_Matcha.framework */,
+				7D20E782A3943E7CA2C5A25B /* EarlGrey.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -309,6 +322,7 @@
 				41F1F4FB1F01138D00D31B35 /* MatchaTapActions.swift in Sources */,
 				41F1F4FE1F01138D00D31B35 /* MatchaTableViewAssertions.swift in Sources */,
 				41F1F4FF1F01138D00D31B35 /* UIWindow+UITestWindow.swift in Sources */,
+				A101DE5E1F52456800B9A08B /* MatchaTestCase.swift in Sources */,
 				41F1F5001F01138D00D31B35 /* XCTestCase+Matcha.swift in Sources */,
 				41F1F4F91F01138D00D31B35 /* MatchaScrollViewActions.swift in Sources */,
 				1FDC8A2D753808F3D6A58612 /* EarlGrey.swift in Sources */,
