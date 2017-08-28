@@ -4,31 +4,12 @@ import XCTest
 public protocol Matcha: MatchaAssertion, MatchaScrollableAssertion, MatchaTapActions, MatchaEditTextActions, MatchaScrollViewActions, MatchaKeyboardActions, MatchaTableViewAssertions {}
 
 
-protocol PropertyStoring {
-    associatedtype T
-    func getAssociatedObject(_ key: UnsafeRawPointer!, defaultValue: T) -> T
-}
 
-extension PropertyStoring {
-    func getAssociatedObject(_ key: UnsafeRawPointer!, defaultValue: T) -> T {
-        guard let value = objc_getAssociatedObject(self, key) as? T else {
-            return defaultValue
-        }
-        return value
-    }
-}
+extension XCTestCase: Matcha {
 
-extension XCTestCase: Matcha, PropertyStoring {
-
-    typealias T = UIWindow
-    
-    private struct CustomProperties {
-        static var window = UIApplication.shared.keyWindow!
-    }
-    
     private var window : UIWindow {
         get {
-            return getAssociatedObject(&CustomProperties.window, defaultValue: CustomProperties.window)
+            return UIApplication.shared.keyWindow!
         }
     }
     
