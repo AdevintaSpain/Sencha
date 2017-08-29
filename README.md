@@ -1,5 +1,5 @@
 #  Matcha
-**The tea cool people drink**
+**The tea cool people drink** 🤙
 
 Earl Grey is a great tool to test our iOS apps via instrumental tests. With them, we can mimic user actions like tapping a button, scrolling, or typing. Then, we can assert that a text appears in the screen, a view is visible or invisible, or a button is enabled or not.
 
