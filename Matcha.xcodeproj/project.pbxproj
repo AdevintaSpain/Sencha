@@ -15,6 +15,7 @@
 		4184292D1F56D310004CE40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4184292C1F56D310004CE40E /* Assets.xcassets */; };
 		418429301F56D310004CE40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4184292E1F56D310004CE40E /* LaunchScreen.storyboard */; };
 		418429441F56EA90004CE40E /* MainViewShould.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418429431F56EA90004CE40E /* MainViewShould.swift */; };
+		418429461F56FB0A004CE40E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418429451F56FB0A004CE40E /* DetailViewController.swift */; };
 		419B3B3B1F029F7D00D7BC89 /* MatchaEditTextActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3C1F029F7D00D7BC89 /* MatchaKeyboardActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3D1F029F7D00D7BC89 /* MatchaScrollViewActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +65,7 @@
 		418429391F56E9AC004CE40E /* ExampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4184293D1F56E9AC004CE40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418429431F56EA90004CE40E /* MainViewShould.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewShould.swift; sourceTree = "<group>"; };
+		418429451F56FB0A004CE40E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		41D45E6E1F014FDD00A49B60 /* Matcha.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matcha.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		41D45E701F01543500A49B60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		41D595BB1F02457200CB5F57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				418429251F56D310004CE40E /* AppDelegate.swift */,
 				418429271F56D310004CE40E /* MainViewController.swift */,
+				418429451F56FB0A004CE40E /* DetailViewController.swift */,
 				418429291F56D310004CE40E /* Main.storyboard */,
 				4184292C1F56D310004CE40E /* Assets.xcassets */,
 				4184292E1F56D310004CE40E /* LaunchScreen.storyboard */,
@@ -492,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418429461F56FB0A004CE40E /* DetailViewController.swift in Sources */,
 				418429281F56D310004CE40E /* MainViewController.swift in Sources */,
 				418429261F56D310004CE40E /* AppDelegate.swift in Sources */,
 			);

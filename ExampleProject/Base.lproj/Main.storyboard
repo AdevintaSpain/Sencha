@@ -12,7 +12,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,16 +48,60 @@
                     <connections>
                         <outlet property="editBarButton" destination="TeN-Uv-Jtp" id="H7e-D3-vDR"/>
                         <outlet property="tableView" destination="4HT-OP-vxE" id="o4a-du-fON"/>
+                        <segue destination="wCN-qU-Ss6" kind="show" identifier="DetailViewSegue" id="d9d-VN-NIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1207" y="139"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="OQs-nW-ILz">
+            <objects>
+                <viewController id="wCN-qU-Ss6" customClass="DetailViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rUi-49-s7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="ro0-Dd-P9k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qCF-c5-j0j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a detail view!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28X-di-zDY">
+                                <rect key="frame" x="111" y="94" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvk-6B-uzh">
+                                <rect key="frame" x="101" y="179" width="173" height="30"/>
+                                <state key="normal" title="This is an enabled button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZz-va-XsP">
+                                <rect key="frame" x="104" y="223" width="168" height="30"/>
+                                <state key="normal" title="This is a disabled button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="28X-di-zDY" firstAttribute="top" secondItem="rUi-49-s7f" secondAttribute="bottom" constant="30" id="1Ga-5v-6xl"/>
+                            <constraint firstItem="28X-di-zDY" firstAttribute="centerX" secondItem="qCF-c5-j0j" secondAttribute="centerX" id="BZo-I1-h5N"/>
+                            <constraint firstItem="cvk-6B-uzh" firstAttribute="top" secondItem="28X-di-zDY" secondAttribute="bottom" constant="64" id="KSV-M7-e9m"/>
+                            <constraint firstItem="YZz-va-XsP" firstAttribute="centerX" secondItem="qCF-c5-j0j" secondAttribute="centerX" id="T55-BY-rZA"/>
+                            <constraint firstItem="YZz-va-XsP" firstAttribute="top" secondItem="cvk-6B-uzh" secondAttribute="bottom" constant="14" id="o75-nx-Flz"/>
+                            <constraint firstItem="cvk-6B-uzh" firstAttribute="centerX" secondItem="qCF-c5-j0j" secondAttribute="centerX" id="tF0-zG-X7R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9eT-hC-xq8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgD-jB-IaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Ni-JO-fQA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CsI-lX-C1m" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CsI-lX-C1m" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NCM-8c-ywN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

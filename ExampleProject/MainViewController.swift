@@ -46,7 +46,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: TableViewDelegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "DetailView", sender: self)
+        performSegue(withIdentifier: "DetailViewSegue", sender: self)
     }
 }
 

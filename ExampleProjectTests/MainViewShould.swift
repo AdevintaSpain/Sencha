@@ -7,8 +7,14 @@ import Matcha
 
 class MainViewShould: XCTestCase {
     
+    let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: MainViewController.self))
+    
     override func setUp() {
         super.setUp()
+        
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MainNavigationController")
+        
+        open(viewController: viewController)
     }
     
     func test_be_able_to_assert_the_number_of_rows() {
@@ -23,7 +29,7 @@ class MainViewShould: XCTestCase {
     
     func test_be_able_to_scroll_to_an_offscreen_cell_and_verify_the_content() {
     
-        assertVisible(.text("48"), inScrollableElementWith: .accessibilityID(MainViewController.AccessibilityID.tableView))
+        assertVisible(.text("20"), inScrollableElementWith: .accessibilityID(MainViewController.AccessibilityID.tableView))
     }
     
     func test_be_able_to_tap_elements_and_verify_the_result() {
@@ -31,5 +37,11 @@ class MainViewShould: XCTestCase {
         tap(.text("Edit"))
         
         assertVisible(.text("Edit Mode"))
+    }
+    
+    func test_be_able_to_navigate_to_a_detail_view() {
+        
+        tap(.text("12"), inScrollableElementWith: .accessibilityID(MainViewController.AccessibilityID.tableView))
+        assertVisible(.text("Detail"))
     }
 }
