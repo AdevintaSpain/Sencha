@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,7 +38,17 @@
                             <constraint firstItem="4HT-OP-vxE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xsH-kY-sf5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vt4-nw-lEf"/>
+                    <navigationItem key="navigationItem" id="Vt4-nw-lEf">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="TeN-Uv-Jtp">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="bZC-Ft-1UI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editBarButton" destination="TeN-Uv-Jtp" id="H7e-D3-vDR"/>
+                        <outlet property="tableView" destination="4HT-OP-vxE" id="o4a-du-fON"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
