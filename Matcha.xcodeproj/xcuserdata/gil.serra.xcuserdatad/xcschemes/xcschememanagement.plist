@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ExampleProject.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Matcha.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>418429221F56D310004CE40E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41F1F4DA1F01104100D31B35</key>
 		<dict>
 			<key>primary</key>

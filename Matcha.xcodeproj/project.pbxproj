@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		09BCF6E30F6800CA31F5C5AA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */; };
 		1FDC8A2D753808F3D6A58612 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A73761203B36AC2502E8B3 /* EarlGrey.swift */; };
+		418429261F56D310004CE40E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418429251F56D310004CE40E /* AppDelegate.swift */; };
+		418429281F56D310004CE40E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418429271F56D310004CE40E /* ViewController.swift */; };
+		4184292B1F56D310004CE40E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418429291F56D310004CE40E /* Main.storyboard */; };
+		4184292D1F56D310004CE40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4184292C1F56D310004CE40E /* Assets.xcassets */; };
+		418429301F56D310004CE40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4184292E1F56D310004CE40E /* LaunchScreen.storyboard */; };
 		419B3B3B1F029F7D00D7BC89 /* MatchaEditTextActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E71F01138D00D31B35 /* MatchaEditTextActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3C1F029F7D00D7BC89 /* MatchaKeyboardActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E81F01138D00D31B35 /* MatchaKeyboardActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		419B3B3D1F029F7D00D7BC89 /* MatchaScrollViewActions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 41F1F4E91F01138D00D31B35 /* MatchaScrollViewActions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		418429231F56D310004CE40E /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		418429251F56D310004CE40E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		418429271F56D310004CE40E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4184292A1F56D310004CE40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4184292C1F56D310004CE40E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4184292F1F56D310004CE40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		418429311F56D310004CE40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41D45E6E1F014FDD00A49B60 /* Matcha.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matcha.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		41D45E701F01543500A49B60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		41D595BB1F02457200CB5F57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -62,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		418429201F56D310004CE40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41F1F4D71F01104100D31B35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,12 +93,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		418429241F56D310004CE40E /* ExampleProject */ = {
+			isa = PBXGroup;
+			children = (
+				418429251F56D310004CE40E /* AppDelegate.swift */,
+				418429271F56D310004CE40E /* ViewController.swift */,
+				418429291F56D310004CE40E /* Main.storyboard */,
+				4184292C1F56D310004CE40E /* Assets.xcassets */,
+				4184292E1F56D310004CE40E /* LaunchScreen.storyboard */,
+				418429311F56D310004CE40E /* Info.plist */,
+			);
+			path = ExampleProject;
+			sourceTree = "<group>";
+		};
 		41F1F4D11F01104100D31B35 = {
 			isa = PBXGroup;
 			children = (
 				41D595BB1F02457200CB5F57 /* README.md */,
 				41D45E6E1F014FDD00A49B60 /* Matcha.podspec */,
 				41F1F4DD1F01104100D31B35 /* Matcha */,
+				418429241F56D310004CE40E /* ExampleProject */,
 				41F1F4DC1F01104100D31B35 /* Products */,
 				A7060A3C4DED472335B83B6A /* Pods */,
 				AC62590E832C74351652B6BD /* Frameworks */,
@@ -91,6 +124,7 @@
 			children = (
 				41F1F4DB1F01104100D31B35 /* Matcha.framework */,
 				E8D0CDFCD7D7CCEB19F2BE59 /* EarlGrey.framework */,
+				418429231F56D310004CE40E /* ExampleProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +233,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		418429221F56D310004CE40E /* ExampleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 418429341F56D311004CE40E /* Build configuration list for PBXNativeTarget "ExampleProject" */;
+			buildPhases = (
+				4184291F1F56D310004CE40E /* Sources */,
+				418429201F56D310004CE40E /* Frameworks */,
+				418429211F56D310004CE40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExampleProject;
+			productName = ExampleProject;
+			productReference = 418429231F56D310004CE40E /* ExampleProject.app */;
+			productType = "com.apple.product-type.application";
+		};
 		41F1F4DA1F01104100D31B35 /* Matcha */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41F1F4E31F01104100D31B35 /* Build configuration list for PBXNativeTarget "Matcha" */;
@@ -225,9 +276,15 @@
 		41F1F4D21F01104100D31B35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Schibsted Spain";
 				TargetAttributes = {
+					418429221F56D310004CE40E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = EJ3X4MB8HS;
+						ProvisioningStyle = Automatic;
+					};
 					41F1F4DA1F01104100D31B35 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RCTL45N8E9;
@@ -242,6 +299,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 41F1F4D11F01104100D31B35;
 			productRefGroup = 41F1F4DC1F01104100D31B35 /* Products */;
@@ -249,11 +307,22 @@
 			projectRoot = "";
 			targets = (
 				41F1F4DA1F01104100D31B35 /* Matcha */,
+				418429221F56D310004CE40E /* ExampleProject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		418429211F56D310004CE40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418429301F56D310004CE40E /* LaunchScreen.storyboard in Resources */,
+				4184292D1F56D310004CE40E /* Assets.xcassets in Resources */,
+				4184292B1F56D310004CE40E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41F1F4D91F01104100D31B35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +367,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4184291F1F56D310004CE40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418429281F56D310004CE40E /* ViewController.swift in Sources */,
+				418429261F56D310004CE40E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41F1F4D61F01104100D31B35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,7 +397,52 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		418429291F56D310004CE40E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4184292A1F56D310004CE40E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4184292E1F56D310004CE40E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4184292F1F56D310004CE40E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		418429321F56D311004CE40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EJ3X4MB8HS;
+				INFOPLIST_FILE = ExampleProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.ExampleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		418429331F56D311004CE40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EJ3X4MB8HS;
+				INFOPLIST_FILE = ExampleProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.schibsted.ExampleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		41F1F4E11F01104100D31B35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +600,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		418429341F56D311004CE40E /* Build configuration list for PBXNativeTarget "ExampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418429321F56D311004CE40E /* Debug */,
+				418429331F56D311004CE40E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		41F1F4D51F01104100D31B35 /* Build configuration list for PBXProject "Matcha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
