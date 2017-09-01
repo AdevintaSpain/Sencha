@@ -6,6 +6,8 @@ public protocol MatchaAssertion: EarlGreyHumanizer {
     
     func assertVisible(_ matcher: Matcher, file: StaticString, line: UInt)
     func assertNotVisible(_ matcher: Matcher, file: StaticString, line: UInt)
+    func assertEnabled(_ matcher: Matcher, file: StaticString, line: UInt)
+    func assertDisabled(_ matcher: Matcher, file: StaticString, line: UInt)
 }
 
 public extension MatchaAssertion {
@@ -17,7 +19,7 @@ public extension MatchaAssertion {
             file: file,
             line: line
         ).assert(
-            Matcher.visible.greyMatcher()
+            .visible
         )
     }
 
@@ -28,7 +30,27 @@ public extension MatchaAssertion {
             file: file,
             line: line
         ).assert(
-            Matcher.notVisible.greyMatcher()
+            .notVisible
+        )
+    }
+    
+    func assertEnabled(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        select(
+            matcher: matcher,
+            file: file,
+            line: line
+        ).assert(
+            .enabled
+        )
+    }
+    
+    func assertDisabled(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        select(
+            matcher: matcher,
+            file: file,
+            line: line
+        ).assert(
+            .not(.enabled)
         )
     }
 }
