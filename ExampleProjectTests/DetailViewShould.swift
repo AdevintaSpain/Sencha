@@ -15,6 +15,7 @@ class ViewDetailShould: XCTestCase {
     }
     
     func test_show_one_enabled_button_and_one_disabled_button() {
-        
+        assertEnabled(.text("This is an enabled button"))
+        assertDisabled(.text("This is a disabled button"))
     }
 }
