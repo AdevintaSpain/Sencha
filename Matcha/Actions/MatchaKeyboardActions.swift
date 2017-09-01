@@ -12,10 +12,10 @@ public extension MatchaKeyboardActions {
     
     func tapKeyboardReturnKey(file: StaticString = #file, line: UInt = #line) {
         
-        let matchers = Matcher.allOf(
+        let matchers: Matcher = .allOf(
             [
-                Matcher.firstResponder,
-                Matcher.class(UITextField.self)
+                .firstResponder,
+                .class(UITextField.self)
             ]
         )
         let newLineCharacter = "\n"

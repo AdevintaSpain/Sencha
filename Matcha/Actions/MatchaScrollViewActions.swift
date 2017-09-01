@@ -43,11 +43,11 @@ public extension MatchaScrollViewActions {
             line: line
         ).usingSearch(
             grey_scrollInDirection(GREYDirection.down, CGFloat(distance)),
-            onElementWith: grey_allOf([
-                scrollMatcher.greyMatcher(),
-                Matcher.visible.greyMatcher()
+            onElementWith: Matcher.allOf([
+                    scrollMatcher,
+                    .visible
                 ]
-            )
+            ).greyMatcher()
         )
     }
 }

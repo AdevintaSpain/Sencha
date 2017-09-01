@@ -19,7 +19,7 @@ public extension MatchaScrollableAssertion {
             file: file,
             line: line
         ).assert(
-            Matcher.visible.greyMatcher()
+            .visible
         )
     }
     
@@ -31,7 +31,7 @@ public extension MatchaScrollableAssertion {
             file: file,
             line: line
         ).assert(
-            Matcher.allOf([matcher, Matcher.notVisible]).greyMatcher()
+            .allOf([matcher, .notVisible])
         )
     }
 }
