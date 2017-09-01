@@ -58,7 +58,7 @@
         <!--Detail View Controller-->
         <scene sceneID="OQs-nW-ILz">
             <objects>
-                <viewController id="wCN-qU-Ss6" customClass="DetailViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="wCN-qU-Ss6" customClass="DetailViewController" customModule="ExampleProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rUi-49-s7f"/>
                         <viewControllerLayoutGuide type="bottom" id="ro0-Dd-P9k"/>
