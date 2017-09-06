@@ -23,7 +23,7 @@ Benefits of using EarlGrey (via Matcha) over other UI testing libraries:
 
 EarlGrey [installation instructions](https://github.com/google/EarlGrey/blob/master/docs/install-and-run.md) are unconventional to say the least. They require you to install a gem that, in turn, monkey patches your local cocoapods gem (!) to perform some changes every time a `pod install` is invoked in your system. 
 
-We have found that there is no need to do that, and that's why in order to install Matcha (and with it, EarlGrey) you only need to add the following line to your Podfile: 
+We have found that there is no need to do that, and that's why in order to install Matcha (and with it, EarlGrey) you only need to create a **unit test** target and add the following line to your Podfile under the dependencies of your new target: 
 
 ```
 pod 'Matcha', '~> 1.0'
