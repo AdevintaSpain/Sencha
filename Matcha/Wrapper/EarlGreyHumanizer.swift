@@ -55,12 +55,12 @@ public indirect enum Matcher {
 
 public protocol EarlGreyHumanizer {
     
-    func select(matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
+    func select(_ matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
 }
 
 public extension EarlGreyHumanizer {
     
-    func select(matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
+    func select(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
     
         return EarlGrey.select(
             elementWithMatcher: matcher.greyMatcher(),

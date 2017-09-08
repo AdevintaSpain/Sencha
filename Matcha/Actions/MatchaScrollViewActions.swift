@@ -38,7 +38,7 @@ public extension MatchaScrollViewActions {
     @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
         
         return select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).usingSearch(

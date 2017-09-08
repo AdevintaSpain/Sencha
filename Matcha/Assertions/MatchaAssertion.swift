@@ -15,7 +15,7 @@ public extension MatchaAssertion {
     func assertVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).assert(
@@ -26,7 +26,7 @@ public extension MatchaAssertion {
     func assertNotVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).assert(
@@ -36,7 +36,7 @@ public extension MatchaAssertion {
     
     func assertEnabled(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).assert(
@@ -46,7 +46,7 @@ public extension MatchaAssertion {
     
     func assertDisabled(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).assert(
