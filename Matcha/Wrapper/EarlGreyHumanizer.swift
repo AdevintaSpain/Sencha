@@ -15,6 +15,7 @@ public indirect enum Matcher {
     case allOf([Matcher])
     case anyOf([Matcher])
     case firstElement
+    case firstElementWith(Matcher)
     case enabled
     case userInteractionEnabled
     
@@ -42,6 +43,8 @@ public indirect enum Matcher {
             return grey_anyOf(matchers.map{$0.greyMatcher()})
         case .firstElement:
             return CustomMatcher.firstElementMatcher()
+        case .firstElementWith(let matcher):
+            return grey_allOf([matcher.greyMatcher(), Matcher.firstElement.greyMatcher()])
         case .enabled:
             return grey_enabled()
         case .userInteractionEnabled:
