@@ -35,7 +35,6 @@ class MainViewShould: XCTestCase {
     func test_be_able_to_tap_elements_and_verify_the_result() {
     
         tap(.text("Edit"))
-        
         assertVisible(.text("Edit Mode"))
     }
     

@@ -37,7 +37,7 @@ class ViewDetailShould: XCTestCase {
          are multiple elements, but we don't care as long as the text exists.
         */
         assertVisible(
-            .allOf([.text("I am typing stuff!!"), .firstElement])
+            .firstElementWith(.text("I am typing stuff!!"))
         )
 
         /*
@@ -45,7 +45,7 @@ class ViewDetailShould: XCTestCase {
          and assert functions:
         */
         select(
-            matcher: .accessibilityID(DetailViewController.AccessibilityID.textField)
+            .accessibilityID(DetailViewController.AccessibilityID.textField)
         ).assert(
             .text("I am typing stuff!!")
         )
