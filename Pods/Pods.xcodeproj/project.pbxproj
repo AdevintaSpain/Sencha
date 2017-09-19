@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25169B23FBA25367F44E59629138F5D3 /* MatchaScrollingAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A4C0194D0820D4999E5BE12D09AFF5 /* MatchaScrollingAssertion.swift */; };
 		253745A5C51EA24A8C543F4CE59F93C8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBDD60AB5EC0183A198A13D9A5D7BCE /* XCTest.framework */; };
-		278F064B76586627C4754264025A0B9F /* MatchaScrollViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89301797C8EF945275D5EE15F7DB43DE /* MatchaScrollViewActions.swift */; };
-		2865E27B7E9C82AF0D0A5BDF830E8F7E /* Matcha-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CCF1B74225B66FE52B8D7F069A4948 /* Matcha-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D83169BAEC2B90E09C3DAC37AB8F4EF /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D56999FADE4094DC35E14E5B0382B93 /* EarlGrey.swift */; };
-		5AD4F27ECE57BF24335ABC8D9D7FFD9D /* EarlGreyHumanizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD23C9A9696911B9476C20D49FB53F /* EarlGreyHumanizer.swift */; };
-		6218B2BD43BF78250BA51C30B996D18F /* MatchaAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B476BFF19412998DAFF8CF355E3E61FF /* MatchaAssertion.swift */; };
-		63519EFAD45EE321E271C2C5F2C11FE2 /* MatchaEditTextActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92F9D563CC20074CE12129C7511467 /* MatchaEditTextActions.swift */; };
-		6497E634ECB246F8D91F04334C87E66F /* MatchaTapActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79BA8A23C50ADF8D20482E70F72F72 /* MatchaTapActions.swift */; };
-		6C109EAEE0DDA7FCBE04DD8F7E36F715 /* XCTestCase+Matcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5722F01237E3F8F867E52621F6AE1 /* XCTestCase+Matcha.swift */; };
+		25DC4CF2D493282E02CA783FF13BF7ED /* CustomMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E606D6B5152B5773FC2E79D43D25B8C /* CustomMatcher.swift */; };
+		2865E27B7E9C82AF0D0A5BDF830E8F7E /* Matcha-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAA7824CA5DBF1B3A5E1829E603399C /* Matcha-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3242BDCE94223E559982F42E2073A40B /* UIWindow+UITestWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245092611FC307C9173A6C3405FEA93F /* UIWindow+UITestWindow.swift */; };
+		3ADD06EAAE1C65A287C2C410DFE46608 /* XCTestCase+Matcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518DA1EB9A63E7CB7D19E6450B5AC354 /* XCTestCase+Matcha.swift */; };
+		435E07D0FA3349F2AAD30BD861AA463A /* MatchaScrollViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D3A3408399906E0E2A47F57FC8BF42 /* MatchaScrollViewActions.swift */; };
+		4A6027E64D976BE4FD5DA01BD8882721 /* MatchaEditTextActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38181C0626912A621BDABD5E0E2A00F4 /* MatchaEditTextActions.swift */; };
+		573257E2D568B22E5243034D8E8A1A78 /* MatchaKeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA3FB9882F40B1A5CE1B0E495B0F404 /* MatchaKeyboardActions.swift */; };
 		6D5CA9F9FEE00010BF398886CFA49322 /* Pods-Matcha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B6A362D299EBC1F93E57FF80B0217D /* Pods-Matcha-dummy.m */; };
 		79075D4706A62417B89BB30FE2AC6AA5 /* Pods-Matcha-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B36E282983DC011E917DC83BB2827607 /* Pods-Matcha-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FC53FCCE473931CCF5627533AD864F3 /* MatchaKeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F356211A836FFAF0824C1ABCE8C63 /* MatchaKeyboardActions.swift */; };
-		8C8F56F243D67404B5E825BFAF0C890F /* MatchaTableViewAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB906E6AF31F730CFD97C1A39D8D4558 /* MatchaTableViewAssertions.swift */; };
+		84076C9CB001688423B0923280B05FD8 /* EarlGreyHumanizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB34046A9983EFF70492C4ABA4041D /* EarlGreyHumanizer.swift */; };
+		889860E55DFF3D8E4001DBA029E84A6B /* MatchaScrollingAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C02DD2926CAE1FC71FA3330C3934B /* MatchaScrollingAssertion.swift */; };
+		92A38FE6ACA6E529ED53FCC7D5224DC4 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD10DD69F87D866A4A0F1E28E66E6FFC /* EarlGrey.swift */; };
 		B5521280F0FDDB10441CDEE42E826477 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */; };
-		B553EB84380A3E64BFC2900D5CB816DD /* Matcha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5443EF55C02218DF6B0EF50E4C33569 /* Matcha-dummy.m */; };
-		B7A32F47E5B8C9585A5604CCB2E99531 /* UIWindow+UITestWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D943B7220AA84CDD386751634018 /* UIWindow+UITestWindow.swift */; };
-		C7D156547048C8B99E9CD2D63BABFDA5 /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = F39B6FB0AB3EEDF82718C3B9FF8F2F63 /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2AF0BF306CFDCB7D23724803778CEA5 /* Matcha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56716140431851468205E2FEEDB84500 /* Matcha-dummy.m */; };
+		C7D156547048C8B99E9CD2D63BABFDA5 /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = C428CC50D43254E1376CBAB795C8782B /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D952E44BC282E09BC1C9435BDD97A812 /* MatchaTapActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105C07FE3C5C6D0821059CF637BF963 /* MatchaTapActions.swift */; };
 		E06EBE5AC378185FD39A7764F3F1A8E9 /* Pods-ExampleProjectTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5FF8876AB743FB2872F72CB1E0044 /* Pods-ExampleProjectTests-dummy.m */; };
+		E33D172C58186F4A943B0912FBC60ECC /* MatchaTableViewAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E1060E09FB0FE00CBF4E61F5B95964 /* MatchaTableViewAssertions.swift */; };
 		E766BBA01F06DFD37293C2446B319965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */; };
+		E86A95D89F53C3E28114148B13D290A0 /* MatchaAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19CDD7220BE280768F718012646259 /* MatchaAssertion.swift */; };
 		F4D280A2EF67C444E3C82F406B0A1F0A /* Pods-ExampleProjectTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C840D6D76EE94456D5044F0FD4C37EA8 /* Pods-ExampleProjectTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5D172B4C7D1A7E0506B5AFB0BBEB16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */; };
-		FEF9BA6D9C12FBC1321429D3FA8DBF30 /* CustomMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C7BEEDE095CBD242C626B65226915B /* CustomMatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,49 +43,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1401FB2A65181B3AA9999E30941DD62C /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = EarlGrey/EarlGrey.framework; sourceTree = "<group>"; };
-		15CCF1B74225B66FE52B8D7F069A4948 /* Matcha-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matcha-umbrella.h"; sourceTree = "<group>"; };
-		1B79BA8A23C50ADF8D20482E70F72F72 /* MatchaTapActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaTapActions.swift; path = Matcha/Actions/MatchaTapActions.swift; sourceTree = "<group>"; };
+		08E1060E09FB0FE00CBF4E61F5B95964 /* MatchaTableViewAssertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaTableViewAssertions.swift; sourceTree = "<group>"; };
 		20E921DC6B3D713D08E895AE28FA6CED /* Pods-Matcha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matcha.debug.xcconfig"; sourceTree = "<group>"; };
+		245092611FC307C9173A6C3405FEA93F /* UIWindow+UITestWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIWindow+UITestWindow.swift"; sourceTree = "<group>"; };
 		2EE51DFD96871897FDF80336B60B2F4D /* Pods-ExampleProjectTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleProjectTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		327DE791176714190B228501AF348F6B /* Pods_Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Matcha.framework; path = "Pods-Matcha.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		360ACA4CEA1700C0A10C94F07A808822 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = EarlGrey/EarlGrey.framework; sourceTree = "<group>"; };
+		38181C0626912A621BDABD5E0E2A00F4 /* MatchaEditTextActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaEditTextActions.swift; sourceTree = "<group>"; };
+		3BAA7824CA5DBF1B3A5E1829E603399C /* Matcha-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matcha-umbrella.h"; sourceTree = "<group>"; };
 		3FBDD60AB5EC0183A198A13D9A5D7BCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4208C46BC7BDE4BD1A809E00A8E0943F /* Pods-ExampleProjectTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExampleProjectTests.modulemap"; sourceTree = "<group>"; };
-		4AF5722F01237E3F8F867E52621F6AE1 /* XCTestCase+Matcha.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XCTestCase+Matcha.swift"; path = "Matcha/Extensions/XCTestCase+Matcha.swift"; sourceTree = "<group>"; };
+		46A2042511699D767F0DF01DB409979D /* Matcha.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Matcha.modulemap; sourceTree = "<group>"; };
+		518DA1EB9A63E7CB7D19E6450B5AC354 /* XCTestCase+Matcha.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Matcha.swift"; sourceTree = "<group>"; };
 		544562AE2F380C43F983381B68ECB5BB /* Pods-ExampleProjectTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleProjectTests-resources.sh"; sourceTree = "<group>"; };
+		56716140431851468205E2FEEDB84500 /* Matcha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Matcha-dummy.m"; sourceTree = "<group>"; };
+		5E606D6B5152B5773FC2E79D43D25B8C /* CustomMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomMatcher.swift; sourceTree = "<group>"; };
 		610075281859A67FD7E313AAEA27A3BC /* Matcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Matcha.framework; path = Matcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA3FB9882F40B1A5CE1B0E495B0F404 /* MatchaKeyboardActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaKeyboardActions.swift; sourceTree = "<group>"; };
+		70D425E6BEDC76F313F73A2225DD1CC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73F227D24E17A855A9FCB19E4348F931 /* Matcha-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matcha-prefix.pch"; sourceTree = "<group>"; };
 		86A81CD1675D4AD7CC5F01FCC5302274 /* Pods-Matcha-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Matcha-resources.sh"; sourceTree = "<group>"; };
-		89301797C8EF945275D5EE15F7DB43DE /* MatchaScrollViewActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaScrollViewActions.swift; path = Matcha/Actions/MatchaScrollViewActions.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94B6A362D299EBC1F93E57FF80B0217D /* Pods-Matcha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Matcha-dummy.m"; sourceTree = "<group>"; };
-		95C7BEEDE095CBD242C626B65226915B /* CustomMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomMatcher.swift; path = Matcha/Matchers/CustomMatcher.swift; sourceTree = "<group>"; };
-		9D56999FADE4094DC35E14E5B0382B93 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EarlGrey.swift; path = Matcha/EarlGrey.swift; sourceTree = "<group>"; };
-		9E92F9D563CC20074CE12129C7511467 /* MatchaEditTextActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaEditTextActions.swift; path = Matcha/Actions/MatchaEditTextActions.swift; sourceTree = "<group>"; };
 		9F65B842E4117EF1D5AC43789E4E0D80 /* Pods-Matcha-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Matcha-acknowledgements.plist"; sourceTree = "<group>"; };
-		A70C1C0304357948CD4687EAD10DF637 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA82D943B7220AA84CDD386751634018 /* UIWindow+UITestWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+UITestWindow.swift"; path = "Matcha/Extensions/UIWindow+UITestWindow.swift"; sourceTree = "<group>"; };
-		ACBAC3743DF0B8351E0A0D997EB0ED02 /* Matcha-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matcha-prefix.pch"; sourceTree = "<group>"; };
-		B21F356211A836FFAF0824C1ABCE8C63 /* MatchaKeyboardActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaKeyboardActions.swift; path = Matcha/Actions/MatchaKeyboardActions.swift; sourceTree = "<group>"; };
+		AD10DD69F87D866A4A0F1E28E66E6FFC /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EarlGrey.swift; path = Matcha/EarlGrey.swift; sourceTree = "<group>"; };
 		B36E282983DC011E917DC83BB2827607 /* Pods-Matcha-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Matcha-umbrella.h"; sourceTree = "<group>"; };
-		B476BFF19412998DAFF8CF355E3E61FF /* MatchaAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaAssertion.swift; path = Matcha/Assertions/MatchaAssertion.swift; sourceTree = "<group>"; };
 		B9608FB83F11F4FDD19A159F636B23C2 /* Pods-Matcha.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Matcha.modulemap"; sourceTree = "<group>"; };
-		BA5A0C1AFC6C6513699EF0A381C558F5 /* Matcha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Matcha.xcconfig; sourceTree = "<group>"; };
+		BC7FA3532660DC4F27F4C3AE381A95B0 /* Matcha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Matcha.xcconfig; sourceTree = "<group>"; };
 		BCEDA0B7CDA7302C15A87BDCD99DF3E0 /* Pods-ExampleProjectTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleProjectTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C22C02DD2926CAE1FC71FA3330C3934B /* MatchaScrollingAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaScrollingAssertion.swift; sourceTree = "<group>"; };
+		C428CC50D43254E1376CBAB795C8782B /* Matcha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Matcha.h; path = Matcha/Matcha.h; sourceTree = "<group>"; };
 		C840D6D76EE94456D5044F0FD4C37EA8 /* Pods-ExampleProjectTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleProjectTests-umbrella.h"; sourceTree = "<group>"; };
 		CA2AF09C7DD988116835909909B86206 /* Pods-Matcha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matcha.release.xcconfig"; sourceTree = "<group>"; };
-		CBBD23C9A9696911B9476C20D49FB53F /* EarlGreyHumanizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EarlGreyHumanizer.swift; path = Matcha/Wrapper/EarlGreyHumanizer.swift; sourceTree = "<group>"; };
+		CC19CDD7220BE280768F718012646259 /* MatchaAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaAssertion.swift; sourceTree = "<group>"; };
 		CE8CEF2B2AEEFF4ACF759BE5ACE88927 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC5FF8876AB743FB2872F72CB1E0044 /* Pods-ExampleProjectTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleProjectTests-dummy.m"; sourceTree = "<group>"; };
 		CF3B011C5D2B0EBA217C3A93DC80F03C /* Pods_ExampleProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleProjectTests.framework; path = "Pods-ExampleProjectTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4CB34046A9983EFF70492C4ABA4041D /* EarlGreyHumanizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGreyHumanizer.swift; sourceTree = "<group>"; };
 		D8AD3837005DEFDE11BF1EB880E3D362 /* Pods-ExampleProjectTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleProjectTests-frameworks.sh"; sourceTree = "<group>"; };
 		E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E6D3A3408399906E0E2A47F57FC8BF42 /* MatchaScrollViewActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaScrollViewActions.swift; sourceTree = "<group>"; };
 		ECF34F2FBF7119C1A79E706F1658E305 /* Pods-Matcha-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Matcha-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EEDDFF77AEECF4CFA79E86C50FD671FB /* Matcha.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Matcha.modulemap; sourceTree = "<group>"; };
-		F39B6FB0AB3EEDF82718C3B9FF8F2F63 /* Matcha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Matcha.h; path = Matcha/Matcha.h; sourceTree = "<group>"; };
+		F105C07FE3C5C6D0821059CF637BF963 /* MatchaTapActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchaTapActions.swift; sourceTree = "<group>"; };
 		F5040560D9859821382407D88982C57B /* Pods-ExampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		F5443EF55C02218DF6B0EF50E4C33569 /* Matcha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Matcha-dummy.m"; sourceTree = "<group>"; };
-		F5A4C0194D0820D4999E5BE12D09AFF5 /* MatchaScrollingAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaScrollingAssertion.swift; path = Matcha/Assertions/MatchaScrollingAssertion.swift; sourceTree = "<group>"; };
-		FB906E6AF31F730CFD97C1A39D8D4558 /* MatchaTableViewAssertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchaTableViewAssertions.swift; path = Matcha/Assertions/MatchaTableViewAssertions.swift; sourceTree = "<group>"; };
 		FE5E361E72B28AAFBA42F53B528BC4FC /* Pods-ExampleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF145A5DB9E548FD922A2EF80D1A7FC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0835BCB13E09235F999AF8DD8A1EE029 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E4324F15200446DFC05780A204B3D03 /* EarlGrey */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1C87CD2DADDE78A8F26B40179955683D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +155,61 @@
 			path = "Target Support Files/Pods-ExampleProjectTests";
 			sourceTree = "<group>";
 		};
+		3451391EF88B6DE45CBECCADE541029C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				360ACA4CEA1700C0A10C94F07A808822 /* EarlGrey.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39D800276400EDA00A41D1807DF88B04 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70D425E6BEDC76F313F73A2225DD1CC0 /* Info.plist */,
+				46A2042511699D767F0DF01DB409979D /* Matcha.modulemap */,
+				BC7FA3532660DC4F27F4C3AE381A95B0 /* Matcha.xcconfig */,
+				56716140431851468205E2FEEDB84500 /* Matcha-dummy.m */,
+				73F227D24E17A855A9FCB19E4348F931 /* Matcha-prefix.pch */,
+				3BAA7824CA5DBF1B3A5E1829E603399C /* Matcha-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/Matcha";
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7BE34EE7067F7CC8A54539A282682749 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		490C969970FD2DB32D286F743A467D59 /* Assertions */ = {
+			isa = PBXGroup;
+			children = (
+				CC19CDD7220BE280768F718012646259 /* MatchaAssertion.swift */,
+				C22C02DD2926CAE1FC71FA3330C3934B /* MatchaScrollingAssertion.swift */,
+				08E1060E09FB0FE00CBF4E61F5B95964 /* MatchaTableViewAssertions.swift */,
+			);
+			name = Assertions;
+			path = Matcha/Assertions;
+			sourceTree = "<group>";
+		};
+		4AA49E1726843253FE2959F562FD6965 /* Matcha */ = {
+			isa = PBXGroup;
+			children = (
+				AD10DD69F87D866A4A0F1E28E66E6FFC /* EarlGrey.swift */,
+				C428CC50D43254E1376CBAB795C8782B /* Matcha.h */,
+				C35792C063BBAB99DCD30BE0AAF663B9 /* Actions */,
+				490C969970FD2DB32D286F743A467D59 /* Assertions */,
+				A8CCD9FCAAB9643048458CB98505A5C8 /* Extensions */,
+				7853C11DAEA00EA19EB25B5A8052B4E9 /* Matchers */,
+				39D800276400EDA00A41D1807DF88B04 /* Support Files */,
+				F4EDFF081D99E78D3C362A50DD9CBD65 /* Wrapper */,
+			);
+			name = Matcha;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5748E4E00B71D0D8EDFFCD7B730960A8 /* Targets Support Files */ = {
@@ -164,21 +221,13 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		742F9CBF13273886F5CAD950A0D4D6DF /* EarlGrey */ = {
+		7853C11DAEA00EA19EB25B5A8052B4E9 /* Matchers */ = {
 			isa = PBXGroup;
 			children = (
-				76FC3A12DD18F99306A25AA0E066E518 /* Frameworks */,
+				5E606D6B5152B5773FC2E79D43D25B8C /* CustomMatcher.swift */,
 			);
-			name = EarlGrey;
-			path = EarlGrey;
-			sourceTree = "<group>";
-		};
-		76FC3A12DD18F99306A25AA0E066E518 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1401FB2A65181B3AA9999E30941DD62C /* EarlGrey.framework */,
-			);
-			name = Frameworks;
+			name = Matchers;
+			path = Matcha/Matchers;
 			sourceTree = "<group>";
 		};
 		7BC39AC6FFB13DEE02B942A4B7D90C5F /* Pods-Matcha */ = {
@@ -211,56 +260,60 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				CB29C2071BDD09FCFEEB6F3E507B07A7 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				FE73E86496DB14669B52D2B9702107EA /* Pods */,
+				0835BCB13E09235F999AF8DD8A1EE029 /* Pods */,
 				1C87CD2DADDE78A8F26B40179955683D /* Products */,
 				5748E4E00B71D0D8EDFFCD7B730960A8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B29D03523A6CEEE3F48EA43EB0CCE9E /* Support Files */ = {
+		7E4324F15200446DFC05780A204B3D03 /* EarlGrey */ = {
 			isa = PBXGroup;
 			children = (
-				A70C1C0304357948CD4687EAD10DF637 /* Info.plist */,
-				EEDDFF77AEECF4CFA79E86C50FD671FB /* Matcha.modulemap */,
-				BA5A0C1AFC6C6513699EF0A381C558F5 /* Matcha.xcconfig */,
-				F5443EF55C02218DF6B0EF50E4C33569 /* Matcha-dummy.m */,
-				ACBAC3743DF0B8351E0A0D997EB0ED02 /* Matcha-prefix.pch */,
-				15CCF1B74225B66FE52B8D7F069A4948 /* Matcha-umbrella.h */,
+				3451391EF88B6DE45CBECCADE541029C /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Matcha";
+			name = EarlGrey;
+			path = EarlGrey;
 			sourceTree = "<group>";
 		};
-		C0070C420DB9E35351C193049A6B3704 /* Matcha */ = {
+		A8CCD9FCAAB9643048458CB98505A5C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				95C7BEEDE095CBD242C626B65226915B /* CustomMatcher.swift */,
-				9D56999FADE4094DC35E14E5B0382B93 /* EarlGrey.swift */,
-				CBBD23C9A9696911B9476C20D49FB53F /* EarlGreyHumanizer.swift */,
-				F39B6FB0AB3EEDF82718C3B9FF8F2F63 /* Matcha.h */,
-				B476BFF19412998DAFF8CF355E3E61FF /* MatchaAssertion.swift */,
-				9E92F9D563CC20074CE12129C7511467 /* MatchaEditTextActions.swift */,
-				B21F356211A836FFAF0824C1ABCE8C63 /* MatchaKeyboardActions.swift */,
-				F5A4C0194D0820D4999E5BE12D09AFF5 /* MatchaScrollingAssertion.swift */,
-				89301797C8EF945275D5EE15F7DB43DE /* MatchaScrollViewActions.swift */,
-				FB906E6AF31F730CFD97C1A39D8D4558 /* MatchaTableViewAssertions.swift */,
-				1B79BA8A23C50ADF8D20482E70F72F72 /* MatchaTapActions.swift */,
-				AA82D943B7220AA84CDD386751634018 /* UIWindow+UITestWindow.swift */,
-				4AF5722F01237E3F8F867E52621F6AE1 /* XCTestCase+Matcha.swift */,
-				8B29D03523A6CEEE3F48EA43EB0CCE9E /* Support Files */,
+				245092611FC307C9173A6C3405FEA93F /* UIWindow+UITestWindow.swift */,
+				518DA1EB9A63E7CB7D19E6450B5AC354 /* XCTestCase+Matcha.swift */,
 			);
-			name = Matcha;
-			path = Matcha;
+			name = Extensions;
+			path = Matcha/Extensions;
 			sourceTree = "<group>";
 		};
-		FE73E86496DB14669B52D2B9702107EA /* Pods */ = {
+		C35792C063BBAB99DCD30BE0AAF663B9 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				742F9CBF13273886F5CAD950A0D4D6DF /* EarlGrey */,
-				C0070C420DB9E35351C193049A6B3704 /* Matcha */,
+				38181C0626912A621BDABD5E0E2A00F4 /* MatchaEditTextActions.swift */,
+				6BA3FB9882F40B1A5CE1B0E495B0F404 /* MatchaKeyboardActions.swift */,
+				E6D3A3408399906E0E2A47F57FC8BF42 /* MatchaScrollViewActions.swift */,
+				F105C07FE3C5C6D0821059CF637BF963 /* MatchaTapActions.swift */,
 			);
-			name = Pods;
+			name = Actions;
+			path = Matcha/Actions;
+			sourceTree = "<group>";
+		};
+		CB29C2071BDD09FCFEEB6F3E507B07A7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AA49E1726843253FE2959F562FD6965 /* Matcha */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F4EDFF081D99E78D3C362A50DD9CBD65 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				D4CB34046A9983EFF70492C4ABA4041D /* EarlGreyHumanizer.swift */,
+			);
+			name = Wrapper;
+			path = Matcha/Wrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +369,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19391FCAAC146CC5A67B2615DA0AB7AE /* Build configuration list for PBXNativeTarget "Matcha" */;
 			buildPhases = (
-				D17070FB232BCE239E0AA9500B20716B /* Sources */,
+				EB0A4FE05E5C97A670520B54DF9313FD /* Sources */,
 				73627AEE1B7103F68F3F723176F59906 /* Frameworks */,
 				708B07DFA2757F0F69F923F979860431 /* Headers */,
 			);
@@ -383,31 +436,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D17070FB232BCE239E0AA9500B20716B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEF9BA6D9C12FBC1321429D3FA8DBF30 /* CustomMatcher.swift in Sources */,
-				4D83169BAEC2B90E09C3DAC37AB8F4EF /* EarlGrey.swift in Sources */,
-				5AD4F27ECE57BF24335ABC8D9D7FFD9D /* EarlGreyHumanizer.swift in Sources */,
-				B553EB84380A3E64BFC2900D5CB816DD /* Matcha-dummy.m in Sources */,
-				6218B2BD43BF78250BA51C30B996D18F /* MatchaAssertion.swift in Sources */,
-				63519EFAD45EE321E271C2C5F2C11FE2 /* MatchaEditTextActions.swift in Sources */,
-				7FC53FCCE473931CCF5627533AD864F3 /* MatchaKeyboardActions.swift in Sources */,
-				25169B23FBA25367F44E59629138F5D3 /* MatchaScrollingAssertion.swift in Sources */,
-				278F064B76586627C4754264025A0B9F /* MatchaScrollViewActions.swift in Sources */,
-				8C8F56F243D67404B5E825BFAF0C890F /* MatchaTableViewAssertions.swift in Sources */,
-				6497E634ECB246F8D91F04334C87E66F /* MatchaTapActions.swift in Sources */,
-				B7A32F47E5B8C9585A5604CCB2E99531 /* UIWindow+UITestWindow.swift in Sources */,
-				6C109EAEE0DDA7FCBE04DD8F7E36F715 /* XCTestCase+Matcha.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D1D324431DE0337B4045DC4DF031D04E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6D5CA9F9FEE00010BF398886CFA49322 /* Pods-Matcha-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB0A4FE05E5C97A670520B54DF9313FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25DC4CF2D493282E02CA783FF13BF7ED /* CustomMatcher.swift in Sources */,
+				92A38FE6ACA6E529ED53FCC7D5224DC4 /* EarlGrey.swift in Sources */,
+				84076C9CB001688423B0923280B05FD8 /* EarlGreyHumanizer.swift in Sources */,
+				C2AF0BF306CFDCB7D23724803778CEA5 /* Matcha-dummy.m in Sources */,
+				E86A95D89F53C3E28114148B13D290A0 /* MatchaAssertion.swift in Sources */,
+				4A6027E64D976BE4FD5DA01BD8882721 /* MatchaEditTextActions.swift in Sources */,
+				573257E2D568B22E5243034D8E8A1A78 /* MatchaKeyboardActions.swift in Sources */,
+				889860E55DFF3D8E4001DBA029E84A6B /* MatchaScrollingAssertion.swift in Sources */,
+				435E07D0FA3349F2AAD30BD861AA463A /* MatchaScrollViewActions.swift in Sources */,
+				E33D172C58186F4A943B0912FBC60ECC /* MatchaTableViewAssertions.swift in Sources */,
+				D952E44BC282E09BC1C9435BDD97A812 /* MatchaTapActions.swift in Sources */,
+				3242BDCE94223E559982F42E2073A40B /* UIWindow+UITestWindow.swift in Sources */,
+				3ADD06EAAE1C65A287C2C410DFE46608 /* XCTestCase+Matcha.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +476,55 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
 		28FE344D6FF2C2E958715B1802CF0607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5040560D9859821382407D88982C57B /* Pods-ExampleProjectTests.release.xcconfig */;
@@ -460,41 +562,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		29C5581A440C7136FDA98371499070D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA5A0C1AFC6C6513699EF0A381C558F5 /* Matcha.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Matcha/Matcha-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Matcha/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Matcha/Matcha.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Matcha;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -540,9 +607,9 @@
 			};
 			name = Release;
 		};
-		6472F6C1ED7C9E683351828C0949D32C /* Release */ = {
+		B7889486A0A170EF288C4CA0113E71EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA5A0C1AFC6C6513699EF0A381C558F5 /* Matcha.xcconfig */;
+			baseConfigurationReference = BC7FA3532660DC4F27F4C3AE381A95B0 /* Matcha.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -566,6 +633,7 @@
 				PRODUCT_NAME = Matcha;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -610,51 +678,38 @@
 			};
 			name = Debug;
 		};
-		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
+		CC28D859C6CBA44BCDC214F3E3F6AB63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC7FA3532660DC4F27F4C3AE381A95B0 /* Matcha.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Matcha/Matcha-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Matcha/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Matcha/Matcha.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Matcha;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -739,8 +794,8 @@
 		19391FCAAC146CC5A67B2615DA0AB7AE /* Build configuration list for PBXNativeTarget "Matcha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29C5581A440C7136FDA98371499070D0 /* Debug */,
-				6472F6C1ED7C9E683351828C0949D32C /* Release */,
+				CC28D859C6CBA44BCDC214F3E3F6AB63 /* Debug */,
+				B7889486A0A170EF288C4CA0113E71EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -757,7 +812,7 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C104F7F091290C3D1E248192F07FE689 /* Debug */,
+				1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */,
 				34FE9531DA9AF2820790339988D5FF41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

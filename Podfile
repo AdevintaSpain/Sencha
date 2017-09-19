@@ -13,6 +13,6 @@ end
 
 target 'ExampleProjectTests' do
 
-    pod 'Matcha'
+    pod 'Matcha', :path => '.'
     
 end
