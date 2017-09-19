@@ -37,3 +37,7 @@ scripts/reports-publisher
 
 # Bundler
 vendor/
+
+# Cocoapods
+Pods/
+Podfile.lock
