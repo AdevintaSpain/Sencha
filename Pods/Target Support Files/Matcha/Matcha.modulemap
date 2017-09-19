@@ -1,6 +1,0 @@
-framework module Matcha {
-  umbrella header "Matcha-umbrella.h"
-
-  export *
-  module * { export * }
-}
