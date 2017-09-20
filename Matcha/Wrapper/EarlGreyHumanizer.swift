@@ -15,6 +15,7 @@ public indirect enum Matcher {
     case allOf([Matcher])
     case anyOf([Matcher])
     case firstElement
+    case firstElementWith(Matcher)
     case enabled
     case userInteractionEnabled
     
@@ -42,6 +43,8 @@ public indirect enum Matcher {
             return grey_anyOf(matchers.map{$0.greyMatcher()})
         case .firstElement:
             return CustomMatcher.firstElementMatcher()
+        case .firstElementWith(let matcher):
+            return grey_allOf([matcher.greyMatcher(), Matcher.firstElement.greyMatcher()])
         case .enabled:
             return grey_enabled()
         case .userInteractionEnabled:
@@ -52,12 +55,12 @@ public indirect enum Matcher {
 
 public protocol EarlGreyHumanizer {
     
-    func select(matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
+    func select(_ matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
 }
 
 public extension EarlGreyHumanizer {
     
-    func select(matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
+    func select(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
     
         return EarlGrey.select(
             elementWithMatcher: matcher.greyMatcher(),

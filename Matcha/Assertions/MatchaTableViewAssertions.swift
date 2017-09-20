@@ -41,7 +41,7 @@ public extension MatchaTableViewAssertions {
         }
         
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).assert(
@@ -60,7 +60,7 @@ public extension MatchaTableViewAssertions {
         }
         
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).assert(

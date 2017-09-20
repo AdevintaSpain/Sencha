@@ -21,7 +21,7 @@ public extension MatchaKeyboardActions {
         let newLineCharacter = "\n"
 
         select(
-            matcher: matchers, file: file, line: line
+            matchers, file: file, line: line
         ).perform(
             grey_typeText(newLineCharacter)
         )

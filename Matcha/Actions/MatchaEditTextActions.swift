@@ -12,7 +12,7 @@ public extension MatchaEditTextActions {
     func type(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
         select(
-            matcher: matcher,
+            matcher,
             file: file,
             line: line
         ).perform(
