@@ -20,9 +20,12 @@ class ViewDetailShould: XCTestCase {
         assertDisabled(.text("This is a disabled button"))
     }
 
-    func test_show_an_interactable_text_field() {
+    func test_show_a_placeholder_text() {
 
         assertVisible(.text("Some placeholder text"))
+    }
+
+    func test_show_an_interactable_text_field() {
 
         type(
             text: "I am typing stuff!!",
