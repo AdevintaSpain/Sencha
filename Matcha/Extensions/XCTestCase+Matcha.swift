@@ -1,7 +1,7 @@
 
 import XCTest
 
-public protocol Matcha: MatchaAssertion, MatchaScrollableAssertion, MatchaTapActions, MatchaEditTextActions, MatchaScrollViewActions, MatchaKeyboardActions, MatchaTableViewAssertions {}
+public protocol Matcha: MatchaScrollableAssertion, MatchaTapActions, MatchaEditTextActions, MatchaKeyboardActions, MatchaTableViewAssertions {}
 
 
 
