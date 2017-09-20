@@ -42,6 +42,9 @@ tap(.text("ButtonTitle"))
 
 tap(.text("CellTitle"), inScrollableElementWith: .accessibilityID("TableViewID"))
 
+//Tapping the back button contained in a UINavigationBar when using push navigation mode
+tapBackButton()
+
 ```
 ### Scrolling
 
