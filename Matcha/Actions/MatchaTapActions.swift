@@ -24,7 +24,7 @@ public extension MatchaTapActions {
     public func tapBackButton(file: StaticString = #file, line: UInt = #line) {
 
         select(
-            matcher: .class(NSClassFromString("_UIBackButtonContainerView")!),
+            .class(NSClassFromString("_UIBackButtonContainerView")!),
             file: file,
             line: line
         ).perform(
