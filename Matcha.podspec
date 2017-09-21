@@ -1,20 +1,20 @@
 Pod::Spec.new do |s|
 
   s.name         = 'Matcha'
-  s.version      = '0.2.1'
+  s.version      = '0.3.0'
   s.summary      = 'The friendly version of EarlGrey'
 
   s.description  = <<-DESC
                    Provides a set of tools to facilitate the UI tests using EarlGrey, with a more developer-friendly API.
                    DESC
 
-  s.homepage     = 'git@github.schibsted.io:scmspain/ios-common--lib-matcha.git'
-  s.license      = { 'type' => 'Proprietary', 'text' => 'Copyright Schibsted All rights reserved.\n\n' }
-  s.author       = 'Gil Serra'
+  s.homepage     = 'https://github.com/SchibstedSpain/Matcha.git'
+  s.license      = { 'type' => 'Apache' }
+  s.author       = 'Schibsted Spain'
 
   s.platform     = :ios, '8.0'
 
-  s.source       = { :git => 'git@github.schibsted.io:scmspain/ios-common--lib-matcha.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/SchibstedSpain/Matcha.git', :tag => s.version.to_s }
   s.source_files  = 'Matcha/**/*.{swift,h,m}'
   
   s.framework = 'XCTest'
