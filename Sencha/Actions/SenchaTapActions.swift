@@ -1,14 +1,13 @@
-
 import Foundation
 import EarlGrey
 
-public protocol MatchaTapActions: EarlGreyHumanizer {
+public protocol SenchaTapActions: EarlGreyHumanizer {
     
     func tap(_ matcher: Matcher, file: StaticString, line: UInt)
     func tapBackButton(file: StaticString, line: UInt)
 }
 
-public extension MatchaTapActions {
+public extension SenchaTapActions {
         
     func tap(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         

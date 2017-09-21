@@ -2,7 +2,7 @@
 import Foundation
 import EarlGrey
 
-public protocol MatchaAssertion: EarlGreyHumanizer {
+public protocol SenchaAssertion: EarlGreyHumanizer {
     
     func assertVisible(_ matcher: Matcher, file: StaticString, line: UInt)
     func assertNotVisible(_ matcher: Matcher, file: StaticString, line: UInt)
@@ -10,7 +10,7 @@ public protocol MatchaAssertion: EarlGreyHumanizer {
     func assertDisabled(_ matcher: Matcher, file: StaticString, line: UInt)
 }
 
-public extension MatchaAssertion {
+public extension SenchaAssertion {
     
     func assertVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         

@@ -1,15 +1,14 @@
-
 import Foundation
 import EarlGrey
 
-public protocol MatchaScrollableAssertion: MatchaAssertion, MatchaScrollViewActions {
+public protocol SenchaScrollableAssertion: SenchaAssertion, SenchaScrollViewActions {
     
     func assertVisible(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString, line: UInt)
     func assertNotVisible(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString, line: UInt)
     
 }
 
-public extension MatchaScrollableAssertion {
+public extension SenchaScrollableAssertion {
     
     func assertVisible(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         

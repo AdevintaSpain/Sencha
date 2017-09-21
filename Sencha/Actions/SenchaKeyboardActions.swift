@@ -1,14 +1,13 @@
-
 import UIKit
 import Foundation
 import EarlGrey
 
-public protocol MatchaKeyboardActions: EarlGreyHumanizer {
+public protocol SenchaKeyboardActions: EarlGreyHumanizer {
     
     func tapKeyboardReturnKey(file: StaticString, line: UInt)
 }
 
-public extension MatchaKeyboardActions {
+public extension SenchaKeyboardActions {
     
     func tapKeyboardReturnKey(file: StaticString = #file, line: UInt = #line) {
         

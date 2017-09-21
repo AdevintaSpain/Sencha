@@ -1,8 +1,6 @@
-
 import Foundation
 import XCTest
-import Matcha
-import EarlGrey
+import Sencha
 
 @testable import ExampleProject
 

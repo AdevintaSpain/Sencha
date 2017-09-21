@@ -1,13 +1,12 @@
-
 import Foundation
 import EarlGrey
 
-public protocol MatchaEditTextActions: EarlGreyHumanizer {
+public protocol SenchaEditTextActions: EarlGreyHumanizer {
     
     func type(text: String, inElementWith matcher: Matcher, file: StaticString, line: UInt)
 }
 
-public extension MatchaEditTextActions {
+public extension SenchaEditTextActions {
     
     func type(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         

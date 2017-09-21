@@ -1,13 +1,13 @@
 
-![Matcha logo](HeaderImage.png)
+![Sencha logo](HeaderImage.png)
 
 [EarlGrey](https://github.com/google/EarlGrey) is a great tool to test our iOS apps via instrumental tests. With them, we can mimic user actions like tapping a button, scrolling, or typing. Then, we can assert that a text appears in the screen, a view is visible or invisible, or a button is enabled or not.
 
 On the other hand, if you tried EarlGrey, you’ll agree that its API is not discoverable or friendly.
 
-Matcha introduces a discoverable API for the EarlGrey features. So, you and all the iOS team will write instrumental tests with no effort.
+Sencha introduces a discoverable API for the EarlGrey features. So, you and all the iOS team will write instrumental tests with no effort.
 
-Benefits of using EarlGrey (via Matcha) over other UI testing libraries:
+Benefits of using EarlGrey (via Sencha) over other UI testing libraries:
 
 * From EarlGrey's own README:
 
@@ -23,15 +23,15 @@ Benefits of using EarlGrey (via Matcha) over other UI testing libraries:
 
 EarlGrey [installation instructions](https://github.com/google/EarlGrey/blob/master/docs/install-and-run.md) are unconventional to say the least. They require you to install a gem that, in turn, monkey patches your local cocoapods gem (!) to perform some changes every time a `pod install` is invoked in your system.
 
-We have found that there is no need to do that, and that's why in order to install Matcha (and with it, EarlGrey) you only need to create a **unit test** target and add the following line to your Podfile under the dependencies of your new target:
+We have found that there is no need to do that, and that's why in order to install Sencha (and with it, EarlGrey) you only need to create a **unit test** target and add the following line to your Podfile under the dependencies of your new target:
 
 ```
-pod 'Matcha', '~> 1.0'
+pod 'Sencha', '~> 1.0'
 ```
 
 That's it!
 
-## Matcha's actions
+## Sencha's actions
 
 ### Tapping
 
@@ -69,7 +69,7 @@ tapKeyboardReturnKey()
 
 ```
 
-## Matcha's assertions
+## Sencha's assertions
 
 ```swift
 
@@ -99,7 +99,7 @@ assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
 
 ```
 
-## Matcha's matchers
+## Sencha's matchers
 
 In order to find interface elements and perform actions on them, we need some matchers. In other libraries this is achieved by finding an element via the _accessibilityLabel_ property of a view, but this property is meant for VoiceOver, and shouldn't be used for testing.
 Or yes, it's completely up to you, but at least you can choose :)

@@ -5,6 +5,6 @@ use_frameworks!
 
 target 'ExampleProjectTests' do
 
-    pod 'Matcha', :path => '.'
+    pod 'Sencha', :path => '.'
 
 end

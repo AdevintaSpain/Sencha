@@ -1,11 +1,11 @@
 
 import XCTest
 
-public protocol Matcha: MatchaScrollableAssertion, MatchaTapActions, MatchaEditTextActions, MatchaKeyboardActions, MatchaTableViewAssertions {}
+public protocol Sencha: SenchaScrollableAssertion, SenchaTapActions, SenchaEditTextActions, SenchaKeyboardActions, SenchaTableViewAssertions {}
 
 
 
-extension XCTestCase: Matcha {
+extension XCTestCase: Sencha {
 
     private var window : UIWindow {
         get {

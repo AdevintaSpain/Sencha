@@ -17,7 +17,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Matcha Example"
+        title = "Sencha Example"
         tableView.accessibilityIdentifier = AccessibilityID.tableView
     }
 

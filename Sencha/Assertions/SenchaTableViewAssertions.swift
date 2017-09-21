@@ -2,7 +2,7 @@
 import UIKit
 import EarlGrey
 
-public protocol MatchaTableViewAssertions: EarlGreyHumanizer {
+public protocol SenchaTableViewAssertions: EarlGreyHumanizer {
     
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString, line: UInt)
@@ -10,7 +10,7 @@ public protocol MatchaTableViewAssertions: EarlGreyHumanizer {
 
 }
 
-public extension MatchaTableViewAssertions {
+public extension SenchaTableViewAssertions {
     
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString = #file, line: UInt = #line) {
         

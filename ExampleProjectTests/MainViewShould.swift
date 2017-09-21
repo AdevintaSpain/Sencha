@@ -1,7 +1,6 @@
-
 import Foundation
 import XCTest
-import Matcha
+import Sencha
 
 @testable import ExampleProject
 
@@ -46,12 +45,12 @@ class MainViewShould: XCTestCase {
 
     func test_be_able_to_navigate_to_a_detail_and_then_go_back() {
 
-        assertVisible(.text("Matcha Example"))
+        assertVisible(.text("Sencha Example"))
 
         tap(.text("12"), inScrollableElementWith: .accessibilityID(MainViewController.AccessibilityID.tableView))
         assertVisible(.text("Detail"))
         tapBackButton()
 
-        assertVisible(.text("Matcha Example"))
+        assertVisible(.text("Sencha Example"))
     }
 }
