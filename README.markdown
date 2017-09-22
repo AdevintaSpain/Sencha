@@ -99,6 +99,12 @@ assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
 
 ```
 
+### Verifying Switch state
+```swift
+ assertSwitchIsOn(.accessibilityID("SwitchID"))
+ assertSwitchIsOff(.accessibilityID("SwitchID"))
+```
+
 ## Sencha's matchers
 
 In order to find interface elements and perform actions on them, we need some matchers. In other libraries this is achieved by finding an element via the _accessibilityLabel_ property of a view, but this property is meant for VoiceOver, and shouldn't be used for testing.
