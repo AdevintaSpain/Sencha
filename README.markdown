@@ -26,7 +26,7 @@ EarlGrey [installation instructions](https://github.com/google/EarlGrey/blob/mas
 We have found that there is no need to do that, and that's why in order to install Sencha (and with it, EarlGrey) you only need to create a **unit test** target and add the following line to your Podfile under the dependencies of your new target:
 
 ```
-pod 'Sencha', '~> 1.0'
+pod 'Sencha', '~> 0.3.0'
 ```
 
 That's it!
