@@ -42,11 +42,7 @@ public extension SenchaScrollViewActions {
             line: line
         ).usingSearch(
             grey_scrollInDirection(GREYDirection.down, CGFloat(distance)),
-            onElementWith: Matcher.allOf([
-                    scrollMatcher,
-                    .visible
-                ]
-            ).greyMatcher()
+            onElementWith: scrollMatcher.greyMatcher()
         )
     }
 }
