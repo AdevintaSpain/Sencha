@@ -1,7 +1,7 @@
 
 import XCTest
 
-public protocol Sencha: SenchaScrollableAssertion, SenchaTapActions, SenchaEditTextActions, SenchaKeyboardActions, SenchaTableViewAssertions, SenchaSwitchAssertions {}
+public protocol Sencha: SenchaScrollableAssertion, SenchaTapActions, SenchaEditTextActions, SenchaKeyboardActions, SenchaTableViewAssertions, SenchaSwitchAssertions, SenchaTableViewActions {}
 
 extension XCTestCase: Sencha {
 
