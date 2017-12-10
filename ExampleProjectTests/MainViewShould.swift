@@ -53,4 +53,10 @@ class MainViewShould: XCTestCase {
 
         assertVisible(.text("Sencha Example"))
     }
+    
+    func test_be_able_to_pull_to_refresh_tableview() {
+        assertVisible(.text("Sencha Example"))
+        
+        pullToRefresh(tableViewWith: .accessibilityID(MainViewController.AccessibilityID.tableView))
+    }
 }
