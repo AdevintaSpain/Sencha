@@ -12,8 +12,9 @@ public extension SenchaScrollViewActions {
     
     func tap(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
+        let visibleMatcher = Matcher.allOf([matcher, .visible])
         scrollTo(
-            matcher,
+            visibleMatcher,
             inElementWith: scrollMatcher,
             file: file,
             line: line
