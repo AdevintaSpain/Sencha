@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   
   s.framework = 'XCTest'
   s.dependency 'EarlGrey', '~> 1.12.1'
-  s.requires_arc = true
+  s.swift_version = '3.2'
 
 end
