@@ -131,6 +131,40 @@ public indirect enum Matcher {
     }
 }
 
+public indirect enum Action {
+
+    case tap
+    case tapAtPont(CGPoint)
+    case doubleTap
+    case doubleTapAtPoint(CGPoint)
+    case longPress
+    case longPressAtPointWithDuration(CGPoint, Double)
+    case longPressWithDuration(Double)
+    case multipleTapsWithCount(UInt)
+
+    func greyAction() -> GREYAction {
+        switch self {
+        case .tap:
+            return grey_tap()
+        case .tapAtPont(let point):
+            return grey_tapAtPoint(point)
+        case .doubleTap:
+            return grey_doubleTap()
+        case .doubleTapAtPoint(let point):
+            return grey_doubleTapAtPoint(point)
+        case .longPress:
+            return grey_longPress()
+        case .longPressAtPointWithDuration(let point, let duration):
+            return grey_longPressAtPointWithDuration(point, duration)
+        case .longPressWithDuration(let duration):
+            return grey_longPressWithDuration(duration)
+        case .multipleTapsWithCount(let count):
+            return grey_multipleTapsWithCount(count)
+        }
+    }
+}
+
+
 public protocol EarlGreyHumanizer {
     
     func select(_ matcher: Matcher, file: StaticString, line: UInt) -> GREYInteraction
