@@ -34,7 +34,7 @@ class ViewDetailShould: XCTestCase {
         assertVisible(.text("I am typing stuff!!"))
     }
 
-    func test_show_a_swicth_with_on_state_and_turn_onto_off_state() {
+    func test_show_a_switch_with_on_state_and_turn_onto_off_state() {
         assertSwitchIsOn(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
 
         tap(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
