@@ -66,7 +66,7 @@ public extension EarlGreyHumanizer {
     func select(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
     
         return EarlGrey.select(
-            elementWithMatcher: matcher.greyMatcher(),
+            with: matcher.greyMatcher(),
             file: file,
             line: line
         )
