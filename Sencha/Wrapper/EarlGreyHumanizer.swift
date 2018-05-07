@@ -19,6 +19,7 @@ public indirect enum Matcher {
     case enabled
     case userInteractionEnabled
     case switchOn
+    case earlGrey(GREYMatcher)
     
     public func greyMatcher() -> GREYMatcher {
         switch self {
@@ -52,6 +53,8 @@ public indirect enum Matcher {
             return grey_userInteractionEnabled()
         case .switchOn:
             return grey_switchWithOnState(true)
+        case .earlGrey(let matcher):
+            return matcher
         }
     }
 }
