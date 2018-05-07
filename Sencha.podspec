@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.source_files  = 'Sencha/**/*.{swift,h,m}'
   
   s.framework = 'XCTest'
-  s.dependency 'EarlGrey', '~> 1.12.1'
-  s.swift_version = '3.2'
+  s.dependency 'EarlGrey', '~> 1.13.0'
 
 end
