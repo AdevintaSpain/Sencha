@@ -4,8 +4,8 @@ import EarlGrey
 public protocol SenchaScrollViewActions: EarlGreyHumanizer {
     
     func tap(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString, line: UInt)
-    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
-    @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
+    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYInteraction
+    @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYInteraction
 }
 
 public extension SenchaScrollViewActions {
@@ -23,7 +23,7 @@ public extension SenchaScrollViewActions {
         )
     }
     
-    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
+    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYInteraction {
         
         let halfScreenSize = UIScreen.main.bounds.height/2
         return scrollTo(
@@ -35,7 +35,7 @@ public extension SenchaScrollViewActions {
         )
     }
     
-    @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
+    @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYInteraction {
         
         return select(
             matcher,

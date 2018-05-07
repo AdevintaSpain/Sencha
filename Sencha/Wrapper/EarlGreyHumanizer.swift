@@ -58,14 +58,14 @@ public indirect enum Matcher {
 
 public protocol EarlGreyHumanizer {
     
-    func select(_ matcher: Matcher, file: StaticString, line: UInt) -> GREYElementInteraction
+    func select(_ matcher: Matcher, file: StaticString, line: UInt) -> GREYInteraction
 }
 
 public extension EarlGreyHumanizer {
     
-    func select(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYElementInteraction {
+    func select(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYInteraction {
     
-        return EarlGrey.select(
+        return EarlGrey.selectElement(
             with: matcher.greyMatcher(),
             file: file,
             line: line
@@ -73,7 +73,7 @@ public extension EarlGreyHumanizer {
     }
 }
 
-public extension GREYElementInteraction {
+public extension GREYInteraction {
     @discardableResult public func assert(_ matcher: @autoclosure () -> Matcher) -> Self {
         return self.assert(matcher().greyMatcher())
     }
