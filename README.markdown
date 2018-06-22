@@ -99,6 +99,18 @@ assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
 
 ```
 
+### Verifying CollectionView content
+
+```swift
+
+assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30)
+
+assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30, inSection: 1)
+
+assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasSectionCount: 2)
+
+```
+
 ### Verifying Switch state
 ```swift
  assertSwitchIsOn(.accessibilityID("SwitchID"))
