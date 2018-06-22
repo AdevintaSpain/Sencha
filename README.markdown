@@ -104,9 +104,7 @@ assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
 ```swift
 
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30)
-
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30, inSection: 1)
-
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasSectionCount: 2)
 
 ```
