@@ -51,6 +51,10 @@ tapBackButton()
 ```swift
 
 scrollTo(.accessibilityID("AnythingTappableID"), inElementWith: .accessibilityID("TableViewID"))
+scrollToBottom(in: .accessibilityID("TableViewID"))
+scrollToTop(in: .accessibilityID("TableViewID"))
+scrollToLeft(in: .accessibilityID("TableViewID"))
+scrollToRight(in: .accessibilityID("TableViewID"))
 
 ```
 
