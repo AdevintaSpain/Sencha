@@ -96,6 +96,8 @@ assertNotVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilit
 assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30)
 assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30, inSection: 1)
 assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
+assertTableViewIsEmpty(with: .accessibilityID("TableViewID"))
+assertTableViewIsNotEmpty(with: .accessibilityID("TableViewID"))
 
 ```
 
@@ -106,6 +108,8 @@ assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30)
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30, inSection: 1)
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasSectionCount: 2)
+assertCollectionViewIsEmpty(with: .accessibilityID("CollectionViewID"))
+assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
 
 ```
 
