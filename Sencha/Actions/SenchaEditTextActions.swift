@@ -15,7 +15,7 @@ public extension SenchaEditTextActions {
             file: file,
             line: line
         ).perform(
-            grey_replaceText(text)
+            grey_typeText(text)
         )
     }
 }
