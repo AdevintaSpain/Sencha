@@ -16,13 +16,6 @@ public extension SenchaTableViewAssertions {
         
         assert(
             tableViewWith: matcher,
-            hasSectionCount: 1,
-            file: file,
-            line: line
-        )
-        
-        assert(
-            tableViewWith: matcher,
             hasRowCount: rowCount,
             inSection: 0,
             file: file,
