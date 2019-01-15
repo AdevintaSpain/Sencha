@@ -13,14 +13,7 @@ public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
 public extension SenchaCollectionViewAssertions {
 
     func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString = #file, line: UInt = #line) {
-
-        assert(
-            collectionViewWith: matcher,
-            hasSectionCount: 1,
-            file: file,
-            line: line
-        )
-
+    
         assert(
             collectionViewWith: matcher,
             hasCellCount: cellCount,
@@ -28,6 +21,7 @@ public extension SenchaCollectionViewAssertions {
             file: file,
             line: line
         )
+        
     }
 
     func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
