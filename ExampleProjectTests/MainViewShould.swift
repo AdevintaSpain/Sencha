@@ -7,15 +7,26 @@ import Sencha
 class MainViewShould: XCTestCase {
     
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: MainViewController.self))
-    
+    var viewController: MainViewController!
+
     override func setUp() {
         super.setUp()
         
-        let viewController = storyboard.instantiateViewController(withIdentifier: "MainNavigationController")
-        
-        open(viewController: viewController)
+        let navigationController = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+        viewController = navigationController.viewControllers.first as? MainViewController
+        open(viewController: navigationController)
     }
-    
+
+    func test_be_able_to_assert_TableView_is_empty() {
+        viewController.clearTableView()
+        assertTableViewIsEmpty(with: .accessibilityID(MainViewController.AccessibilityID.tableView))
+    }
+
+    func test_be_able_to_assert_TableView_is_not_empty() {
+
+        assertTableViewIsNotEmpty(with: .accessibilityID(MainViewController.AccessibilityID.tableView))
+    }
+
     func test_be_able_to_assert_the_number_of_rows() {
         
         assert(tableViewWith: .accessibilityID(MainViewController.AccessibilityID.tableView), hasRowCount: 100)
