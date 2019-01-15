@@ -10,7 +10,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var editBarButton: UIBarButtonItem!
-    let rows: [Int] = Array(1...100)
+    var rows: [Int] = Array(1...100)
     
     var sectionTitle = "Normal Mode"
     
@@ -25,6 +25,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         sectionTitle = sectionTitle == "Normal Mode" ? "Edit Mode" : "Normal Mode"
         tableView.reloadData()
+    }
+
+    func clearTableView() {
+        rows = []
     }
     
     //MARK: TableViewDataSource

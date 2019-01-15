@@ -93,13 +93,11 @@ assertNotVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilit
 
 ```swift
 
-//This assertion also verifies that the table view has only one section, 2 good assertions in 1 :)
 assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30)
-
-//This assertion does the same as the previous one but you can specify the section.
 assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30, inSection: 1)
-
 assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
+assertTableViewIsEmpty(with: .accessibilityID("TableViewID"))
+assertTableViewIsNotEmpty(with: .accessibilityID("TableViewID"))
 
 ```
 
@@ -110,6 +108,8 @@ assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30)
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30, inSection: 1)
 assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasSectionCount: 2)
+assertCollectionViewIsEmpty(with: .accessibilityID("CollectionViewID"))
+assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
 
 ```
 
