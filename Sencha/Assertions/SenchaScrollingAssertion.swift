@@ -13,7 +13,7 @@ public extension SenchaScrollableAssertion {
     func assertVisible(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
         scrollTo(
-            matcher,
+            .allOf([matcher, .visible]),
             inElementWith: scrollMatcher,
             file: file,
             line: line
