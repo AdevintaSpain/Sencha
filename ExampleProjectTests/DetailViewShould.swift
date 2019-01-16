@@ -42,7 +42,7 @@ class ViewDetailShould: XCTestCase {
         assertSwitchIsOff(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
     }
     
-    func test_clears_text_from_a_filled_text_filed() {
+    func test_clears_text_from_a_filled_text_field() {
         type(
             text: "text",
             inElementWith: textFieldMatcher)
