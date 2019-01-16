@@ -7,6 +7,7 @@ import Sencha
 class ViewDetailShould: XCTestCase {
     
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: MainViewController.self))
+    let textFieldMatcher = Matcher.accessibilityID(DetailViewController.AccessibilityID.textField)
     
     override func setUp() {
         super.setUp()
@@ -27,7 +28,7 @@ class ViewDetailShould: XCTestCase {
 
         type(
             text: "I am typing stuff!!",
-            inElementWith: .accessibilityID(DetailViewController.AccessibilityID.textField)
+            inElementWith: textFieldMatcher
         )
 
         assertVisible(.text("I am typing stuff!!"))
@@ -39,5 +40,16 @@ class ViewDetailShould: XCTestCase {
         tap(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
 
         assertSwitchIsOff(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
+    }
+    
+    func test_clear_text_from_a_filled_text_field() {
+        type(
+            text: "text",
+            inElementWith: textFieldMatcher
+        )
+        
+        clearTextInElement(with: textFieldMatcher)
+        
+        assertNotVisible(.text("text"))
     }
 }
