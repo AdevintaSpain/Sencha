@@ -4,6 +4,8 @@ import EarlGrey
 
 public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
 
+    func assertCollectionViewIsEmpty(with matcher: Matcher, file: StaticString, line: UInt)
+    func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString, line: UInt)
     func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, inSection section: Int, file: StaticString, line: UInt)
     func assert(collectionViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString, line: UInt)
@@ -12,15 +14,30 @@ public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
 
 public extension SenchaCollectionViewAssertions {
 
-    func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString = #file, line: UInt = #line) {
+    func assertCollectionViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        assert(collectionViewWith: matcher, hasCellCount: 0, file: file, line: line)
+    }
 
-        assert(
-            collectionViewWith: matcher,
-            hasSectionCount: 1,
+    func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        let cellCountAssert = GREYAssertionBlock(name: "CollectionView is not empty") { (element, error) -> Bool in
+            if let collectionView = element as? UICollectionView {
+                let numberOfCells = collectionView.numberOfItems(inSection: 0)
+                return numberOfCells > 0
+            }
+            return false
+        }
+
+        select(
+            matcher,
             file: file,
             line: line
+        ).assert(
+            cellCountAssert
         )
+    }
 
+    func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString = #file, line: UInt = #line) {
+    
         assert(
             collectionViewWith: matcher,
             hasCellCount: cellCount,
@@ -44,8 +61,8 @@ public extension SenchaCollectionViewAssertions {
             matcher,
             file: file,
             line: line
-            ).assert(
-                cellCountAssert
+        ).assert(
+            cellCountAssert
         )
     }
 
@@ -63,8 +80,8 @@ public extension SenchaCollectionViewAssertions {
             matcher,
             file: file,
             line: line
-            ).assert(
-                sectionCountAssert
+        ).assert(
+            sectionCountAssert
         )
     }
 }
