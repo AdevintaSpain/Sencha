@@ -58,11 +58,12 @@ scrollToRight(in: .accessibilityID("TableViewID"))
 
 ```
 
-### Typing
+### Text actions
 
 ```swift
 
 type("Username", inElementWith: .accessibilityID("UsernameTextFieldID"))
+clearTextInElement(.accessibilityID("UsernameTextFieldID"))
 
 ```
 ### Interacting with the keyboard
