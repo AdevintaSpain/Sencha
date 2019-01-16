@@ -4,7 +4,7 @@ import EarlGrey
 public protocol SenchaEditTextActions: EarlGreyHumanizer {
     
     func type(text: String, inElementWith matcher: Matcher, file: StaticString, line: UInt)
-    func clearsTextInElement(with matcher: Matcher, file: StaticString, line: UInt)
+    func clearTextInElement(with matcher: Matcher, file: StaticString, line: UInt)
 }
 
 public extension SenchaEditTextActions {
@@ -20,7 +20,7 @@ public extension SenchaEditTextActions {
         )
     }
     
-    func clearsTextInElement(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+    func clearTextInElement(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         
         select(
             matcher,
