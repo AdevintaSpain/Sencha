@@ -80,7 +80,7 @@ tapKeyboardReturnKey()
 
 assertVisible(.text("EmptyStateText"))
 assertVisible(.accessibilityID("EmptyStateID"))
-assertVisible(.class(UIActivityIndicator.class))
+assertVisible(.class(UIActivityIndicatorView.self))
 
 assertVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("TableViewID"))
 assertVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("RegularScrollViewID"))
