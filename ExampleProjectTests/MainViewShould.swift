@@ -66,4 +66,10 @@ class MainViewShould: XCTestCase {
 
         assertVisible(.text("Sencha Example"))
     }
+
+    func test_be_able_to_swipe_in_cell_shows_delete_button() {
+
+        swipe(.text("1"), inDirection: .left)
+        assertVisible(.text("Delete"))
+    }
 }
