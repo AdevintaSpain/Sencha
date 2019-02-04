@@ -60,9 +60,21 @@ scrollToRight(in: .accessibilityID("TableViewID"))
 
 ### Text actions
 
+⚠️ Use this method if you need the delegate methods of the text input to be triggered (otherwise use insertText below)
+This method uses the simulator's keyboard to type, and depending on the text it might fail.
 ```swift
 
 type("Username", inElementWith: .accessibilityID("UsernameTextFieldID"))
+
+```
+⚠️ Use this method if you don't need the delegate methods of the text input to be triggered.
+```swift
+
+insertText("Username", inElementWith: .accessibilityID("UsernameTextFieldID"))
+
+```
+```swift
+
 clearTextInElement(.accessibilityID("UsernameTextFieldID"))
 
 ```
@@ -134,8 +146,8 @@ assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
 ### Verifying Switch state
 ```swift
 
- assertSwitchIsOn(.accessibilityID("SwitchID"))
- assertSwitchIsOff(.accessibilityID("SwitchID"))
+assertSwitchIsOn(.accessibilityID("SwitchID"))
+assertSwitchIsOff(.accessibilityID("SwitchID"))
  
 ```
 
