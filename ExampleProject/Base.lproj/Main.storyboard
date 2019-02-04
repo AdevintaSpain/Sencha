@@ -94,7 +94,7 @@
                                 <rect key="frame" x="163" y="273" width="51" height="31"/>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MFy-gJ-0Tm">
-                                <rect key="frame" x="128" y="330" width="118" height="31"/>
+                                <rect key="frame" x="128.5" y="330" width="118" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="5pm-XE-tcH"/>
                                 </constraints>

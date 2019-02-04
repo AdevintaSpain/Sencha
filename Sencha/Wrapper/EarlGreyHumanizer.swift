@@ -51,6 +51,7 @@ public indirect enum Matcher {
     case enabled
     case userInteractionEnabled
     case switchOn
+    case switchOff
     case datePickerValue(Date)
     case pickerColumnSetToValue(Int, String)
     case layout([Any], Matcher)
@@ -109,6 +110,8 @@ public indirect enum Matcher {
             return grey_userInteractionEnabled()
         case .switchOn:
             return grey_switchWithOnState(true)
+        case .switchOff:
+            return grey_switchWithOnState(false)
         case .datePickerValue(let date):
             return grey_datePickerValue(date)
         case .pickerColumnSetToValue(let column, let value):
@@ -149,6 +152,7 @@ public indirect enum Action {
     case longPressAtPointWithDuration(CGPoint, Double)
     case longPressWithDuration(Double)
     case multipleTapsWithCount(UInt)
+    case moveSliderToValue(Double)
 
     func greyAction() -> GREYAction {
         switch self {
@@ -168,10 +172,11 @@ public indirect enum Action {
             return grey_longPressWithDuration(duration)
         case .multipleTapsWithCount(let count):
             return grey_multipleTapsWithCount(count)
+        case .moveSliderToValue(let value):
+            return grey_moveSliderToValue(Float(value))
         }
     }
 }
-
 
 public protocol EarlGreyHumanizer {
     
@@ -193,5 +198,9 @@ public extension EarlGreyHumanizer {
 public extension GREYInteraction {
     @discardableResult public func assert(_ matcher: @autoclosure () -> Matcher) -> Self {
         return self.assert(matcher().greyMatcher())
+    }
+
+    @discardableResult public func perform(_ action: @autoclosure () -> Action) -> Self {
+        return self.perform(action().greyAction())
     }
 }

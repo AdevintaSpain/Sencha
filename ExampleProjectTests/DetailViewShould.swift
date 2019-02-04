@@ -56,7 +56,13 @@ class ViewDetailShould: XCTestCase {
 
     func test_be_able_to_slide_a_slider() {
         assertSlider(slider, hasValue: .equalTo(0.5))
+        moveSlider(slider, to: 1)
+        assertSlider(slider, hasValue: .equalTo(1))
+    }
+
+    func test_be_able_to_validate_a_slider_value() {
         assertSlider(slider, hasValue: .greaterThan(0.0))
+        assertSlider(slider, hasValue: .equalTo(0.5))
         assertSlider(slider, hasValue: .lessThan(1.0))
     }
 }
