@@ -78,7 +78,16 @@ tapKeyboardReturnKey()
 
 ```swift
 
-moveSlider(slider, to: 0.5)
+moveSlider(.accessibilityID("SliderID"), to: 0.5)
+
+```
+
+### Interacting with pickers
+
+```swift
+
+movePicker(.accessibilityID("PickerID"), to: Date())
+movePicker(.accessibilityID("PickerID"), column: 1, to: "10")
 
 ```
 
