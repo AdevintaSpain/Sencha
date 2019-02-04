@@ -74,6 +74,14 @@ tapKeyboardReturnKey()
 
 ```
 
+### Interacting with sliders
+
+```swift
+
+moveSlider(slider, to: 0.5)
+
+```
+
 ## Sencha's assertions
 
 ```swift
@@ -116,15 +124,19 @@ assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
 
 ### Verifying Switch state
 ```swift
+
  assertSwitchIsOn(.accessibilityID("SwitchID"))
  assertSwitchIsOff(.accessibilityID("SwitchID"))
+ 
 ```
 
 ### Verifying Slider value
-```
+```swift
+
 assertSlider(slider, hasValue: .equalTo(0.5))
 assertSlider(slider, hasValue: .greaterThan(0.0))
 assertSlider(slider, hasValue: .lessThan(1.0))
+
 ```
 
 ## Sencha's matchers
