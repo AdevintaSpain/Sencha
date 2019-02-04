@@ -68,6 +68,8 @@ class ViewDetailShould: XCTestCase {
     }
 
     func test_be_able_to_change_a_pickers_value() {
-        movePicker(picker, to: Date(timeIntervalSince1970: 0))
+        let theBeginningOfTimes = Date(timeIntervalSince1970: 0)
+        movePicker(picker, to: theBeginningOfTimes)
+        assertPicker(picker, hasValue: theBeginningOfTimes)
     }
 }
