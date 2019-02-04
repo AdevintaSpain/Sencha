@@ -8,6 +8,7 @@ class ViewDetailShould: XCTestCase {
     
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: MainViewController.self))
     let textFieldMatcher = Matcher.accessibilityID(DetailViewController.AccessibilityID.textField)
+    let slider = Matcher.accessibilityID(DetailViewController.AccessibilityID.slider)
     
     override func setUp() {
         super.setUp()
@@ -27,11 +28,11 @@ class ViewDetailShould: XCTestCase {
     func test_show_an_interactable_text_field() {
 
         type(
-            text: "I am typing stuff!!",
+            text: "text",
             inElementWith: textFieldMatcher
         )
 
-        assertVisible(.text("I am typing stuff!!"))
+        assertVisible(.text("text"))
     }
 
     func test_show_a_switch_with_on_state_and_turn_onto_off_state() {
@@ -51,5 +52,11 @@ class ViewDetailShould: XCTestCase {
         clearTextInElement(with: textFieldMatcher)
         
         assertNotVisible(.text("text"))
+    }
+
+    func test_be_able_to_slide_a_slider() {
+        assertSlider(slider, hasValue: .equalTo(0.5))
+        assertSlider(slider, hasValue: .greaterThan(0.0))
+        assertSlider(slider, hasValue: .lessThan(1.0))
     }
 }

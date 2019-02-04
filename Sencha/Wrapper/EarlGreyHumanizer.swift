@@ -2,6 +2,26 @@
 import Foundation
 import EarlGrey
 
+public indirect enum ValueMatcher {
+    case closeTo(Double, Double)
+    case equalTo(Double)
+    case lessThan(Double)
+    case greaterThan(Double)
+
+    func greyMatcher() -> GREYMatcher {
+        switch self {
+        case .closeTo(let value, let delta):
+            return grey_closeTo(value, delta)
+        case .equalTo(let value):
+            return grey_equalTo(value)
+        case .lessThan(let value):
+            return grey_lessThan(value)
+        case .greaterThan(let value):
+            return grey_greaterThan(value)
+        }
+    }
+}
+
 public indirect enum Matcher {
     
     case text(String)
@@ -37,12 +57,8 @@ public indirect enum Matcher {
     case progress(Matcher)
     case scrollViewContentOffset(CGPoint)
     case selected
-    case sliderValue(Matcher)
+    case sliderValue(ValueMatcher)
     case stepperValue(Double)
-    case closeTo(Double, Double)
-    case equalTo(Any)
-    case lessThan(Any)
-    case greaterThan(Any)
     case anything()
     
     public func greyMatcher() -> GREYMatcher {
@@ -117,14 +133,6 @@ public indirect enum Matcher {
             return grey_systemAlertViewShown()
         case .keyWindow:
             return grey_keyWindow()
-        case .closeTo(let value, let delta):
-            return grey_closeTo(value, delta)
-        case .equalTo(let value):
-            return grey_equalTo(value)
-        case .lessThan(let value):
-            return grey_lessThan(value)
-        case .greaterThan(let value):
-            return grey_greaterThan(value)
         case .anything():
             return grey_anything()
         }
