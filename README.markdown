@@ -142,9 +142,18 @@ assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
 ### Verifying Slider value
 ```swift
 
-assertSlider(slider, hasValue: .equalTo(0.5))
-assertSlider(slider, hasValue: .greaterThan(0.0))
-assertSlider(slider, hasValue: .lessThan(1.0))
+assertSlider(.accessibilityID("SliderID"), hasValue: .equalTo(0.5))
+assertSlider(.accessibilityID("SliderID"), hasValue: .greaterThan(0.0))
+assertSlider(.accessibilityID("SliderID"), hasValue: .lessThan(1.0))
+
+```
+
+### Verifying Picker value
+
+```swift 
+
+assertPicker(.accessibilityID("pickerID"), hasValue: Date())
+assertPicker(.accessibilityID("pickerID"), hasValue: "10", inColumn: 1)
 
 ```
 
