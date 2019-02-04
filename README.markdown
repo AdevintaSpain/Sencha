@@ -60,9 +60,21 @@ scrollToRight(in: .accessibilityID("TableViewID"))
 
 ### Text actions
 
+⚠️ Use this method if you need the delegate methods of the text input to be triggered (otherwise use insertText below)
+This method uses the simulator's keyboard to type, and depending on the text it might fail.
 ```swift
 
 type("Username", inElementWith: .accessibilityID("UsernameTextFieldID"))
+
+```
+⚠️ Use this method if you don't need the delegate methods of the text input to be triggered.
+```swift
+
+insertText("Username", inElementWith: .accessibilityID("UsernameTextFieldID"))
+
+```
+```swift
+
 clearTextInElement(.accessibilityID("UsernameTextFieldID"))
 
 ```
@@ -71,6 +83,23 @@ clearTextInElement(.accessibilityID("UsernameTextFieldID"))
 ```swift
 
 tapKeyboardReturnKey()
+
+```
+
+### Interacting with sliders
+
+```swift
+
+moveSlider(.accessibilityID("SliderID"), to: 0.5)
+
+```
+
+### Interacting with pickers
+
+```swift
+
+movePicker(.accessibilityID("PickerID"), to: Date())
+movePicker(.accessibilityID("PickerID"), column: 1, to: "10")
 
 ```
 
@@ -116,8 +145,28 @@ assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
 
 ### Verifying Switch state
 ```swift
- assertSwitchIsOn(.accessibilityID("SwitchID"))
- assertSwitchIsOff(.accessibilityID("SwitchID"))
+
+assertSwitchIsOn(.accessibilityID("SwitchID"))
+assertSwitchIsOff(.accessibilityID("SwitchID"))
+ 
+```
+
+### Verifying Slider value
+```swift
+
+assertSlider(.accessibilityID("SliderID"), hasValue: .equalTo(0.5))
+assertSlider(.accessibilityID("SliderID"), hasValue: .greaterThan(0.0))
+assertSlider(.accessibilityID("SliderID"), hasValue: .lessThan(1.0))
+
+```
+
+### Verifying Picker value
+
+```swift 
+
+assertPicker(.accessibilityID("pickerID"), hasValue: Date())
+assertPicker(.accessibilityID("pickerID"), hasValue: "10", inColumn: 1)
+
 ```
 
 ## Sencha's matchers

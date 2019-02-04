@@ -3,7 +3,7 @@ import EarlGrey
 
 public protocol SenchaSwipeActions: EarlGreyHumanizer {
 
-    func swipe(_ matcher: Matcher, inDirection direction: SenchaDirection,file: StaticString, line: UInt)
+    func swipe(_ matcher: Matcher, inDirection direction: SenchaDirection, file: StaticString, line: UInt)
 }
 
 public extension SenchaSwipeActions {

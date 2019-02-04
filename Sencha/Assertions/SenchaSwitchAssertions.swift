@@ -24,7 +24,7 @@ public extension SenchaSwitchAssertions {
             file: file,
             line: line
         ).assert(
-            .not(.switchOn)
+            .switchOff
         )
     }
 }
