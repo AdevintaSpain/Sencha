@@ -202,11 +202,11 @@ public extension EarlGreyHumanizer {
 }
 
 public extension GREYInteraction {
-    @discardableResult public func assert(_ matcher: @autoclosure () -> Matcher) -> Self {
-        return self.assert(matcher().greyMatcher())
+    @discardableResult public func assert(_ matcher: Matcher) -> Self {
+        return self.assert(matcher.greyMatcher())
     }
 
-    @discardableResult public func perform(_ action: @autoclosure () -> Action) -> Self {
-        return self.perform(action().greyAction())
+    @discardableResult public func perform(_ action: Action) -> Self {
+        return self.perform(action.greyAction())
     }
 }
