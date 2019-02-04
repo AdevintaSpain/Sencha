@@ -9,6 +9,7 @@ class ViewDetailShould: XCTestCase {
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: MainViewController.self))
     let textFieldMatcher = Matcher.accessibilityID(DetailViewController.AccessibilityID.textField)
     let slider = Matcher.accessibilityID(DetailViewController.AccessibilityID.slider)
+    let picker = Matcher.accessibilityID(DetailViewController.AccessibilityID.datePicker)
     
     override func setUp() {
         super.setUp()
@@ -64,5 +65,9 @@ class ViewDetailShould: XCTestCase {
         assertSlider(slider, hasValue: .greaterThan(0.0))
         assertSlider(slider, hasValue: .equalTo(0.5))
         assertSlider(slider, hasValue: .lessThan(1.0))
+    }
+
+    func test_be_able_to_change_a_pickers_value() {
+        movePicker(picker, to: Date(timeIntervalSince1970: 0))
     }
 }

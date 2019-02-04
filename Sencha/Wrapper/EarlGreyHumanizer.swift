@@ -52,8 +52,8 @@ public indirect enum Matcher {
     case userInteractionEnabled
     case switchOn
     case switchOff
+    case pickerColumnValue(Int, String)
     case datePickerValue(Date)
-    case pickerColumnSetToValue(Int, String)
     case layout([Any], Matcher)
     case progress(Matcher)
     case scrollViewContentOffset(CGPoint)
@@ -112,10 +112,10 @@ public indirect enum Matcher {
             return grey_switchWithOnState(true)
         case .switchOff:
             return grey_switchWithOnState(false)
+        case .pickerColumnValue(let column, let value):
+            return grey_pickerColumnSetToValue(column, value)
         case .datePickerValue(let date):
             return grey_datePickerValue(date)
-        case .pickerColumnSetToValue(let column, let value):
-            return grey_pickerColumnSetToValue(column, value)
         case .layout(let constraints, let referenceElement):
             return grey_layout(constraints, referenceElement.greyMatcher())
         case .progress(let comparisonMatcher):
@@ -153,6 +153,8 @@ public indirect enum Action {
     case longPressWithDuration(Double)
     case multipleTapsWithCount(UInt)
     case moveSliderToValue(Double)
+    case setPickerColumnToValue(Int, String)
+    case setPickerDateTo(Date)
 
     func greyAction() -> GREYAction {
         switch self {
@@ -174,6 +176,10 @@ public indirect enum Action {
             return grey_multipleTapsWithCount(count)
         case .moveSliderToValue(let value):
             return grey_moveSliderToValue(Float(value))
+        case .setPickerColumnToValue(let column, let value):
+            return grey_setPickerColumnToValue(column, value)
+        case .setPickerDateTo(let date):
+            return grey_setDate(date)
         }
     }
 }
