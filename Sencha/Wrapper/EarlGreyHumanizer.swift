@@ -60,6 +60,7 @@ public indirect enum Matcher {
     case sliderValue(ValueMatcher)
     case stepperValue(Double)
     case anything()
+    case earlGrey(GREYMatcher)
     
     public func greyMatcher() -> GREYMatcher {
         switch self {
@@ -137,6 +138,8 @@ public indirect enum Matcher {
             return grey_keyWindow()
         case .anything():
             return grey_anything()
+        case .earlGrey(let matcher):
+            return matcher
         }
     }
 }
