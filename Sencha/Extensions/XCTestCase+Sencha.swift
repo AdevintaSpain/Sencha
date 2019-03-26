@@ -30,6 +30,11 @@ extension XCTestCase: Sencha {
         }
     }
     
+    public func waitToBeVisible(viewControllerType: UIViewController.Type) {
+        let condition = SenchaViewControllerCondition(window: window)
+        condition.waitToBeVisible(viewControllerType)
+    }
+
     private func embedInNavigationController(_ viewController: UIViewController) -> UIViewController {
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
