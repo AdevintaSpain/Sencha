@@ -17,24 +17,21 @@ struct SenchaViewControllerCondition {
     }
 
     private func topViewController(_ rootViewController: UIViewController) -> UIViewController {
+        var viewController: UIViewController?
+
         switch rootViewController {
         case let navigationController as UINavigationController:
-            return navigationController.topViewController ?? rootViewController
+            viewController = navigationController.topViewController
         case let tabBarController as UITabBarController:
-            guard let selectedViewController = tabBarController.selectedViewController else {
-                return rootViewController
-            }
-            return topViewController(selectedViewController)
+            viewController = tabBarController.selectedViewController
         case let splitViewController as UISplitViewController:
-            guard let viewController = splitViewController.viewControllers.last else {
-                return rootViewController
-            }
-            return topViewController(viewController)
+            viewController = splitViewController.viewControllers.last
         default:
-            guard let presented = rootViewController.presentedViewController else {
-                return rootViewController
-            }
-            return topViewController(presented)
+            viewController = rootViewController.presentedViewController
         }
+        guard let nextViewController = viewController else {
+            return rootViewController
+        }
+        return topViewController(nextViewController)
     }
 }
