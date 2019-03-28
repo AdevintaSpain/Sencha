@@ -3,27 +3,33 @@ import Foundation
 import EarlGrey
 
 struct SenchaViewControllerCondition {
-    var window: UIWindow
+    private(set) var window: UIWindow
 
     @discardableResult func waitToBeVisible(_ viewControllerType: UIViewController.Type) -> Bool {
         let success = GREYCondition.init(name: "Wait ViewController to be visible", block: { () -> Bool in
-            let viewController = self.topViewController(self.window.rootViewController)
-            return viewController?.isKind(of: viewControllerType) ?? false
+
+            guard let rootViewController = self.window.rootViewController else { return false }
+            let viewController = self.topViewController(rootViewController)
+            return viewController.isKind(of: viewControllerType)
         }).wait(withTimeout: 10)
 
         return success
     }
 
-    private func topViewController(_ rootViewController: UIViewController?) -> UIViewController? {
-        guard let rootViewController = rootViewController else {
-            return nil
-        }
-
+    private func topViewController(_ rootViewController: UIViewController) -> UIViewController {
         switch rootViewController {
         case let navigationController as UINavigationController:
-            return topViewController(navigationController.viewControllers.last)
+            return navigationController.topViewController ?? rootViewController
         case let tabBarController as UITabBarController:
-            return topViewController(tabBarController.selectedViewController)
+            guard let selectedViewController = tabBarController.selectedViewController else {
+                return rootViewController
+            }
+            return topViewController(selectedViewController)
+        case let splitViewController as UISplitViewController:
+            guard let viewController = splitViewController.viewControllers.last else {
+                return rootViewController
+            }
+            return topViewController(viewController)
         default:
             guard let presented = rootViewController.presentedViewController else {
                 return rootViewController
