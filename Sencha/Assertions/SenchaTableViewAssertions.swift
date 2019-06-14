@@ -20,11 +20,11 @@ public extension SenchaTableViewAssertions {
 
     func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         let cellCountAssert = GREYAssertionBlock(name: "TableView is not empty") { (element, error) -> Bool in
-            if let tableView = element as? UITableView {
-                let numberOfCells = tableView.numberOfRows(inSection: 0)
-                return numberOfCells > 0
+            guard let tableView = element as? UITableView, tableView.numberOfSections > 0 else {
+                return false
             }
-            return false
+            let numberOfCells = tableView.numberOfRows(inSection: 0)
+            return numberOfCells > 0
         }
 
         select(
@@ -50,11 +50,11 @@ public extension SenchaTableViewAssertions {
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
     
         let cellCountAssert = GREYAssertionBlock(name: "cell count") { (element, error) -> Bool in
-            if let tableView = element as? UITableView {
-                let numberOfCells = tableView.numberOfRows(inSection: section)
-                return numberOfCells == rowCount
+            guard let tableView = element as? UITableView, tableView.numberOfSections > section else {
+                return false
             }
-            return false
+            let numberOfCells = tableView.numberOfRows(inSection: section)
+            return numberOfCells == rowCount
         }
         
         select(
