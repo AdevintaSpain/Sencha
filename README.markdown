@@ -31,7 +31,86 @@ pod 'Sencha'
 
 That's it!
 
+## Sencha's assertions
+
+### For elements in regular UIs:
+
+```swift
+
+assertVisible(.text("EmptyStateText"))
+assertVisible(.accessibilityID("EmptyStateID"))
+assertVisible(.class(UIActivityIndicator.class))
+
+assertNotVisible(.text("EmptyStateText"))
+
+```
+
+Note: The previous assertions won't work for elements inside a ScrollView, for that you'll need the ones in the next section.
+
+### For elements inside a ScrollView(also TableView & CollectionView):
+
+```swift
+
+assertVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("TableViewID"))
+assertVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("RegularScrollViewID"))
+
+assertNotVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("TableViewID"))
+
+```
+
+### Verifying TableView content
+
+```swift
+
+assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30)
+assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30, inSection: 1)
+assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
+assertTableViewIsEmpty(with: .accessibilityID("TableViewID"))
+assertTableViewIsNotEmpty(with: .accessibilityID("TableViewID"))
+
+```
+
+### Verifying CollectionView content
+
+```swift
+
+assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30)
+assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30, inSection: 1)
+assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasSectionCount: 2)
+assertCollectionViewIsEmpty(with: .accessibilityID("CollectionViewID"))
+assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
+
+```
+
+### Verifying Switch state
+```swift
+
+assertSwitchIsOn(.accessibilityID("SwitchID"))
+assertSwitchIsOff(.accessibilityID("SwitchID"))
+ 
+```
+
+### Verifying Slider value
+```swift
+
+assertSlider(.accessibilityID("SliderID"), hasValue: .equalTo(0.5))
+assertSlider(.accessibilityID("SliderID"), hasValue: .greaterThan(0.0))
+assertSlider(.accessibilityID("SliderID"), hasValue: .lessThan(1.0))
+
+```
+
+### Verifying Picker value
+
+```swift 
+
+assertPicker(.accessibilityID("pickerID"), hasValue: Date())
+assertPicker(.accessibilityID("pickerID"), hasValue: "10", inColumn: 1)
+
+```
+
 ## Sencha's actions
+
+You can also use actions to move the content where it is visible, note that these are not assertions, and thus, don't consititute a test, they are just modifiers to the state of the UI.
 
 ### Tapping
 
@@ -100,72 +179,6 @@ moveSlider(.accessibilityID("SliderID"), to: 0.5)
 
 movePicker(.accessibilityID("PickerID"), to: Date())
 movePicker(.accessibilityID("PickerID"), column: 1, to: "10")
-
-```
-
-## Sencha's assertions
-
-```swift
-
-assertVisible(.text("EmptyStateText"))
-assertVisible(.accessibilityID("EmptyStateID"))
-assertVisible(.class(UIActivityIndicator.class))
-
-assertVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("TableViewID"))
-assertVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("RegularScrollViewID"))
-
-assertNotVisible(.text("EmptyStateText"))
-assertNotVisible(.text("EmptyStateText"), inScrollableElementWith: .accessibilityID("TableViewID"))
-
-```
-
-### Verifying TableView content
-
-```swift
-
-assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30)
-assert(tableViewWith: .accessibilityID("TableViewID"), hasRowCount: 30, inSection: 1)
-assert(tableViewWith: .accessibilityID("TableViewID"), hasSectionCount: 2)
-assertTableViewIsEmpty(with: .accessibilityID("TableViewID"))
-assertTableViewIsNotEmpty(with: .accessibilityID("TableViewID"))
-
-```
-
-### Verifying CollectionView content
-
-```swift
-
-assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30)
-assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasCellCount: 30, inSection: 1)
-assert(collectionViewWith: .accessibilityID("CollectionViewID"), hasSectionCount: 2)
-assertCollectionViewIsEmpty(with: .accessibilityID("CollectionViewID"))
-assertCollectionViewIsNotEmpty(with: .accessibilityID("CollectionViewID"))
-
-```
-
-### Verifying Switch state
-```swift
-
-assertSwitchIsOn(.accessibilityID("SwitchID"))
-assertSwitchIsOff(.accessibilityID("SwitchID"))
- 
-```
-
-### Verifying Slider value
-```swift
-
-assertSlider(.accessibilityID("SliderID"), hasValue: .equalTo(0.5))
-assertSlider(.accessibilityID("SliderID"), hasValue: .greaterThan(0.0))
-assertSlider(.accessibilityID("SliderID"), hasValue: .lessThan(1.0))
-
-```
-
-### Verifying Picker value
-
-```swift 
-
-assertPicker(.accessibilityID("pickerID"), hasValue: Date())
-assertPicker(.accessibilityID("pickerID"), hasValue: "10", inColumn: 1)
 
 ```
 
