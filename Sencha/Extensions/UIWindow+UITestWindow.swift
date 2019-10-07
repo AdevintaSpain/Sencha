@@ -24,17 +24,26 @@ public extension UIWindow {
             newRootViewController.setNeedsStatusBarAppearanceUpdate()
         }
         
-        /// The presenting view controllers view doesn't get removed from the window as its currently transistioning and presenting a view controller
-        if let transitionViewClass = NSClassFromString("UITransitionView") {
-            for subview in subviews where subview.isKind(of: transitionViewClass) {
-                subview.removeFromSuperview()
-            }
+        if #available(iOS 13, *) {
+            // `removeTransitionViews()` causes black screen on iOS13
+        } else {
+            removeTransitionViews()
         }
+        
         if let previousViewController = previousViewController {
             // Allow the view controller to be deallocated
             previousViewController.dismiss(animated: false) {
                 // Remove the root view in case its still showing
                 previousViewController.view.removeFromSuperview()
+            }
+        }
+    }
+    
+    /// The presenting view controllers view doesn't get removed from the window as its currently transistioning and presenting a view controller
+    private func removeTransitionViews() {
+        if let transitionViewClass = NSClassFromString("UITransitionView") {
+            for subview in subviews where subview.isKind(of: transitionViewClass) {
+                subview.removeFromSuperview()
             }
         }
     }
