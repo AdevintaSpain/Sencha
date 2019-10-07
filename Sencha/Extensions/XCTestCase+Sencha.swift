@@ -23,10 +23,10 @@ extension XCTestCase: Sencha {
         }
         
         if modally {
-            window.set(rootViewController: UIViewController())
+            window.rootViewController = UIViewController()
             window.rootViewController?.present(viewControllerToOpen, animated: true, completion: nil)
         } else {
-            window.set(rootViewController: viewControllerToOpen)
+            window.rootViewController = viewControllerToOpen
         }
     }
     
