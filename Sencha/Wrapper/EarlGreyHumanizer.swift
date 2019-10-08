@@ -59,7 +59,7 @@ public indirect enum Matcher {
     case selected
     case sliderValue(ValueMatcher)
     case stepperValue(Double)
-    case anything()
+    case anything
     case earlGrey(GREYMatcher)
     
     public func greyMatcher() -> GREYMatcher {
@@ -136,7 +136,7 @@ public indirect enum Matcher {
             return grey_systemAlertViewShown()
         case .keyWindow:
             return grey_keyWindow()
-        case .anything():
+        case .anything:
             return grey_anything()
         case .earlGrey(let matcher):
             return matcher
@@ -204,11 +204,11 @@ public extension EarlGreyHumanizer {
 }
 
 public extension GREYInteraction {
-    @discardableResult public func assert(_ matcher: Matcher) -> Self {
+    @discardableResult func assert(_ matcher: Matcher) -> Self {
         return self.assert(matcher.greyMatcher())
     }
 
-    @discardableResult public func perform(_ action: Action) -> Self {
+    @discardableResult func perform(_ action: Action) -> Self {
         return self.perform(action.greyAction())
     }
 }

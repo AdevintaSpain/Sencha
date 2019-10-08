@@ -20,7 +20,7 @@ public extension SenchaTapActions {
         )
     }
 
-    public func tapBackButton(file: StaticString = #file, line: UInt = #line) {
+    func tapBackButton(file: StaticString = #file, line: UInt = #line) {
 
         select(
             .class(NSClassFromString("_UIBackButtonContainerView")!),
