@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'Sencha'
-  s.version      = '0.13'
+  s.version      = '0.14'
   s.summary      = 'The friendly version of EarlGrey'
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source_files  = 'Sencha/**/*.{swift,h,m}'
   
   s.framework = 'XCTest'
-  s.dependency 'EarlGrey', '~> 1.15.0'
+  s.dependency 'EarlGrey', '~> 1.16.0'
   s.swift_version = '5.0'
 
 end
