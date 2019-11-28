@@ -4,26 +4,13 @@ import UIKit
 public extension UIWindow {
     
     /// Fix for http://stackoverflow.com/a/27153956/849645
-    func set(rootViewController newRootViewController: UIViewController, withTransition transition: CATransition? = nil) {
+    func set(rootViewController newRootViewController: UIViewController) {
         
         let previousViewController = rootViewController
-        
-        if let transition = transition {
-            // Add the transition
-            layer.add(transition, forKey: kCATransition)
-        }
-        
+
         rootViewController = newRootViewController
-        
-        // Update status bar appearance using the new view controllers appearance - animate if needed
-        if UIView.areAnimationsEnabled {
-            UIView.animate(withDuration: CATransaction.animationDuration()) {
-                newRootViewController.setNeedsStatusBarAppearanceUpdate()
-            }
-        } else {
-            newRootViewController.setNeedsStatusBarAppearanceUpdate()
-        }
-        
+        newRootViewController.setNeedsStatusBarAppearanceUpdate()
+
         if #available(iOS 13, *) {
             // `removeTransitionViews()` causes black screen on iOS13
         } else {
@@ -31,7 +18,8 @@ public extension UIWindow {
         }
         
         if let previousViewController = previousViewController {
-            // Allow the view controller to be deallocated
+            // Modal view controllers presented by the previous view controller need to be manually dismissed or else they will remain in the
+            // hierarchy, even on iOS 13. That will cause memory leaks and lots of "Multiple elements were matched" exceptions from EarlGrey.
             previousViewController.dismiss(animated: false) {
                 // Remove the root view in case its still showing
                 previousViewController.view.removeFromSuperview()
