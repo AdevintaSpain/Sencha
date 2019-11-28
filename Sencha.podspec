@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'Sencha'
-  s.version      = '0.14'
+  s.version      = '0.14.1'
   s.summary      = 'The friendly version of EarlGrey'
 
   s.description  = <<-DESC
