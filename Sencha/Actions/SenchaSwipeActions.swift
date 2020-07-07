@@ -4,6 +4,7 @@ import EarlGrey
 public protocol SenchaSwipeActions: EarlGreyHumanizer {
 
     func swipe(_ matcher: Matcher, inDirection direction: SenchaDirection, file: StaticString, line: UInt)
+    func swipeFast(_ matcher: Matcher, inDirection direction: SenchaDirection, file: StaticString, line: UInt)
 }
 
 public extension SenchaSwipeActions {
@@ -16,6 +17,17 @@ public extension SenchaSwipeActions {
             line: line
         ).perform(
             grey_swipeSlowInDirection(direction.toGREYDirection())
+        )
+    }
+
+    func swipeFast(_ matcher: Matcher, inDirection direction: SenchaDirection,file: StaticString = #file, line: UInt = #line) {
+
+        select(
+            matcher,
+            file: file,
+            line: line
+        ).perform(
+            grey_swipeFastInDirection(direction.toGREYDirection())
         )
     }
 }
