@@ -21,9 +21,14 @@ public extension SenchaTapActions {
     }
 
     func tapBackButton(file: StaticString = #file, line: UInt = #line) {
-
+        var backButtonMatcher: Matcher
+        if #available(iOS 14, *) {
+            backButtonMatcher = .allOf([.descendant(.class(NSClassFromString("_UINavigationBarContentView")!)), .firstElement])
+        } else {
+            backButtonMatcher = .class(NSClassFromString("_UIBackButtonContainerView")!)
+        }
         select(
-            .class(NSClassFromString("_UIBackButtonContainerView")!),
+            backButtonMatcher,
             file: file,
             line: line
         ).perform(
