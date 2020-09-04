@@ -24,5 +24,6 @@ class DetailViewController: UIViewController {
         switchOn.accessibilityIdentifier = AccessibilityID.switchOn
         slider.accessibilityIdentifier = AccessibilityID.slider
         datePicker.accessibilityIdentifier = AccessibilityID.datePicker
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
     }
 }
