@@ -15,8 +15,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
 
   s.source       = { :git => 'https://github.com/SchibstedSpain/Sencha.git', :tag => s.version.to_s }
-  s.source_files  = 'EarlGrey.framework', 'Sencha/**/*.{swift,h,m}'
-  s.public_header_files = "EarlGrey.framework/Headers/*.h"
+  s.source_files  = 'Sencha/**/*.{swift,h,m}'
 
   s.framework = 'XCTest'
   s.vendored_frameworks = "EarlGrey.framework"
