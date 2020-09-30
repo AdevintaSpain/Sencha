@@ -32,6 +32,8 @@
 		3F5122191EE1D37E0000CC56 /* GREYTraversalDFS.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5122131EE1D37E0000CC56 /* GREYTraversalDFS.m */; };
 		3FE259BB1F1D451200CFBB57 /* GREYAppStateTrackerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE259B91F1D451200CFBB57 /* GREYAppStateTrackerObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3FE259BC1F1D451200CFBB57 /* GREYAppStateTrackerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE259BA1F1D451200CFBB57 /* GREYAppStateTrackerObject.m */; };
+		47E029C924FE99F800473024 /* UITextSelectionView+GREYAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E029C724FE99F800473024 /* UITextSelectionView+GREYAdditions.h */; };
+		47E029CA24FE99F800473024 /* UITextSelectionView+GREYAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E029C824FE99F800473024 /* UITextSelectionView+GREYAdditions.m */; };
 		597E02CA1D55AC040052A8D1 /* GREYPathGestureUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1001081C5B46C100B2DB0A /* GREYPathGestureUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		597E02CB1D55AC180052A8D1 /* GREYScrollAction.h in Headers */ = {isa = PBXBuildFile; fileRef = FD10010C1C5B46C100B2DB0A /* GREYScrollAction.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		597E02CC1D55AC240052A8D1 /* GREYTapAction.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1001181C5B46C100B2DB0A /* GREYTapAction.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -264,6 +266,8 @@
 		3F5122131EE1D37E0000CC56 /* GREYTraversalDFS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GREYTraversalDFS.m; path = EarlGrey/Traversal/GREYTraversalDFS.m; sourceTree = SOURCE_ROOT; };
 		3FE259B91F1D451200CFBB57 /* GREYAppStateTrackerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GREYAppStateTrackerObject.h; sourceTree = "<group>"; };
 		3FE259BA1F1D451200CFBB57 /* GREYAppStateTrackerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GREYAppStateTrackerObject.m; sourceTree = "<group>"; };
+		47E029C724FE99F800473024 /* UITextSelectionView+GREYAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextSelectionView+GREYAdditions.h"; sourceTree = "<group>"; };
+		47E029C824FE99F800473024 /* UITextSelectionView+GREYAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextSelectionView+GREYAdditions.m"; sourceTree = "<group>"; };
 		599E31E61ED79E1D0091178D /* GREYFatalAsserts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GREYFatalAsserts.h; sourceTree = "<group>"; };
 		599E31F61ED7DF280091178D /* GREYThrowDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GREYThrowDefines.h; sourceTree = "<group>"; };
 		61156A4F1D1B2AC1000013C7 /* UIGestureRecognizer+GREYAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GREYAdditions.h"; sourceTree = "<group>"; };
@@ -562,8 +566,7 @@
 				FD10019B1C5B46C200B2DB0A /* Synchronization */,
 				3F5122091EE1CF2B0000CC56 /* Traversal */,
 			);
-			name = EarlGrey;
-			path = EGFramework;
+			path = EarlGrey;
 			sourceTree = "<group>";
 		};
 		FD1001001C5B46C100B2DB0A /* Action */ = {
@@ -643,6 +646,8 @@
 				FD10013C1C5B46C100B2DB0A /* UIScrollView+GREYAdditions.m */,
 				FD10013D1C5B46C100B2DB0A /* UISwitch+GREYAdditions.h */,
 				FD10013E1C5B46C100B2DB0A /* UISwitch+GREYAdditions.m */,
+				47E029C724FE99F800473024 /* UITextSelectionView+GREYAdditions.h */,
+				47E029C824FE99F800473024 /* UITextSelectionView+GREYAdditions.m */,
 				FD10013F1C5B46C100B2DB0A /* UITouch+GREYAdditions.h */,
 				FD1001401C5B46C100B2DB0A /* UITouch+GREYAdditions.m */,
 				FD1001411C5B46C100B2DB0A /* UIView+GREYAdditions.h */,
@@ -906,7 +911,9 @@
 				FDE401021BE83859001C172E /* Dependencies */,
 				FDE4FFAA1BE831AA001C172E /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		FDE4FFAA1BE831AA001C172E /* Products */ = {
 			isa = PBXGroup;
@@ -928,6 +935,7 @@
 				FD1001B31C5B46C200B2DB0A /* GREYActions.h in Headers */,
 				FD6D0B981C6D49400001EA75 /* GREYBaseAction.h in Headers */,
 				FD1001B11C5B46C200B2DB0A /* GREYActionBlock.h in Headers */,
+				47E029C924FE99F800473024 /* UITextSelectionView+GREYAdditions.h in Headers */,
 				FD1001BD1C5B46C200B2DB0A /* GREYScrollActionError.h in Headers */,
 				FD1001F91C5B46C200B2DB0A /* GREYIdlingResource.h in Headers */,
 				FD1001FA1C5B46C200B2DB0A /* GREYAssertion.h in Headers */,
@@ -940,7 +948,6 @@
 				FD1002051C5B46C200B2DB0A /* GREYConstants.h in Headers */,
 				FD10020C1C5B46C200B2DB0A /* GREYScreenshotUtil.h in Headers */,
 				FD1002081C5B46C200B2DB0A /* GREYElementHierarchy.h in Headers */,
-				FD10020C1C5B46C200B2DB0A /* GREYScreenshotUtil.h in Headers */,
 				FD242E811D14C24C00046221 /* GREYTestHelper.h in Headers */,
 				FD1002161C5B46C200B2DB0A /* GREYInteraction.h in Headers */,
 				FD1002121C5B46C200B2DB0A /* GREYElementFinder.h in Headers */,
@@ -1012,12 +1019,10 @@
 				597E02CE1D55AC320052A8D1 /* GREYAnalytics.h in Headers */,
 				597E02CF1D55AC380052A8D1 /* GREYAnalyticsDelegate.h in Headers */,
 				7CCBEBA61DCD2F0500CC01B8 /* GREYError.h in Headers */,
-				FDA218ED1E450A9900693978 /* GREYErrorConstants.h in Headers */,
 				FD3CBAF91EDF79BA002FCB66 /* GREYAppleInternals.h in Headers */,
 				7C32F6FD1E258E7200B00610 /* GREYError+Internal.h in Headers */,
 				7CFDF8E81DBBD5FC00CAADB3 /* GREYFailureFormatter.h in Headers */,
 				7CFDF8EA1DBBD5FC00CAADB3 /* GREYLogger.h in Headers */,
-				597E02D21D55AC520052A8D1 /* GREYSwizzler.h in Headers */,
 				7CFDF8EC1DBBD5FC00CAADB3 /* GREYObjectFormatter.h in Headers */,
 				597E02D31D55AC580052A8D1 /* GREYVisibilityChecker.h in Headers */,
 				597E02D51D55AC640052A8D1 /* GREYKeyboard.h in Headers */,
@@ -1073,7 +1078,7 @@
 		FDE4FFA11BE831AA001C172E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Google Inc.";
 				TargetAttributes = {
 					FD1000E81C5B466F00B2DB0A = {
@@ -1083,10 +1088,11 @@
 			};
 			buildConfigurationList = FDE4FFA41BE831AA001C172E /* Build configuration list for PBXProject "EarlGrey" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FDE4FFA01BE831AA001C172E;
 			productRefGroup = FDE4FFAA1BE831AA001C172E /* Products */;
@@ -1210,6 +1216,7 @@
 				FD1002451C5B46C200B2DB0A /* GREYCondition.m in Sources */,
 				3FE259BC1F1D451200CFBB57 /* GREYAppStateTrackerObject.m in Sources */,
 				FD1001FC1C5B46C200B2DB0A /* GREYAssertionBlock.m in Sources */,
+				47E029CA24FE99F800473024 /* UITextSelectionView+GREYAdditions.m in Sources */,
 				FD1002151C5B46C200B2DB0A /* GREYElementInteraction.m in Sources */,
 				FD1002381C5B46C200B2DB0A /* GREYMatchers.m in Sources */,
 				FD1001C61C5B46C200B2DB0A /* GREYSwipeAction.m in Sources */,
@@ -1261,13 +1268,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -1306,13 +1314,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -1373,7 +1382,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULEMAP_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.google.earlgrey.EarlGrey;
 				PRODUCT_MODULE_NAME = EarlGrey;
 				SDKROOT = iphoneos;
