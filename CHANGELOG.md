@@ -2,6 +2,12 @@
 
 Details changes in each release of EarlGrey. EarlGrey follows [semantic versioning](http://semver.org/).
 
+## [1.17.0](https://github.com/AdevintaSpain/EarlGrey/tree/1.17.0) (09/30/2020)
+
+### Compatibility
+* Added support for Xcode 12 and iOS 14
+* Dropped iOS 8 support
+
 ## [1.16.0](https://github.com/google/EarlGrey/tree/1.16.0) (10/26/2019)
 ```
 Baseline: [09f4abc]
