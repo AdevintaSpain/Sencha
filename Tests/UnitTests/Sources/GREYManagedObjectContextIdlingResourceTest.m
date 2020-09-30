@@ -275,4 +275,32 @@ static const NSTimeInterval kExpectationTimeoutSeconds = 1.0;
                insertIntoManagedObjectContext:managedObjectContext];
 }
 
++ (void)setUp {
+    [self setUpPersistenceStoreCoordinatorReferenceToUIApplication];
+    [super setUp];
+}
+
++ (void)setUpPersistenceStoreCoordinatorReferenceToUIApplication {
+    if iOS14_OR_ABOVE() {
+        // On iOS 14 NSPersistentStoreCoordinator holds a static reference to whatever value
+        // [UIApplication sharedApplication] has the first time addPersistentStoreWithType: is
+        // invoked. If we allow our mocked UIApplication instance to be referenced, and execute
+        // a second test where the same method is invoked, NSPersistentStoreCoordinator will try
+        // to access a now invalid memory location (since our mock is recreated for every test)
+        // and the application will crash.
+        // In order to bypass this limitation, we force the initialization of this static variable
+        // with a real instance of UIApplication by invoking the following methods before any test
+        // from this test suite is executed.
+        NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] init];
+        NSPersistentStoreCoordinator *coordinator =
+            [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
+
+        [coordinator addPersistentStoreWithType:NSInMemoryStoreType
+                                  configuration:nil
+                                            URL:nil
+                                        options:nil
+                                          error:nil];
+    }
+}
+
 @end
