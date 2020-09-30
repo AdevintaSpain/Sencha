@@ -423,7 +423,9 @@
 				FD8FB2D01BB609C600E90D7D /* UnitTests */,
 				FD8FB2CF1BB609C600E90D7D /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		FD8FB2CF1BB609C600E90D7D /* Products */ = {
 			isa = PBXGroup;
