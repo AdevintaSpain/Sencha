@@ -236,7 +236,7 @@
 - (void)testSubviewsAssignableFromClass {
   UIView *root = [[UIView alloc] init];
   UILabel *child1 = [[UILabel alloc] init];
-  UISlider *child2 = [[UISlider alloc] init];
+  UIButton *child2 = [[UIButton alloc] init];
   UILabel *child1A = [[UILabel alloc] init];
   [root addSubview:child1];
   [root addSubview:child2];
@@ -250,7 +250,7 @@
   expected = @[ child1, child1A ];
   XCTAssertEqualObjects(expected, subviews, @"Should return all UILabel views");
 
-  subviews = [root grey_childrenAssignableFromClass:[UISlider class]];
+  subviews = [root grey_childrenAssignableFromClass:[UIButton class]];
   expected = @[ child2 ];
   XCTAssertEqualObjects(expected, subviews, @"Should return just one UISlider view");
 
