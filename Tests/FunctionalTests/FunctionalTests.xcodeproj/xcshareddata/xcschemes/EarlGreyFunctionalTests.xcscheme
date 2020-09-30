@@ -20,7 +20,8 @@
       </EnvironmentVariables>
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD5470F01BBDECBB000661FD"
