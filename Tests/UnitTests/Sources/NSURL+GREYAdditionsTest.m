@@ -28,7 +28,7 @@
   [[GREYConfiguration sharedInstance] setValue:@[]
                                   forConfigKey:kGREYConfigKeyURLBlacklistRegex];
   // Just analytics tracking ID.
-  NSString *analyticsID = @"UA-54227235-2";
+  NSString *analyticsID = @"UA-54227235-9";
   NSURL *url = [NSURL URLWithString:analyticsID];
   XCTAssertNotNil(url);
   XCTAssertFalse([url grey_shouldSynchronize]);

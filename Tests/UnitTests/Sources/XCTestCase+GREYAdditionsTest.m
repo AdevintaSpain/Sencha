@@ -66,12 +66,17 @@ static NSString *gXCTestCaseInterruptionExceptionName;
   NSAssert(NO, @"Failing test with NSAssert.");
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 - (void)failUsingRecordFailureWithDescription {
   [self recordFailureWithDescription:@"Test Failure"
                               inFile:@"XCTestCase+GREYAdditionsTest.m"
                               atLine:0
                             expected:NO];
 }
+
+#pragma clang diagnostic pop
 
 - (void)failByRaisingException {
   [[NSException exceptionWithName:kGREYSampleExceptionName

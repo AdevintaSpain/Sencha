@@ -24,6 +24,9 @@
 #import "GREYBaseTest.h"
 #import "GREYExposedForTesting.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 @interface NSURLConnection (NSURLConnection_GREYAdditionsTest)
 - (GREYAppStateTrackerObject *)objectForConnection;
 @end
@@ -250,3 +253,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop

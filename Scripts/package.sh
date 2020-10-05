@@ -31,8 +31,7 @@ readonly PACKAGE_FILES="README.md CHANGELOG.md LICENSE"
 
 # Make a universal dynamic framework build.
 export OUTPUT_DIR="${OUTPUT_TMP_DIR}/build"
-(cd "${SOURCE_DIR}/.." \
-  && xcrun xcodebuild build -project "${PROJECT_FILE_PATH}" -target "Release")
+(cd "${SOURCE_DIR}/.." && bash Scripts/build-release.sh)
 
 # Copy files to the temp dir and zip.
 mkdir -p "${OUTPUT_PACKAGE_DIR}"

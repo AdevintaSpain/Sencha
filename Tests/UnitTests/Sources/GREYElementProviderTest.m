@@ -85,7 +85,13 @@
 
   GREYElementProvider *provider = [GREYElementProvider providerWithRootElements:@[ cell ]];
   // At least the following should be present in order in which they are specified.
-  NSArray *expected = @[ cell, cellSubview, cell.contentView ];
+  NSArray *expected;
+  if iOS14_OR_ABOVE() {
+    // On iOS 14, a cell's contentView is lazily created
+    expected = @[ cell,  cell.contentView, cellSubview ];
+  } else {
+    expected = @[ cell, cellSubview, cell.contentView ];
+  }
   NSArray *actual = [[provider dataEnumerator] allObjects];
   // actual could contain intermediate views we don't care about. We filter them out.
   NSPredicate *filterViewsNotInExpected =
@@ -181,17 +187,17 @@
 
 - (void)testAccessibilityElementsOrder {
   UIView *viewA = [[UIView alloc] init];
-  UIImage *imgA = [[UIImage alloc] init];
-  UIImage *imgB = [[UIImage alloc] init];
+  UIView *childA = [[UIView alloc] init];
+  UIView *childB = [[UIView alloc] init];
   GREYUTAccessibilityViewContainerView *imgView =
-      [[GREYUTAccessibilityViewContainerView alloc] initWithElements:@[ imgA, imgB ]];
+      [[GREYUTAccessibilityViewContainerView alloc] initWithElements:@[ childA, childB ]];
   imgView.isAccessibilityElement = NO;
   [viewA addSubview:imgView];
 
   GREYElementProvider *provider = [GREYElementProvider providerWithElements:@[ viewA ]];
   NSEnumerator *dataEnumerator = [provider dataEnumerator];
   XCTAssertEqualObjects(viewA, [dataEnumerator nextObject], @"viewA should be first");
-  NSArray *expectedAfterNext = @[ imgView, imgB, imgA ];
+  NSArray *expectedAfterNext = @[ imgView, childB, childA ];
   XCTAssertEqualObjects(expectedAfterNext,
                         [dataEnumerator allObjects],
                         @"Should contain all views and elements the provider was initialized with");
