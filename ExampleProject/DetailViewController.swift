@@ -1,7 +1,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var switchOn: UISwitch!
@@ -20,10 +20,16 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Detail"
+        textField.delegate = self
         textField.accessibilityIdentifier = AccessibilityID.textField
         switchOn.accessibilityIdentifier = AccessibilityID.switchOn
         slider.accessibilityIdentifier = AccessibilityID.slider
         datePicker.accessibilityIdentifier = AccessibilityID.datePicker
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
