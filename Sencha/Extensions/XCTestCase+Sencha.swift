@@ -52,7 +52,7 @@ extension XCTestCase: Sencha {
         case .accessibilityLabel(let label):
             view = tester().waitForView(withAccessibilityLabel: label, traits: traits)
         case .accessibilityID(let accessibilityID):
-            view = tester().waitForView(withAccessibilityLabel: accessibilityID)
+            view = tester().waitForView(withAccessibilityLabel: accessibilityID, traits: traits)
         default:
             unsupportedTest(file: file, line: line)
         }

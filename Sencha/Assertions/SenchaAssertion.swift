@@ -17,8 +17,18 @@ extension SenchaErrorMessage {
 }
 
 extension XCTestCase: SenchaAssertion {
+
     public func assertNotVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        unsupportedTest(file: file, line: line)
+        switch matcher {
+        case .text(let text):
+            tester().waitForAbsenceOfView(withAccessibilityLabel: text)
+        case .accessibilityLabel(let label):
+            tester().waitForAbsenceOfView(withAccessibilityLabel: label)
+        case .accessibilityID(let accessibilityID):
+            tester().waitForAbsenceOfView(withAccessibilityLabel: accessibilityID)
+        default:
+            unsupportedTest(file: file, line: line)
+        }
     }
 
     public func assertVisible(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {

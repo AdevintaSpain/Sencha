@@ -26,6 +26,12 @@ class ViewDetailShould: XCTestCase {
 
         assertVisible(.text(placeholderText))
     }
+
+    func test_something_is_not_displayed() {
+        assertNotVisible(.text("This text does not exist"))
+        assertNotVisible(.text("This text is hidden"))
+        assertNotVisible(.accessibilityID(""))
+    }
     
 
     func test_show_an_interactable_text_field() {

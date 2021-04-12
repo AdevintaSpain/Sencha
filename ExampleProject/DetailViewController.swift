@@ -7,6 +7,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var switchOn: UISwitch!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var hiddenLabel: UILabel!
 
     struct AccessibilityID {
 
@@ -14,6 +15,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         static let switchOn = "DetailViewController.switchOn"
         static let slider = "DetailViewController.slider"
         static let datePicker = "DetailViewController.datePicker"
+        static let hiddenLabel = "DetailViewController.hiddenLabel"
     }
 
     override func viewDidLoad() {
@@ -26,6 +28,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         slider.accessibilityIdentifier = AccessibilityID.slider
         datePicker.accessibilityIdentifier = AccessibilityID.datePicker
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+        hiddenLabel.accessibilityIdentifier = AccessibilityID.hiddenLabel
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
