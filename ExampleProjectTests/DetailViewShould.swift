@@ -10,6 +10,7 @@ class ViewDetailShould: XCTestCase {
     let textFieldMatcher = Matcher.accessibilityID(DetailViewController.AccessibilityID.textField)
     let slider = Matcher.accessibilityID(DetailViewController.AccessibilityID.slider)
     let picker = Matcher.accessibilityID(DetailViewController.AccessibilityID.datePicker)
+    let placeholderText = "Some placeholder text"
     
     override func setUp() {
         super.setUp()
@@ -23,8 +24,15 @@ class ViewDetailShould: XCTestCase {
 
     func test_show_a_placeholder_text() {
 
-        assertVisible(.text("Some placeholder text"))
+        assertVisible(.text(placeholderText))
     }
+
+    func test_something_is_not_displayed() {
+        assertNotVisible(.text("This text does not exist"))
+        assertNotVisible(.text("This text is hidden"))
+        assertNotVisible(.accessibilityID(""))
+    }
+    
 
     func test_show_an_interactable_text_field() {
 
@@ -32,8 +40,10 @@ class ViewDetailShould: XCTestCase {
             text: "text",
             inElementWith: textFieldMatcher
         )
+        
+        tapKeyboardReturnKey()
 
-        assertVisible(.text("text"))
+        assertTextVisible("text", inTextFieldWith: textFieldMatcher)
     }
 
     func test_show_a_switch_with_on_state_and_turn_onto_off_state() {
@@ -51,8 +61,8 @@ class ViewDetailShould: XCTestCase {
         )
         
         clearTextInElement(with: textFieldMatcher)
-        
-        assertNotVisible(.text("text"))
+
+        assertTextVisible(placeholderText, inTextFieldWith: textFieldMatcher)
     }
 
     func test_be_able_to_slide_a_slider() {
