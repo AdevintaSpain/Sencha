@@ -25,7 +25,7 @@ extension XCTestCase: SenchaAssertion {
         case .accessibilityLabel(let label):
             tester().waitForAbsenceOfView(withAccessibilityLabel: label)
         case .accessibilityID(let accessibilityID):
-            tester().waitForAbsenceOfView(withAccessibilityLabel: accessibilityID)
+            tester().waitForAbsenceOfView(withAccessibilityIdentifier: accessibilityID)
         default:
             unsupportedTest(file: file, line: line)
         }
