@@ -62,7 +62,7 @@ class MainViewShould: XCTestCase {
 
         tap(.text("12"), inScrollableElementWith: TABLE_VIEW_MATCHER)
         assertVisible(.text("Detail"))
-        tapBackButton()
+        tap(.accessibilityLabel("Sencha Example"))
 
         assertVisible(.text("Sencha Example"))
     }

@@ -47,11 +47,11 @@ class ViewDetailShould: XCTestCase {
     }
 
     func test_show_a_switch_with_on_state_and_turn_onto_off_state() {
-        assertSwitchIsOn(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
+        assertSwitchIsOn(.accessibilityID(DetailViewController.AccessibilityID.switch))
 
-        tap(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
+        setSwitch(with: .accessibilityID(DetailViewController.AccessibilityID.switch), toOn: false)
 
-        assertSwitchIsOff(.accessibilityID(DetailViewController.AccessibilityID.switchOn))
+        assertSwitchIsOff(.accessibilityID(DetailViewController.AccessibilityID.switch))
     }
     
     func test_clear_text_from_a_filled_text_field() {

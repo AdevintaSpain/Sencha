@@ -12,7 +12,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     struct AccessibilityID {
 
         static let textField = "DetailViewController.textField"
-        static let switchOn = "DetailViewController.switchOn"
+        static let `switch` = "DetailViewController.switch"
         static let slider = "DetailViewController.slider"
         static let datePicker = "DetailViewController.datePicker"
         static let hiddenLabel = "DetailViewController.hiddenLabel"
@@ -24,7 +24,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         title = "Detail"
         textField.delegate = self
         textField.accessibilityIdentifier = AccessibilityID.textField
-        switchOn.accessibilityIdentifier = AccessibilityID.switchOn
+        switchOn.accessibilityIdentifier = AccessibilityID.switch
         slider.accessibilityIdentifier = AccessibilityID.slider
         datePicker.accessibilityIdentifier = AccessibilityID.datePicker
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
