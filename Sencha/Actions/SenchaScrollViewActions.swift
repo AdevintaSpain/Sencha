@@ -2,29 +2,35 @@ import Foundation
 import KIF
 
 public protocol SenchaScrollViewActions: EarlGreyHumanizer {
-    func scrollToBottom(in matcher: Matcher, file: StaticString, line: UInt)
-    func scrollToTop(in matcher: Matcher, file: StaticString, line: UInt)
-    func scrollToLeft(in matcher: Matcher, file: StaticString, line: UInt)
-    func scrollToRight(in matcher: Matcher, file: StaticString, line: UInt)
+    func scroll(to edge: ScrollEdge, in matcher: Matcher, file: StaticString, line: UInt)
 }
 
-enum ScrollEdge {
+public enum ScrollEdge {
     case top, bottom, left, right
 }
+
+extension SenchaErrorMessage {
+    static let viewIsNotScrollable = "%@ is not scrollable."
+}
+
 extension XCTestCase: SenchaScrollViewActions {
-    public func scrollToBottom(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-    }
-
-    public func scrollToTop(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-    }
-
-    public func scrollToLeft(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-    }
-
-    public func scrollToRight(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-    }
-
-    private func scroll(to edge: ScrollEdge, in matcher: Matcher) {
-
+    public func scroll(to edge: ScrollEdge, in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let scrollView = view as? UIScrollView else {
+            XCTFail(String(format: SenchaErrorMessage.viewIsNotScrollable, view), file: file, line: line)
+            return
+        }
+        var scrollOffset: CGPoint = scrollView.contentOffset
+        switch edge {
+        case .top:
+            scrollOffset.y = -scrollView.contentInset.top
+        case .bottom:
+            scrollOffset.y = scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInset.bottom
+        case .left:
+            scrollOffset.x = -scrollView.contentInset.left
+        case .right:
+            scrollOffset.x = scrollView.contentSize.width - scrollView.bounds.width + scrollView.contentInset.right
+        }
+        scrollView.setContentOffset(scrollOffset, animated: true)
     }
 }
