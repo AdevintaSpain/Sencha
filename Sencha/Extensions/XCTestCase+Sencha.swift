@@ -1,7 +1,7 @@
 
 import XCTest
 
-public protocol Sencha: SenchaScrollableAssertion, SenchaTapActions, SenchaEditTextActions, SenchaSwipeActions, SenchaKeyboardActions, SenchaTableViewAssertions, SenchaSwitchAssertions, SenchaCollectionViewAssertions, SenchaSliderAssertions, SenchaSliderActions, SenchaPickerActions, SenchaPickerAssertions {}
+public protocol Sencha: SenchaTapActions, SenchaEditTextActions, SenchaSwipeActions, SenchaKeyboardActions, SenchaTableViewAssertions, SenchaSwitchAssertions, SenchaCollectionViewAssertions, SenchaSliderAssertions, SenchaSliderActions, SenchaPickerActions, SenchaPickerAssertions {}
 
 struct SenchaErrorMessage {
     static let unsupportedTest = "This combination of methods and matchers is not supported"

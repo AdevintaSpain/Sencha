@@ -1,73 +1,30 @@
 import Foundation
-import EarlGrey
+import KIF
 
 public protocol SenchaScrollViewActions: EarlGreyHumanizer {
-    
-    func tap(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString, line: UInt)
-    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYInteraction
-    @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString, line: UInt) -> GREYInteraction
     func scrollToBottom(in matcher: Matcher, file: StaticString, line: UInt)
     func scrollToTop(in matcher: Matcher, file: StaticString, line: UInt)
     func scrollToLeft(in matcher: Matcher, file: StaticString, line: UInt)
     func scrollToRight(in matcher: Matcher, file: StaticString, line: UInt)
 }
 
-public extension SenchaScrollViewActions {
-    
-    func tap(_ matcher: Matcher, inScrollableElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        
-        let visibleMatcher = Matcher.allOf([matcher, .visible])
-        scrollTo(
-            visibleMatcher,
-            inElementWith: scrollMatcher,
-            file: file,
-            line: line
-        ).perform(
-            grey_tap()
-        )
+enum ScrollEdge {
+    case top, bottom, left, right
+}
+extension XCTestCase: SenchaScrollViewActions {
+    public func scrollToBottom(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
     }
 
-    func scrollToBottom(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        scroll(to: .bottom, in: matcher)
+    public func scrollToTop(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
     }
 
-    func scrollToTop(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        scroll(to: .top, in: matcher)
+    public func scrollToLeft(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
     }
 
-    func scrollToLeft(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        scroll(to: .left, in: matcher)
+    public func scrollToRight(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
     }
 
-    func scrollToRight(in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        scroll(to: .right, in: matcher)
-    }
+    private func scroll(to edge: ScrollEdge, in matcher: Matcher) {
 
-    private func scroll(to edge: GREYContentEdge, in matcher: Matcher) {
-        EarlGrey.selectElement(with: matcher.greyMatcher()).perform(grey_scrollToContentEdge(edge))
-    }
-
-    @discardableResult func scrollTo(_ matcher: Matcher, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYInteraction {
-        
-        let halfScreenSize = UIScreen.main.bounds.height/2
-        return scrollTo(
-            matcher,
-            withSwipesOf: halfScreenSize,
-            inElementWith: scrollMatcher,
-            file: file,
-            line: line
-        )
-    }
-    
-    @discardableResult func scrollTo(_ matcher: Matcher, withSwipesOf distance: CGFloat, inElementWith scrollMatcher: Matcher, file: StaticString = #file, line: UInt = #line) -> GREYInteraction {
-        
-        return select(
-            matcher,
-            file: file,
-            line: line
-        ).usingSearch(
-            grey_scrollInDirection(GREYDirection.down, CGFloat(distance)),
-            onElementWith: scrollMatcher.greyMatcher()
-        )
     }
 }
