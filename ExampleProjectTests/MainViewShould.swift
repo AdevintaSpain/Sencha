@@ -43,6 +43,17 @@ class MainViewShould: XCTestCase {
     
         assertVisible(.text("20"))
     }
+
+    func test_be_able_to_scroll_to_bottom_and_verify_the_content() {
+        scroll(to: .bottom, in: TABLE_VIEW_MATCHER)
+        assertVisible(.text("20"))
+    }
+
+    func test_be_able_to_scroll_to_bottom_then_scroll_to_top_and_verify_the_content() {
+        assertVisible(.text("20"))
+        scroll(to: .top, in: TABLE_VIEW_MATCHER)
+        assertVisible(.text("1"))
+    }
     
     func test_be_able_to_tap_elements_and_verify_the_result() {
     
