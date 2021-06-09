@@ -1,5 +1,5 @@
 import Foundation
-import EarlGrey
+import KIF
 
 public protocol SenchaEditTextActions: EarlGreyHumanizer {
     
@@ -8,38 +8,25 @@ public protocol SenchaEditTextActions: EarlGreyHumanizer {
     func clearTextInElement(with matcher: Matcher, file: StaticString, line: UInt)
 }
 
-public extension SenchaEditTextActions {
+extension XCTestCase: SenchaEditTextActions {
 
-    func insertText(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).perform(
-            grey_replaceText(text)
-        )
+    public func type(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        tester().enterText(text, into: nil, in: findView(with: matcher), expectedResult: nil)
     }
 
-    func type(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).perform(
-            grey_typeText(text)
-        )
+    public func insertText(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        switch matcher {
+        case .text(let textId):
+            tester().setText(text, intoViewWithAccessibilityLabel: textId)
+        case .accessibilityLabel(let label):
+            tester().setText(text, intoViewWithAccessibilityLabel: label)
+        default:
+            unsupportedTest(file: file, line: line)
+        }
     }
-    
-    func clearTextInElement(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).perform(
-            grey_clearText()
-        )
+
+    public func clearTextInElement(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        tester().clearText(from: nil, in: findView(with: matcher))
     }
+
 }
