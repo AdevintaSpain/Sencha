@@ -11,7 +11,15 @@ public protocol SenchaEditTextActions: EarlGreyHumanizer {
 extension XCTestCase: SenchaEditTextActions {
 
     public func type(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        tester().enterText(text, into: nil, in: findView(with: matcher), expectedResult: nil)
+
+        switch matcher {
+        case .text(let accessibilityLabelText):
+            tester().enterText(text, intoViewWithAccessibilityLabel: accessibilityLabelText)
+        case .accessibilityLabel(let label):
+            tester().enterText(text, intoViewWithAccessibilityLabel: label)
+        default:
+            unsupportedTest(file: file, line: line)
+        }
     }
 
     public func insertText(text: String, inElementWith matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
