@@ -41,7 +41,18 @@ class MainViewShould: XCTestCase {
     
     func test_be_able_to_scroll_to_an_offscreen_cell_and_verify_the_content() {
     
-        assertVisible(.text("20"), inScrollableElementWith: TABLE_VIEW_MATCHER)
+        assertVisible(.text("20"))
+    }
+
+    func test_be_able_to_scroll_to_bottom_and_verify_the_content() {
+        scroll(to: .bottom, in: TABLE_VIEW_MATCHER)
+        assertVisible(.text("20"))
+    }
+
+    func test_be_able_to_scroll_to_bottom_then_scroll_to_top_and_verify_the_content() {
+        assertVisible(.text("20"))
+        scroll(to: .top, in: TABLE_VIEW_MATCHER)
+        assertVisible(.text("1"))
     }
     
     func test_be_able_to_tap_elements_and_verify_the_result() {
@@ -52,7 +63,7 @@ class MainViewShould: XCTestCase {
     
     func test_be_able_to_navigate_to_a_detail_view() {
 
-        tap(.text("12"), inScrollableElementWith: TABLE_VIEW_MATCHER)
+        tap(.text("12"))
         assertVisible(.text("Detail"))
     }
 
@@ -60,7 +71,7 @@ class MainViewShould: XCTestCase {
 
         assertVisible(.text("Sencha Example"))
 
-        tap(.text("12"), inScrollableElementWith: TABLE_VIEW_MATCHER)
+        tap(.text("12"))
         assertVisible(.text("Detail"))
         tap(.accessibilityLabel("Sencha Example"))
 
@@ -76,7 +87,7 @@ class MainViewShould: XCTestCase {
     func test_wait_view_controller_to_be_visible() {
         assertVisible(.text("Sencha Example"))
 
-        tap(.text("12"), inScrollableElementWith: TABLE_VIEW_MATCHER)
+        tap(.text("12"))
         waitToBeVisible(viewControllerType: DetailViewController.self)
 
         assertVisible(.text("Detail"))
