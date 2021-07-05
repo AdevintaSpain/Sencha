@@ -1,6 +1,5 @@
-
 import UIKit
-import EarlGrey
+import XCTest
 
 public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
 
@@ -12,76 +11,40 @@ public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
 
 }
 
-public extension SenchaCollectionViewAssertions {
+extension XCTestCase: SenchaCollectionViewAssertions {
 
-    func assertCollectionViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+    public func assertCollectionViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         assert(collectionViewWith: matcher, hasCellCount: 0, file: file, line: line)
     }
 
-    func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        let cellCountAssert = GREYAssertionBlock(name: "CollectionView is not empty") { (element, error) -> Bool in
-            if let collectionView = element as? UICollectionView {
-                let numberOfCells = collectionView.numberOfItems(inSection: 0)
-                return numberOfCells > 0
-            }
-            return false
+    public func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let collectionView = view as? UICollectionView else {
+            XCTFail("\(view) is not a CollectionView")
+            return
         }
-
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            cellCountAssert
-        )
+        XCTAssertTrue(collectionView.numberOfItems(inSection: 0) > 0)
     }
 
-    func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString = #file, line: UInt = #line) {
-    
-        assert(
-            collectionViewWith: matcher,
-            hasCellCount: cellCount,
-            inSection: 0,
-            file: file,
-            line: line
-        )
+    public func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString = #file, line: UInt = #line) {
+        assert(collectionViewWith: matcher, hasCellCount: cellCount, inSection: 0)
     }
 
-    func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
-
-        let cellCountAssert = GREYAssertionBlock(name: "cell count") { (element, error) -> Bool in
-            if let collectionView = element as? UICollectionView {
-                let numberOfCells = collectionView.numberOfItems(inSection: section)
-                return numberOfCells == cellCount
-            }
-            return false
+    public func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let collectionView = view as? UICollectionView else {
+            XCTFail("\(view) is not a CollectionView")
+            return
         }
-
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            cellCountAssert
-        )
+        XCTAssertTrue(collectionView.numberOfItems(inSection: section) == cellCount)
     }
 
-    func assert(collectionViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
-
-        let sectionCountAssert = GREYAssertionBlock(name: "section count") { (element, error) -> Bool in
-            if let collectionView = element as? UICollectionView {
-                let numberOfSections = collectionView.numberOfSections
-                return numberOfSections == sectionCount
-            }
-            return false
+    public func assert(collectionViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let collectionView = view as? UICollectionView else {
+            XCTFail("\(view) is not a CollectionView")
+            return
         }
-
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            sectionCountAssert
-        )
+        XCTAssertTrue(collectionView.numberOfSections == sectionCount)
     }
 }
