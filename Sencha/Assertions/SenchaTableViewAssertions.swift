@@ -1,6 +1,5 @@
-
 import UIKit
-import EarlGrey
+import XCTest
 
 public protocol SenchaTableViewAssertions: EarlGreyHumanizer {
 
@@ -12,76 +11,40 @@ public protocol SenchaTableViewAssertions: EarlGreyHumanizer {
 
 }
 
-public extension SenchaTableViewAssertions {
+extension XCTestCase: SenchaTableViewAssertions {
 
-    func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+    public func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         assert(tableViewWith: matcher, hasRowCount: 0, file: file, line: line)
     }
 
-    func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        let cellCountAssert = GREYAssertionBlock(name: "TableView is not empty") { (element, error) -> Bool in
-            guard let tableView = element as? UITableView, tableView.numberOfSections > 0 else {
-                return false
-            }
-            let numberOfCells = tableView.numberOfRows(inSection: 0)
-            return numberOfCells > 0
+    public func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView")
+            return
         }
-
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            cellCountAssert
-        )
+        XCTAssertTrue(tableView.numberOfRows(inSection: 0) > 0)
     }
 
-    func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString = #file, line: UInt = #line) {
-        
-        assert(
-            tableViewWith: matcher,
-            hasRowCount: rowCount,
-            inSection: 0,
-            file: file,
-            line: line
-        )
+    public func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString = #file, line: UInt = #line) {
+        assert(tableViewWith: matcher, hasRowCount: rowCount, inSection: 0)
     }
     
-    func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
-    
-        let cellCountAssert = GREYAssertionBlock(name: "cell count") { (element, error) -> Bool in
-            guard let tableView = element as? UITableView, tableView.numberOfSections > section else {
-                return false
-            }
-            let numberOfCells = tableView.numberOfRows(inSection: section)
-            return numberOfCells == rowCount
+    public func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView")
+            return
         }
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            cellCountAssert
-        )
+        XCTAssertTrue(tableView.numberOfRows(inSection: section) == rowCount)
     }
     
-    func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
-    
-        let sectionCountAssert = GREYAssertionBlock(name: "section count") { (element, error) -> Bool in
-            if let tableView = element as? UITableView {
-                let numberOfSections = tableView.numberOfSections
-                return numberOfSections == sectionCount
-            }
-            return false
+    public func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView")
+            return
         }
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            sectionCountAssert
-        )
+        XCTAssertTrue(tableView.numberOfSections == sectionCount)
     }
 }
