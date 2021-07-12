@@ -1,20 +1,20 @@
-import Foundation
-import EarlGrey
+import XCTest
 
 public protocol SenchaSliderActions: EarlGreyHumanizer {
 
-    func moveSlider(_ sliderMatcher: Matcher, to value: Double, file: StaticString, line: UInt)
+    func moveSlider(_ matcher: Matcher, to value: Double, file: StaticString, line: UInt)
 }
 
-public extension SenchaSliderActions {
+extension XCTestCase: SenchaSliderActions {
 
-    func moveSlider(_ sliderMatcher: Matcher, to value: Double, file: StaticString = #file, line: UInt = #line) {
-        select(
-            sliderMatcher,
-            file: file,
-            line: line
-        ).perform(
-            .moveSliderToValue(value)
-        )
+    public func moveSlider(_ matcher: Matcher, to value: Double, file: StaticString = #file, line: UInt = #line) {
+        switch matcher {
+        case .text(let label), .accessibilityLabel(let label):
+            tester().setValue(Float(value), forSliderWithAccessibilityLabel: label)
+        case .accessibilityID(let accessibilityID):
+            tester().setValue(Float(value), forSliderWithAccessibilityIdentifier: accessibilityID)
+        default:
+            unsupportedTest(file: file, line: line)
+        }
     }
 }
