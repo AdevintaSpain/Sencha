@@ -2,15 +2,12 @@ import Foundation
 import EarlGrey
 
 public indirect enum ValueMatcher {
-    case closeTo(Double, Double)
     case equalTo(Double)
     case lessThan(Double)
     case greaterThan(Double)
 
     func greyMatcher() -> GREYMatcher {
         switch self {
-        case .closeTo(let value, let delta):
-            return grey_closeTo(value, delta)
         case .equalTo(let value):
             return grey_equalTo(value)
         case .lessThan(let value):
