@@ -23,7 +23,6 @@ public enum SenchaDirection {
 
 public protocol SenchaSwipeActions: EarlGreyHumanizer {
     func swipe(_ matcher: Matcher, inDirection direction: SenchaDirection, file: StaticString, line: UInt)
-    func swipeFast(_ matcher: Matcher, inDirection direction: SenchaDirection, file: StaticString, line: UInt)
 }
 
 extension XCTestCase: SenchaSwipeActions {
@@ -37,10 +36,5 @@ extension XCTestCase: SenchaSwipeActions {
         default:
             unsupportedTest(file: file, line: line)
         }
-    }
-
-    public func swipeFast(_ matcher: Matcher, inDirection direction: SenchaDirection,file: StaticString = #file, line: UInt = #line) {
-
-
     }
 }
