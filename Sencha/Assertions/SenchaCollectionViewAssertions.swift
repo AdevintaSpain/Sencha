@@ -14,7 +14,16 @@ public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
 extension XCTestCase: SenchaCollectionViewAssertions {
 
     public func assertCollectionViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        assert(collectionViewWith: matcher, hasCellCount: 0, file: file, line: line)
+        let view = findView(with: matcher, file: file, line: line)
+        guard let collectionView = view as? UICollectionView else {
+            XCTFail("\(view) is not a CollectionView", file: file, line: line)
+            return
+        }
+        if collectionView.numberOfSections == 0 {
+            XCTAssertEqual(collectionView.numberOfSections, 0, file: file, line: line)
+        } else {
+            assert(collectionViewWith: matcher, hasCellCount: 0, file: file, line: line)
+        }
     }
 
     public func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {

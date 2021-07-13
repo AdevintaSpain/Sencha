@@ -14,9 +14,18 @@ public protocol SenchaTableViewAssertions: EarlGreyHumanizer {
 extension XCTestCase: SenchaTableViewAssertions {
 
     public func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        assert(tableViewWith: matcher, hasRowCount: 0, file: file, line: line)
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView", file: file, line: line)
+            return
+        }
+        if tableView.numberOfSections == 0 {
+            XCTAssertEqual(tableView.numberOfSections, 0, file: file, line: line)
+        } else {
+            assert(tableViewWith: matcher, hasRowCount: 0, file: file, line: line)
+        }
     }
-
+    
     public func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher)
         guard let tableView = view as? UITableView else {
