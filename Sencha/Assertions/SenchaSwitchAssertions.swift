@@ -1,6 +1,6 @@
 import XCTest
 
-public protocol SenchaSwitchAssertions: EarlGreyHumanizer {
+public protocol SenchaSwitchAssertions {
      func assertSwitchIsOn(_ matcher: Matcher, file: StaticString, line: UInt)
      func assertSwitchIsOff(_ matcher: Matcher, file: StaticString, line: UInt)
 }

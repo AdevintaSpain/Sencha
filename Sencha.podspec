@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
 
   s.dependency 'KIF'
   s.dependency 'KIF/IdentifierTests'
-  s.dependency 'EarlGrey', '~> 1.16'
 
   s.swift_version = '5.0'
 

@@ -1,9 +1,6 @@
-import UIKit
-import Foundation
 import KIF
 
-public protocol SenchaKeyboardActions: EarlGreyHumanizer {
-    
+public protocol SenchaKeyboardActions {
     func tapKeyboardReturnKey(file: StaticString, line: UInt)
 }
 

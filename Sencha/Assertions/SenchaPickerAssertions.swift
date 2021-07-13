@@ -1,6 +1,6 @@
 import XCTest
 
-public protocol SenchaPickerAssertions: EarlGreyHumanizer {
+public protocol SenchaPickerAssertions {
     func assertPicker(_ matcher: Matcher, hasValue value: Date, file: StaticString, line: UInt)
     func assertPicker(_ matcher: Matcher, hasValue value: String, inColumn column: Int, file: StaticString, line: UInt)
 }

@@ -1,6 +1,6 @@
 import XCTest
 
-public protocol SenchaSliderAssertions: EarlGreyHumanizer {
+public protocol SenchaSliderAssertions {
     func assertSlider(_ matcher: Matcher, hasValue value: ValueMatcher, file: StaticString, line: UInt)
 }
 

@@ -1,13 +1,8 @@
-
 import XCTest
 
-public protocol Sencha: SenchaTapActions, SenchaEditTextActions, SenchaSwipeActions, SenchaKeyboardActions, SenchaTableViewAssertions, SenchaSwitchAssertions, SenchaCollectionViewAssertions, SenchaSliderAssertions, SenchaSliderActions, SenchaPickerActions, SenchaPickerAssertions {}
+struct SenchaErrorMessage {}
 
-struct SenchaErrorMessage {
-    static let unsupportedTest = "This combination of methods and matchers is not supported"
-}
-
-extension XCTestCase: Sencha {
+extension XCTestCase {
 
     private var window : UIWindow {
         get {
@@ -33,11 +28,6 @@ extension XCTestCase: Sencha {
             window.set(rootViewController: viewControllerToOpen)
         }
     }
-    
-    public func waitToBeVisible(viewControllerType: UIViewController.Type) {
-        let condition = SenchaViewControllerCondition(window: window)
-        condition.waitToBeVisible(viewControllerType)
-    }
 
     private func embedInNavigationController(_ viewController: UIViewController) -> UIViewController {
         let navigationController = UINavigationController(rootViewController: viewController)
@@ -53,13 +43,7 @@ extension XCTestCase: Sencha {
             view = tester().waitForView(withAccessibilityLabel: label, traits: traits)
         case .accessibilityID(let accessibilityID):
             view = tester().waitForView(withAccessibilityIdentifier: accessibilityID)
-        default:
-            unsupportedTest(file: file, line: line)
         }
         return view
-    }
-
-    func unsupportedTest(file: StaticString, line: UInt) {
-        XCTFail(SenchaErrorMessage.unsupportedTest, file: file, line: line)
     }
 }

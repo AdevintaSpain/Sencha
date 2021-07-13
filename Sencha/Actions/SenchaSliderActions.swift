@@ -1,7 +1,6 @@
 import XCTest
 
-public protocol SenchaSliderActions: EarlGreyHumanizer {
-
+public protocol SenchaSliderActions {
     func moveSlider(_ matcher: Matcher, to value: Double, file: StaticString, line: UInt)
 }
 
@@ -13,8 +12,6 @@ extension XCTestCase: SenchaSliderActions {
             tester().setValue(Float(value), forSliderWithAccessibilityLabel: label)
         case .accessibilityID(let accessibilityID):
             tester().setValue(Float(value), forSliderWithAccessibilityIdentifier: accessibilityID)
-        default:
-            unsupportedTest(file: file, line: line)
         }
     }
 }

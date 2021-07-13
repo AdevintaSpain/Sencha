@@ -83,13 +83,4 @@ class MainViewShould: XCTestCase {
         swipe(.text("1"), inDirection: .left)
         assertVisible(.text("Delete"))
     }
-
-    func test_wait_view_controller_to_be_visible() {
-        assertVisible(.text("Sencha Example"))
-
-        tap(.text("12"))
-        waitToBeVisible(viewControllerType: DetailViewController.self)
-
-        assertVisible(.text("Detail"))
-    }
 }

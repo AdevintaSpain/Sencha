@@ -21,7 +21,7 @@ public enum SenchaDirection {
     }
 }
 
-public protocol SenchaSwipeActions: EarlGreyHumanizer {
+public protocol SenchaSwipeActions {
     func swipe(_ matcher: Matcher, inDirection direction: SenchaDirection, file: StaticString, line: UInt)
 }
 
@@ -33,8 +33,6 @@ extension XCTestCase: SenchaSwipeActions {
             tester().swipeView(withAccessibilityLabel: label, in: direction.kifDirection)
         case .accessibilityID(let accessibilityID):
             tester().swipeView(withAccessibilityIdentifier: accessibilityID, in: direction.kifDirection)
-        default:
-            unsupportedTest(file: file, line: line)
         }
     }
 }

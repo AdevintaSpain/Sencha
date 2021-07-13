@@ -1,14 +1,11 @@
-import UIKit
 import XCTest
 
-public protocol SenchaTableViewAssertions: EarlGreyHumanizer {
-
+public protocol SenchaTableViewAssertions {
     func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString, line: UInt)
-
 }
 
 extension XCTestCase: SenchaTableViewAssertions {

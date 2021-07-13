@@ -1,7 +1,6 @@
 import XCTest
 
-public protocol SenchaPickerActions: EarlGreyHumanizer {
-
+public protocol SenchaPickerActions {
     func movePicker(_ matcher: Matcher, to date: Date, file: StaticString, line: UInt)
     func movePicker(_ matcher: Matcher, column: Int, to value: String, file: StaticString, line: UInt)
 }
