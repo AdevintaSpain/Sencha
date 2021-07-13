@@ -18,33 +18,33 @@ extension XCTestCase: SenchaCollectionViewAssertions {
     }
 
     public func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        let view = findView(with: matcher)
+        let view = findView(with: matcher, file: file, line: line)
         guard let collectionView = view as? UICollectionView else {
-            XCTFail("\(view) is not a CollectionView")
+            XCTFail("\(view) is not a CollectionView", file: file, line: line)
             return
         }
-        XCTAssertTrue(collectionView.numberOfItems(inSection: 0) > 0)
+        XCTAssertGreaterThan(collectionView.numberOfItems(inSection: 0), 0, file: file, line: line)
     }
 
     public func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString = #file, line: UInt = #line) {
-        assert(collectionViewWith: matcher, hasCellCount: cellCount, inSection: 0)
+        assert(collectionViewWith: matcher, hasCellCount: cellCount, inSection: 0, file: file, line: line)
     }
 
     public func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
-        let view = findView(with: matcher)
+        let view = findView(with: matcher, file: file, line: line)
         guard let collectionView = view as? UICollectionView else {
-            XCTFail("\(view) is not a CollectionView")
+            XCTFail("\(view) is not a CollectionView", file: file, line: line)
             return
         }
-        XCTAssertTrue(collectionView.numberOfItems(inSection: section) == cellCount)
+        XCTAssertEqual(collectionView.numberOfItems(inSection: section), cellCount, file: file, line: line)
     }
 
     public func assert(collectionViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
-        let view = findView(with: matcher)
+        let view = findView(with: matcher, file: file, line: line)
         guard let collectionView = view as? UICollectionView else {
-            XCTFail("\(view) is not a CollectionView")
+            XCTFail("\(view) is not a CollectionView", file: file, line: line)
             return
         }
-        XCTAssertTrue(collectionView.numberOfSections == sectionCount)
+        XCTAssertEqual(collectionView.numberOfSections, sectionCount, file: file, line: line)
     }
 }

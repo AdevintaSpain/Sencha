@@ -18,7 +18,7 @@ extension XCTestCase: SenchaPickerAssertions {
             XCTFail(String(format: SenchaErrorMessage.viewIsNotADatePicker, view), file: file, line: line)
             return
         }
-        XCTAssertEqual(picker.date, value)
+        XCTAssertEqual(picker.date, value, file: file, line: line)
     }
 
     public func assertPicker(_ matcher: Matcher, hasValue value: String, inColumn column: Int, file: StaticString = #file, line: UInt = #line) {
@@ -29,6 +29,6 @@ extension XCTestCase: SenchaPickerAssertions {
         }
         let selectedRow = picker.selectedRow(inComponent: column)
         let selectedValue = picker.delegate?.pickerView?(picker, titleForRow: selectedRow, forComponent: column)
-        XCTAssertEqual(selectedValue, value)
+        XCTAssertEqual(selectedValue, value, file: file, line: line)
     }
 }

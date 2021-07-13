@@ -17,7 +17,7 @@ extension XCTestCase: SenchaSwitchAssertions {
             XCTFail(String(format: SenchaErrorMessage.viewIsNotASwitch, view), file: file, line: line)
             return
         }
-        XCTAssertTrue(aSwitch.isOn)
+        XCTAssertTrue(aSwitch.isOn, file: file, line: line)
     }
 
     public func assertSwitchIsOff(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
@@ -26,7 +26,7 @@ extension XCTestCase: SenchaSwitchAssertions {
             XCTFail(String(format: SenchaErrorMessage.viewIsNotASwitch, view), file: file, line: line)
             return
         }
-        XCTAssertFalse(aSwitch.isOn)
+        XCTAssertFalse(aSwitch.isOn, file: file, line: line)
     }
 }
 
