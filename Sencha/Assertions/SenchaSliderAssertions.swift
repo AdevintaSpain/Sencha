@@ -18,11 +18,11 @@ extension XCTestCase: SenchaSliderAssertions {
         }
         switch value {
         case .equalTo(let value):
-            XCTAssertEqual(slider.value, Float(value))
+            XCTAssertEqual(slider.value, Float(value), file: file, line: line)
         case .greaterThan(let value):
-            XCTAssertGreaterThan(slider.value, Float(value))
+            XCTAssertGreaterThan(slider.value, Float(value), file: file, line: line)
         case .lessThan(let value):
-            XCTAssertLessThan(slider.value, Float(value))
+            XCTAssertLessThan(slider.value, Float(value), file: file, line: line)
         }
     }
 }

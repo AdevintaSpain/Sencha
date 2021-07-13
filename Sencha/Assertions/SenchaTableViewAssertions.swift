@@ -20,31 +20,31 @@ extension XCTestCase: SenchaTableViewAssertions {
     public func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher)
         guard let tableView = view as? UITableView else {
-            XCTFail("\(view) is not a TableView")
+            XCTFail("\(view) is not a TableView", file: file, line: line)
             return
         }
-        XCTAssertTrue(tableView.numberOfRows(inSection: 0) > 0)
+        XCTAssertGreaterThan(tableView.numberOfRows(inSection: 0), 0, file: file, line: line)
     }
 
     public func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString = #file, line: UInt = #line) {
-        assert(tableViewWith: matcher, hasRowCount: rowCount, inSection: 0)
+        assert(tableViewWith: matcher, hasRowCount: rowCount, inSection: 0, file: file, line: line)
     }
     
     public func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher)
         guard let tableView = view as? UITableView else {
-            XCTFail("\(view) is not a TableView")
+            XCTFail("\(view) is not a TableView", file: file, line: line)
             return
         }
-        XCTAssertTrue(tableView.numberOfRows(inSection: section) == rowCount)
+        XCTAssertEqual(tableView.numberOfRows(inSection: section), rowCount, file: file, line: line)
     }
     
     public func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher)
         guard let tableView = view as? UITableView else {
-            XCTFail("\(view) is not a TableView")
+            XCTFail("\(view) is not a TableView", file: file, line: line)
             return
         }
-        XCTAssertTrue(tableView.numberOfSections == sectionCount)
+        XCTAssertEqual(tableView.numberOfSections, sectionCount, file: file, line: line)
     }
 }

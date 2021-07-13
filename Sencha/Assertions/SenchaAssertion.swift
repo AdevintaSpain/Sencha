@@ -37,12 +37,12 @@ extension XCTestCase: SenchaAssertion {
 
     public func assertEnabled(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher, file: file, line: line)
-        validate(enabled: true, view: view)
+        validate(enabled: true, view: view, file: file, line: line)
     }
 
     public func assertDisabled(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher, file: file, line: line)
-        validate(enabled: false, view: view)
+        validate(enabled: false, view: view, file: file, line: line)
     }
 
     private func validate(enabled: Bool, view: UIView, file: StaticString = #file, line: UInt = #line) {
