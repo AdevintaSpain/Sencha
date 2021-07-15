@@ -1,13 +1,9 @@
-
 import XCTest
 
-public protocol Sencha: SenchaTapActions, SenchaEditTextActions, SenchaSwipeActions, SenchaKeyboardActions, SenchaTableViewAssertions, SenchaSwitchAssertions, SenchaCollectionViewAssertions, SenchaSliderAssertions, SenchaSliderActions, SenchaPickerActions, SenchaPickerAssertions {}
+/// This struct can be extended to add different error messages.
+struct SenchaErrorMessage {}
 
-struct SenchaErrorMessage {
-    static let unsupportedTest = "This combination of methods and matchers is not supported"
-}
-
-extension XCTestCase: Sencha {
+extension XCTestCase {
 
     private var window : UIWindow {
         get {
@@ -19,8 +15,13 @@ extension XCTestCase: Sencha {
         super.setUp()
         window.layer.speed = 10.0
     }
-    
-    open func open(viewController: UIViewController, modally: Bool = false, embedInNavigation: Bool = false) {
+
+    /// Use this method to present a specific view in the test Window.
+    /// - Parameters:
+    ///   - viewController: A view controller to embed in the main UIWindow.
+    ///   - modally: Use this property to simulate a modal presentation.
+    ///   - embedInNavigation: Use this property to simulate push inside a UINavigationController.
+    open func `open`(viewController: UIViewController, modally: Bool = false, embedInNavigation: Bool = false) {
         var viewControllerToOpen = viewController
         if embedInNavigation {
             viewControllerToOpen = embedInNavigationController(viewController)
@@ -33,18 +34,21 @@ extension XCTestCase: Sencha {
             window.set(rootViewController: viewControllerToOpen)
         }
     }
-    
-    public func waitToBeVisible(viewControllerType: UIViewController.Type) {
-        let condition = SenchaViewControllerCondition(window: window)
-        condition.waitToBeVisible(viewControllerType)
-    }
 
     private func embedInNavigationController(_ viewController: UIViewController) -> UIViewController {
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }
 
-    func findView(with matcher: Matcher, traits: UIAccessibilityTraits = .none, file: StaticString = #file, line: UInt = #line) -> UIView {
+    /// This method waits for a view to become visible and then returns that instance to the caller
+    /// - Parameters:
+    ///   - matcher: Specify an accessibility feature to find the view.
+    ///   - traits: Some additional accessibility traits can be provided to narrow down the search if multiple items
+    ///   can be found by the same accessibility trait.
+    ///   - file: Used to highlight the correct file when a test fails.(Do not use)
+    ///   - line: Used to highlight the correct line when a test fails.(Do not use)
+    /// - Returns: The view instance that has been found for the given parameters.
+    public func findView(with matcher: Matcher, traits: UIAccessibilityTraits = .none, file: StaticString = #file, line: UInt = #line) -> UIView {
         var view: UIView!
         switch matcher {
         case .text(let text):
@@ -53,13 +57,7 @@ extension XCTestCase: Sencha {
             view = tester().waitForView(withAccessibilityLabel: label, traits: traits)
         case .accessibilityID(let accessibilityID):
             view = tester().waitForView(withAccessibilityIdentifier: accessibilityID)
-        default:
-            unsupportedTest(file: file, line: line)
         }
         return view
-    }
-
-    func unsupportedTest(file: StaticString, line: UInt) {
-        XCTFail(SenchaErrorMessage.unsupportedTest, file: file, line: line)
     }
 }

@@ -1,8 +1,6 @@
-import UIKit
 import XCTest
 
-public protocol SenchaCollectionViewAssertions: EarlGreyHumanizer {
-
+public protocol SenchaCollectionViewAssertions {
     func assertCollectionViewIsEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assertCollectionViewIsNotEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assert(collectionViewWith matcher: Matcher, hasCellCount cellCount: Int, file: StaticString, line: UInt)

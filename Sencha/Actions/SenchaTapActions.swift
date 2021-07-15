@@ -1,7 +1,6 @@
-import Foundation
-import KIF
+import XCTest
 
-public protocol SenchaTapActions: EarlGreyHumanizer {
+public protocol SenchaTapActions {
     func tap(_ matcher: Matcher, file: StaticString, line: UInt)
 }
 

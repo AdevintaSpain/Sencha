@@ -1,7 +1,7 @@
 import Foundation
 import KIF
 
-public protocol SenchaScrollViewActions: EarlGreyHumanizer {
+public protocol SenchaScrollViewActions {
     func scroll(to edge: ScrollEdge, in matcher: Matcher, file: StaticString, line: UInt)
 }
 
@@ -14,6 +14,7 @@ extension SenchaErrorMessage {
 }
 
 extension XCTestCase: SenchaScrollViewActions {
+    
     public func scroll(to edge: ScrollEdge, in matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
         let view = findView(with: matcher)
         guard let scrollView = view as? UIScrollView else {
