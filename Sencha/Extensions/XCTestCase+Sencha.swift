@@ -14,7 +14,8 @@ extension XCTestCase {
         super.setUp()
         window.layer.speed = 10.0
     }
-    
+
+    /// Use this method to present a specific view in the test Window
     open func open(viewController: UIViewController, modally: Bool = false, embedInNavigation: Bool = false) {
         var viewControllerToOpen = viewController
         if embedInNavigation {
@@ -34,7 +35,8 @@ extension XCTestCase {
         return navigationController
     }
 
-    func findView(with matcher: Matcher, traits: UIAccessibilityTraits = .none, file: StaticString = #file, line: UInt = #line) -> UIView {
+    /// This method waits for a view to become visible and then returns that instance to the caller
+    public func findView(with matcher: Matcher, traits: UIAccessibilityTraits = .none, file: StaticString = #file, line: UInt = #line) -> UIView {
         var view: UIView!
         switch matcher {
         case .text(let text):
