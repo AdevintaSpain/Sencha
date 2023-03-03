@@ -1,31 +1,32 @@
-import Foundation
-import EarlGrey
+import XCTest
 
-public protocol SenchaPickerActions: EarlGreyHumanizer {
-
-    func movePicker(_ pickerMatcher: Matcher, to date: Date, file: StaticString, line: UInt)
-    func movePicker(_ pickerMatcher: Matcher, column: Int, to value: String, file: StaticString, line: UInt)
+public protocol SenchaPickerActions {
+    func movePicker(_ matcher: Matcher, to date: Date, file: StaticString, line: UInt)
+    func movePicker(_ matcher: Matcher, column: Int, to value: String, file: StaticString, line: UInt)
 }
 
-public extension SenchaPickerActions {
+extension XCTestCase: SenchaPickerActions {
 
-    func movePicker(_ pickerMatcher: Matcher, to date: Date, file: StaticString = #file, line: UInt = #line) {
-        select(
-            pickerMatcher,
-            file: file,
-            line: line
-        ).perform(
-            .setPickerDateTo(date)
-        )
+    public func movePicker(_ matcher: Matcher, to date: Date, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher, file: file, line: line)
+        guard let picker = view as? UIDatePicker else {
+            XCTFail(String(format: SenchaErrorMessage.viewIsNotADatePicker, view), file: file, line: line)
+            return
+        }
+        picker.setDate(date, animated: true)
     }
 
-    func movePicker(_ pickerMatcher: Matcher, column: Int, to value: String, file: StaticString = #file, line: UInt = #line) {
-        select(
-            pickerMatcher,
-            file: file,
-            line: line
-        ).perform(
-            .setPickerColumnToValue(column, value)
+    public func movePicker(_ matcher: Matcher, column: Int, to value: String, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher, file: file, line: line)
+        guard let picker = view as? UIPickerView else {
+            XCTFail(String(format: SenchaErrorMessage.viewIsNotAPicker, view), file: file, line: line)
+            return
+        }
+        tester().selectPickerViewRow(
+            withTitle: value,
+            inComponent: column,
+            fromPicker: picker,
+            with: .forwardFromStart
         )
     }
 }

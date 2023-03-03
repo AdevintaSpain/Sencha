@@ -1,28 +1,12 @@
-import UIKit
-import Foundation
-import EarlGrey
+import KIF
 
-public protocol SenchaKeyboardActions: EarlGreyHumanizer {
-    
+public protocol SenchaKeyboardActions {
     func tapKeyboardReturnKey(file: StaticString, line: UInt)
 }
 
-public extension SenchaKeyboardActions {
-    
-    func tapKeyboardReturnKey(file: StaticString = #file, line: UInt = #line) {
-        
-        let matchers: Matcher = .allOf(
-            [
-                .firstResponder,
-                .class(UITextField.self)
-            ]
-        )
+extension XCTestCase: SenchaKeyboardActions {
+    public func tapKeyboardReturnKey(file: StaticString = #file, line: UInt = #line) {
         let newLineCharacter = "\n"
-
-        select(
-            matchers, file: file, line: line
-        ).perform(
-            grey_typeText(newLineCharacter)
-        )
+        tester().enterText(intoCurrentFirstResponder: newLineCharacter)
     }
 }

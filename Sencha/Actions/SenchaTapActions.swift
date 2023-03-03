@@ -1,38 +1,16 @@
-import Foundation
-import EarlGrey
+import XCTest
 
-public protocol SenchaTapActions: EarlGreyHumanizer {
-    
+public protocol SenchaTapActions {
     func tap(_ matcher: Matcher, file: StaticString, line: UInt)
-    func tapBackButton(file: StaticString, line: UInt)
 }
 
-public extension SenchaTapActions {
-        
-    func tap(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).perform(
-            grey_tap()
-        )
-    }
-
-    func tapBackButton(file: StaticString = #file, line: UInt = #line) {
-        var backButtonMatcher: Matcher
-        if #available(iOS 14, *) {
-            backButtonMatcher = .allOf([.descendant(.class(NSClassFromString("_UINavigationBarContentView")!)), .firstElement])
-        } else {
-            backButtonMatcher = .class(NSClassFromString("_UIBackButtonContainerView")!)
+extension XCTestCase: SenchaTapActions {
+    public func tap(_ matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        switch matcher {
+        case .text(let label), .accessibilityLabel(let label):
+            tester().tapView(withAccessibilityLabel: label)
+        case .accessibilityID(let identifier):
+            tester().tapView(withAccessibilityIdentifier: identifier)
         }
-        select(
-            backButtonMatcher,
-            file: file,
-            line: line
-        ).perform(
-            grey_tap()
-        )
     }
 }

@@ -1,87 +1,56 @@
+import XCTest
 
-import UIKit
-import EarlGrey
-
-public protocol SenchaTableViewAssertions: EarlGreyHumanizer {
-
+public protocol SenchaTableViewAssertions {
     func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString, line: UInt)
     func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString, line: UInt)
-
 }
 
-public extension SenchaTableViewAssertions {
+extension XCTestCase: SenchaTableViewAssertions {
 
-    func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        assert(tableViewWith: matcher, hasRowCount: 0, file: file, line: line)
-    }
-
-    func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
-        let cellCountAssert = GREYAssertionBlock(name: "TableView is not empty") { (element, error) -> Bool in
-            guard let tableView = element as? UITableView, tableView.numberOfSections > 0 else {
-                return false
-            }
-            let numberOfCells = tableView.numberOfRows(inSection: 0)
-            return numberOfCells > 0
+    public func assertTableViewIsEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView", file: file, line: line)
+            return
         }
-
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            cellCountAssert
-        )
-    }
-
-    func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString = #file, line: UInt = #line) {
-        
-        assert(
-            tableViewWith: matcher,
-            hasRowCount: rowCount,
-            inSection: 0,
-            file: file,
-            line: line
-        )
-    }
-    
-    func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
-    
-        let cellCountAssert = GREYAssertionBlock(name: "cell count") { (element, error) -> Bool in
-            guard let tableView = element as? UITableView, tableView.numberOfSections > section else {
-                return false
-            }
-            let numberOfCells = tableView.numberOfRows(inSection: section)
-            return numberOfCells == rowCount
+        if tableView.numberOfSections == 0 {
+            XCTAssertEqual(tableView.numberOfSections, 0, file: file, line: line)
+        } else {
+            assert(tableViewWith: matcher, hasRowCount: 0, file: file, line: line)
         }
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            cellCountAssert
-        )
     }
     
-    func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
-    
-        let sectionCountAssert = GREYAssertionBlock(name: "section count") { (element, error) -> Bool in
-            if let tableView = element as? UITableView {
-                let numberOfSections = tableView.numberOfSections
-                return numberOfSections == sectionCount
-            }
-            return false
+    public func assertTableViewIsNotEmpty(with matcher: Matcher, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView", file: file, line: line)
+            return
         }
-        
-        select(
-            matcher,
-            file: file,
-            line: line
-        ).assert(
-            sectionCountAssert
-        )
+        XCTAssertGreaterThan(tableView.numberOfRows(inSection: 0), 0, file: file, line: line)
+    }
+
+    public func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, file: StaticString = #file, line: UInt = #line) {
+        assert(tableViewWith: matcher, hasRowCount: rowCount, inSection: 0, file: file, line: line)
+    }
+    
+    public func assert(tableViewWith matcher: Matcher, hasRowCount rowCount: Int, inSection section: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView", file: file, line: line)
+            return
+        }
+        XCTAssertEqual(tableView.numberOfRows(inSection: section), rowCount, file: file, line: line)
+    }
+    
+    public func assert(tableViewWith matcher: Matcher, hasSectionCount sectionCount: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = findView(with: matcher)
+        guard let tableView = view as? UITableView else {
+            XCTFail("\(view) is not a TableView", file: file, line: line)
+            return
+        }
+        XCTAssertEqual(tableView.numberOfSections, sectionCount, file: file, line: line)
     }
 }

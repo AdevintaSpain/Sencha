@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func editButtonPressed(_ sender: Any) {
         
         sectionTitle = sectionTitle == "Normal Mode" ? "Edit Mode" : "Normal Mode"
-        tableView.reloadData()
+        tableView?.reloadData()
     }
 
     func clearTableView() {
