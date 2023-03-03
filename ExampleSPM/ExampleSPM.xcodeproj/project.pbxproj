@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41115F9329B21A8B00DC0F74 /* Sencha in Frameworks */ = {isa = PBXBuildFile; productRef = 41115F9229B21A8B00DC0F74 /* Sencha */; };
 		41B6CF5429B2166700974299 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6CF5129B2166700974299 /* MainViewController.swift */; };
 		41B6CF5529B2166700974299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6CF5229B2166700974299 /* AppDelegate.swift */; };
 		41B6CF5629B2166700974299 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6CF5329B2166700974299 /* DetailViewController.swift */; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41115F9329B21A8B00DC0F74 /* Sencha in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +156,9 @@
 				DE2E973A29B2150200B3902E /* PBXTargetDependency */,
 			);
 			name = ExampleSPMTests;
+			packageProductDependencies = (
+				41115F9229B21A8B00DC0F74 /* Sencha */,
+			);
 			productName = ExampleSPMTests;
 			productReference = DE2E973829B2150200B3902E /* ExampleSPMTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -525,6 +530,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41115F9229B21A8B00DC0F74 /* Sencha */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Sencha;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE2E971A29B2150100B3902E /* Project object */;
 }

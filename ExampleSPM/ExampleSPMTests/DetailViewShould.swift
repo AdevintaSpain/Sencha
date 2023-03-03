@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Sencha
 
-@testable import ExampleProject
+@testable import ExampleSPM
 
 class ViewDetailShould: XCTestCase {
     
