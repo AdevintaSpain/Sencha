@@ -1,4 +1,5 @@
 import XCTest
+import KIF
 
 public protocol SenchaPickerActions {
     func movePicker(_ matcher: Matcher, to date: Date, file: StaticString, line: UInt)
