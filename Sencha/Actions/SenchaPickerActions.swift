@@ -18,15 +18,11 @@ extension XCTestCase: SenchaPickerActions {
     }
 
     public func movePicker(_ matcher: Matcher, column: Int, to value: String, file: StaticString = #file, line: UInt = #line) {
-        let view = findView(with: matcher, file: file, line: line)
-        guard let picker = view as? UIPickerView else {
-            XCTFail(String(format: SenchaErrorMessage.viewIsNotAPicker, view), file: file, line: line)
-            return
-        }
+        tap(matcher)
+
         tester().selectPickerViewRow(
             withTitle: value,
             inComponent: column,
-            fromPicker: picker,
             with: .forwardFromStart
         )
     }

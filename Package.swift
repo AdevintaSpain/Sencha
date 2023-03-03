@@ -20,7 +20,11 @@ let package = Package(
             dependencies: [
                 .product(name: "KIF", package: "KIF"),
             ],
-            path: "Sencha/"
+            path: "Sencha/",
+            exclude: [
+                "ExampleProject/",
+                "ExampleProjectTests/",
+            ]
         )
         // .testTarget(
         //     name: "AdPlacementManager-Unit-UnitTests",
