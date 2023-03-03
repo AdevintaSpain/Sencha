@@ -20,21 +20,7 @@ let package = Package(
             dependencies: [
                 .product(name: "KIF", package: "KIF"),
             ],
-            path: "Sencha/",
-            exclude: [
-                "ExampleProject/",
-                "ExampleProjectTests/",
-            ]
+            path: "Sencha/"
         )
-        // .testTarget(
-        //     name: "AdPlacementManager-Unit-UnitTests",
-        //     dependencies: [
-        //         .product(name: "Nimble",
-        //                  package: "Nimble"),
-        //         .target(name: "AdPlacementManager"),
-        //     ],
-        //     path: "AdPlacementManager/Tests/GoogleAdManager",
-        //     resources: [.process("Resources")]
-        // ),
     ]
 )
