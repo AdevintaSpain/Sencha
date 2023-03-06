@@ -1,6 +1,8 @@
 
 ![Sencha logo](HeaderImage.png)
 
+> ℹ️ Sencha was originally intended to work with [EarlGrey](https://github.com/google/EarlGrey) under the hood, since they released EarlGrey 2.0, white box testing is no longer supported. This is why EarlGrey has been replaced by [KIF](https://github.com/kif-framework/KIF). Regardless of that, Sencha API is still the same and it works without modification.
+
 [EarlGrey](https://github.com/google/EarlGrey) is a great tool to test our iOS apps via instrumental tests. With them, we can mimic user actions like tapping a button, scrolling, or typing. Then, we can assert that a text appears in the screen, a view is visible or invisible, or a button is enabled or not.
 
 On the other hand, if you tried EarlGrey, you’ll agree that its API is not discoverable or friendly.

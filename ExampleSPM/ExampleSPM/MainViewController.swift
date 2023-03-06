@@ -1,4 +1,3 @@
-
 import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -60,4 +59,3 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     }
 }
-

@@ -23,7 +23,6 @@ class ViewDetailShould: XCTestCase {
     }
 
     func test_show_a_placeholder_text() {
-
         assertVisible(.text(placeholderText))
     }
 
@@ -35,7 +34,6 @@ class ViewDetailShould: XCTestCase {
     
 
     func test_show_an_interactable_text_field() {
-
         type(
             text: "text",
             inElementWith: textFieldMatcher
