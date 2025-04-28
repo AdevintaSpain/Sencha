@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Sencha",
-    platforms: [.iOS("9.0")],
+    platforms: [.iOS("13.0")],
     products: [
         .library(name: "Sencha", targets: ["Sencha"])
     ],
